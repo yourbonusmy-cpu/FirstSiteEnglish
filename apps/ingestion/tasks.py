@@ -1,4 +1,5 @@
 import json
+import os
 from time import sleep
 
 import redis
@@ -15,7 +16,7 @@ from apps.lists.models import SubtitleListWord, SubtitleList
 User = get_user_model()
 extractor = get_phrasal_extractor()
 
-r = redis.Redis(host="localhost", port=6379, db=0, decode_responses=True)
+r = redis.from_url(os.environ.get("REDIS_URL"))
 PREVIEW_TTL = 3600
 channel_layer = get_channel_layer()
 
