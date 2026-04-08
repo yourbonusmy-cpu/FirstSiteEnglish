@@ -19,7 +19,10 @@ from apps.ingestion.tasks import process_subtitle_task, save_subtitle_list_task
 import redis
 
 # Redis client
-r = redis.Redis(host="localhost", port=6379, db=0, decode_responses=True)
+# r = redis.Redis(host="localhost", port=6379, db=0, decode_responses=True)
+import os
+
+r = redis.from_url(os.environ.get("REDIS_URL"))
 PREVIEW_TTL = 3600
 
 extractor = get_phrasal_extractor()
