@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'study/css/study_puzzle_2.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- 📌 ОБЁРТКА ДЛЯ ЦЕНТРИРОВАНИЯ -->
+<div class="puzzle-center">
+
+    <div class="puzzle-wrapper">
+
+        <!-- Левая стрелка -->
+        <button class="btn btn-link nav-arrow" onclick="prevWord()">
+            <i class="bi bi-chevron-compact-left"></i>
+        </button>
+
+        <!-- Карточка -->
+        <div class="card text-center puzzle-card p-4">
+
+            <div class="puzzle-translate mb-3" id="puzzle-translate">
+                Перевод
+            </div>
+
+            <div class="puzzle-slots mb-2" id="puzzle-slots"></div>
+
+            <div class="puzzle-letters mb-3" id="puzzle-letters"></div>
+
+            <div class="puzzle-progress mb-2" id="puzzle-progress">
+                1 / 20
+            </div>
+
+            <button class="btn btn-secondary clear-btn mb-2" id="clear-btn">
+                Очистить
+            </button>
+        </div>
+
+        <!-- Правая стрелка -->
+        <button class="btn btn-link nav-arrow" onclick="nextWord()">
+            <i class="bi bi-chevron-compact-right"></i>
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Боковая панель -->
+<div class="position-fixed top-50 end-0 translate-middle-y d-flex flex-column gap-3 puzzle-side-panel">
+    <div class="card p-3 text-center side-card">
+        <span>Таймер</span>
+        <strong id="timer">00:00</strong>
+    </div>
+    <div class="card p-3 text-center side-card">
+        <span>Правильных</span>
+        <strong id="score">0 / 20</strong>
+    </div>
+    <button class="btn btn-danger finish-btn" onclick="finishStudy()">Завершить</button>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    window.STUDY_WORDS = {{ words_json|safe }};
+</script>
+<script src="{% static 'study/js/study_puzzle_2.js' %}"></script>
+{% endblock %}

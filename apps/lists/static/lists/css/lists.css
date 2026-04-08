@@ -1,0 +1,229 @@
+/* ===============================
+   Карточка
+================================= */
+.list-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.list-card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;              /* убрали внутренние отступы */
+    position: relative;
+}
+
+/* ===============================
+   ВЕРХ — без зазора
+================================= */
+.learned-counter-wrapper {
+    position: absolute;
+    top: 0;                  /* строго к верху */
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+}
+
+/* чтобы контент не залезал на счетчик */
+.content-wrapper {
+    padding-top: 32px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.title-wrapper {
+    flex: 1;                  /* занимает все оставшееся место */
+    margin-right: 0.5rem;     /* небольшой отступ от прогресса */
+}
+
+.title-progress-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    /* фиксированная высота для прогресса, не зависит от текста */
+    min-height: 5.4rem; /* высота на 3 строки текста */
+}
+
+/* Прогресс-круг */
+.progress-container {
+    width: 70px;   /* фиксированный размер круга */
+    height: 70px;
+    flex-shrink: 0; /* не сжимается */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-title {
+    margin: 0;
+    line-height: 1.8rem;      /* высота строки */
+    word-break: break-word;    /* перенос длинных слов */
+}
+
+/* ===============================
+   НИЗ — строго прижат
+================================= */
+.bottom-row {
+    margin-top: auto;        /* толкает вниз */
+    display: flex;
+    align-items: end;
+    justify-content: center; /* publish по центру */
+    position: relative;
+    padding-bottom: 0;       /* без отступа */
+}
+
+/* Лайк справа */
+.like-right {
+    position: absolute;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.bi-heart,
+.bi-heart-fill {
+    -webkit-text-stroke: #000;
+}
+
+/* Publish центр */
+.publish-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===============================
+   Кнопки
+================================= */
+.icon-btn {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;   /* иконка не вылезает */
+}
+
+.icon-btn i,
+.icon-btn img {
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+}
+
+.like-btn {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-card:hover .icon-btn {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.list-card:hover .icon-btn:hover,
+.icon-btn:hover {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* ===============================
+   Hover overlay
+================================= */
+.list-card:hover .card-overlay {
+    --bs-bg-opacity: 0.75;
+}
+
+/* ===============================
+   Switch
+================================= */
+.publish-switch:checked {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.publish-switch:checked:focus {
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+}
+
+/* ===============================
+   Progress ring
+================================= */
+.progress-ring-wrapper {
+    --size: 60px;
+    --track-color: #dee2e6;
+    --progress-color: #333;
+
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+.progress-ring {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--progress-color) calc(var(--percent) * 1%),
+        var(--track-color) calc(var(--percent) * 1%)
+    );
+
+    -webkit-mask: radial-gradient(circle,  transparent 60%, #000 61%);
+    mask: radial-gradient(circle, transparent 60%, #000 61%);
+}
+
+/* Центр постоянный — не зависит от прогресса */
+.progress-ring-center {
+    position: absolute;
+    width: 82%;  /* размер дырки */
+    height: 82%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5); /* полупрозрачный белый */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.progress-ring.empty {
+    background: var(--track-color);
+}
+
+.progress-ring-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #495057;
+    pointer-events: none;
+}
+
+/* Закругления */
+.bottom-rounded {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+.top-rounded {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+

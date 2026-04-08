@@ -1,0 +1,364 @@
+{% extends "base.html" %}  <!-- если у вас есть базовый шаблон, иначе уберите эту строку -->
+{% load static %}
+{% block content %}
+
+<div id="main-container">
+    <!-- Основная область с карточкой и вариантами ответов -->
+    <div id="quiz-area">
+        <h1>Изучение слов: {{ subtitle_list.name }}</h1>
+
+        <!-- Прогресс (текущее / всего) -->
+        <div id="progress">
+            Слово <span id="current">1</span> из <span id="total">—</span>
+        </div>
+
+        <!-- Сама карточка + варианты ответов + стрелки -->
+        <div id="quiz-container">
+            <button id="prev" class="nav-arrow" aria-label="Предыдущее слово">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+
+            <div id="frame">
+                <!-- 3D-карточка слова -->
+                <div class="scene">
+                    <div class="card" id="card">
+                        <div class="front">
+                            <h2 id="word"></h2>
+                            <p id="transcription"></p>
+                        </div>
+                        <div class="back">
+                            <h2 id="translation"></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Варианты ответов -->
+                <div id="answers">
+                    <button class="answer" data-index="0"></button>
+                    <button class="answer" data-index="1"></button>
+                    <button class="answer" data-index="2"></button>
+                    <button class="answer" data-index="3"></button>
+                </div>
+            </div>
+
+            <button id="next" class="nav-arrow" aria-label="Следующее слово">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Боковая панель (фиксированная справа) -->
+    <div id="sidebar">
+        <div class="sidebar-block">
+            <h3>Время</h3>
+            <div id="timer">00:00</div>
+        </div>
+
+        <div class="sidebar-block">
+            <h3>Правильно</h3>
+            <div id="correct-count">0</div>
+        </div>
+
+        <button id="finish-btn">Завершить</button>
+    </div>
+</div>
+
+<style>
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: #f5f5f5;
+        margin: 0;
+        padding: 20px;
+    }
+
+    #main-container {
+        display: flex;
+        max-width: 1100px;
+        margin: 0 auto;
+        gap: 30px;
+        position: relative;
+    }
+
+    #quiz-area {
+        flex: 1;
+    }
+
+    #quiz-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 0;
+    }
+
+    #frame {
+        display: flex;
+        align-items: stretch;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        padding: 24px;
+        gap: 32px;
+    }
+
+    .scene {
+        width: 220px;
+        height: 320px;
+        perspective: 700px;
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: transform 0.7s ease;
+        transform-style: preserve-3d;
+        cursor: pointer;
+    }
+
+    .card.flip {
+        transform: rotateY(180deg);
+    }
+
+    .front, .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .front {
+        background: #ffffff;
+        border: 1px solid #e0e0e0;
+    }
+
+    .back {
+        background: #f8fff8;
+        border: 1px solid #c8e6c9;
+        transform: rotateY(180deg);
+    }
+
+    #answers {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 260px;
+    }
+
+    .answer {
+        padding: 14px 18px;
+        font-size: 16px;
+        text-align: left;
+        background: #f0f0f0;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .answer:hover {
+        background: #e0e0e0;
+    }
+
+    .nav-arrow {
+        font-size: 60px;          /* основной размер иконки */
+        width: 60px;              /* ширина кнопки */
+        height: 320px;            /* высота — подстраиваем под .scene (ваша карточка 320px) */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.04);
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        color: #555;
+        transition: all 0.2s;
+    }
+
+    .nav-arrow:hover {
+        color: #000;
+    }
+    .nav-arrow i {
+        font-size: 3.2rem;        /* ≈ 50–55px */
+        line-height: 1;
+    }
+
+    /* Боковая панель */
+    #sidebar {
+        width: 220px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        padding: 24px;
+        height: fit-content;
+        position: sticky;
+        top: 20px;
+    }
+
+    .sidebar-block {
+        text-align: center;
+        margin-bottom: 28px;
+    }
+
+    #timer, #correct-count {
+        font-size: 32px;
+        font-weight: bold;
+        color: #1976d2;
+    }
+
+    #finish-btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+        background: #d32f2f;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    #finish-btn:hover {
+        background: #b71c1c;
+    }
+</style>
+
+<script>
+// Данные приходят из Django
+const words = {{ words_json|safe }};
+let currentIndex = 0;
+let correctCount = 0;
+let startTime = Date.now();
+let timerInterval;
+
+const elements = {
+    card: document.getElementById('card'),
+    word: document.getElementById('word'),
+    transcription: document.getElementById('transcription'),
+    translation: document.getElementById('translation'),
+    current: document.getElementById('current'),
+    total: document.getElementById('total'),
+    timer: document.getElementById('timer'),
+    correctCount: document.getElementById('correct-count'),
+    answers: document.querySelectorAll('.answer'),
+    prev: document.getElementById('prev'),
+    next: document.getElementById('next'),
+    finish: document.getElementById('finish-btn')
+};
+
+function formatTime(seconds) {
+    const min = Math.floor(seconds / 60).toString().padStart(2, '0');
+    const sec = (seconds % 60).toString().padStart(2, '0');
+    return `${min}:${sec}`;
+}
+
+function updateTimer() {
+    const elapsed = Math.floor((Date.now() - startTime) / 1000);
+    elements.timer.textContent = formatTime(elapsed);
+}
+
+function loadWord(index) {
+    const wordData = words[index];
+
+    elements.word.textContent = wordData.word;
+    elements.transcription.textContent = wordData.transcription || '';
+    elements.translation.textContent = wordData.main_translation;
+
+    elements.current.textContent = index + 1;
+    elements.total.textContent = words.length;
+
+    // Сбрасываем карточку и цвета
+    elements.card.classList.remove('flip');
+    elements.translation.parentElement.style.backgroundColor = '';
+
+    // Генерация вариантов ответов
+    let correct = wordData.main_translation;
+    let distractors = [];
+
+    // Собираем неправильные варианты из других слов
+    words.forEach((w, i) => {
+        if (i !== index && !wordData.all_translations.includes(w.main_translation.toLowerCase())) {
+            distractors.push(w.main_translation);
+        }
+    });
+
+    // Берём 3 случайных неправильных
+    distractors = distractors.sort(() => Math.random() - 0.5).slice(0, 3);
+
+    // Если мало — дополняем (в реальном проекте лучше иметь запас)
+    while (distractors.length < 3) {
+        distractors.push(`Вариант ${distractors.length + 1}`);
+    }
+
+    let options = [correct, ...distractors];
+    options = options.sort(() => Math.random() - 0.5);
+
+    elements.answers.forEach((btn, i) => {
+        btn.textContent = options[i];
+        btn.style.backgroundColor = '#f0f0f0';
+        btn.disabled = false;
+
+        btn.onclick = () => {
+            checkAnswer(options[i], wordData, btn);
+        };
+    });
+}
+
+function checkAnswer(selected, wordData, clickedBtn) {
+    const isCorrect = wordData.all_translations
+        .map(t => t.toLowerCase())
+        .includes(selected.toLowerCase());
+
+    if (isCorrect) {
+        clickedBtn.style.backgroundColor = '#4caf50';
+        correctCount++;
+        elements.correctCount.textContent = correctCount;
+    } else {
+        clickedBtn.style.backgroundColor = '#f44336';
+    }
+
+    // Можно отключить остальные кнопки после выбора:
+    // elements.answers.forEach(b => b.disabled = true);
+}
+
+function init() {
+    if (!words.length) {
+        elements.word.textContent = 'Слов для изучения нет';
+        return;
+    }
+
+    loadWord(currentIndex);
+    timerInterval = setInterval(updateTimer, 1000);
+
+    elements.card.addEventListener('click', () => {
+        elements.card.classList.toggle('flip');
+    });
+
+    elements.prev.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + words.length) % words.length;
+        loadWord(currentIndex);
+    });
+
+    elements.next.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % words.length;
+        loadWord(currentIndex);
+    });
+
+    elements.finish.addEventListener('click', () => {
+        clearInterval(timerInterval);
+        alert(`Сессия завершена!\nПравильных ответов: ${correctCount}`);
+        // Здесь можно отправить статистику на сервер через fetch/post
+    });
+}
+
+init();
+</script>
+
+{% endblock %}

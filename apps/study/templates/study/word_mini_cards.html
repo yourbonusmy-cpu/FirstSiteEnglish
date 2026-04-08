@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+{% load dict_extras %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'study/css/word_mini_cards.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">{{ word_list.name }}</h2>
+
+    <div class="row g-3">
+        {% for word in words %}
+        {% with p=progress_map|get_item:word.id %}
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="mini-card d-flex align-items-center justify-content-between
+                {% if p and p.is_learned %}border border-3 border-success{% endif %}
+                {% if p and p.is_learning %}border border-3 border-danger{% endif %}
+            "
+            data-word-id="{{ word.id }}"
+            data-learning="{{ p.is_learning|default_if_none:'false' }}"
+            data-learned="{{ p.is_learned|default_if_none:'false' }}"
+            >
+
+                <button class="btn btn-sm btn-outline-danger learn-btn">+</button>
+
+                <div class="word-text flex-grow-1 text-center">
+                    {{ word.name }}
+                </div>
+
+                <button class="btn btn-sm btn-outline-success learned-btn">
+                    <i class="bi bi-check-lg"></i>
+                </button>
+
+            </div>
+        </div>
+        {% endwith %}
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    function applyState(card, state) {
+        card.dataset.learning = state.is_learning;
+        card.dataset.learned = state.is_learned;
+
+        card.classList.toggle("border-danger", state.is_learning);
+        card.classList.toggle("border-success", state.is_learned);
+    }
+
+    function toggle(card, mode) {
+        fetch("{% url 'study:update_word_state' %}", {
+            method: "POST",
+            headers: {
+                "X-CSRFToken": "{{ csrf_token }}",
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: `word_id=${card.dataset.wordId}&mode=${mode}`,
+        })
+        .then(r => r.json())
+        .then(data => {
+            if (data.status !== "ok") return;
+            applyState(card, data.state);
+        });
+    }
+
+    document.querySelectorAll(".mini-card").forEach(card => {
+
+        card.querySelector(".learn-btn")
+            .addEventListener("click", () => toggle(card, "learning"));
+
+        card.querySelector(".learned-btn")
+            .addEventListener("click", () => toggle(card, "learned"));
+
+    });
+
+});
+</script>
+{% endblock %}

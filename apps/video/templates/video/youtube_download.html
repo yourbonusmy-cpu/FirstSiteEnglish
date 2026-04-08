@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Downloader</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+        input, button {
+            padding: 8px;
+            font-size: 16px;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border-bottom: 1px solid #ddd;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>YouTube загрузка</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <input
+        type="url"
+        name="youtube_url"
+        placeholder="https://www.youtube.com/watch?v=..."
+        style="width: 70%;"
+        required
+    >
+    <button type="submit">Получить качества</button>
+</form>
+
+{% if title %}
+    <h2>{{ title }}</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Разрешение</th>
+                <th>Формат</th>
+                <th>Размер (MB)</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for f in formats %}
+            <tr>
+                <td>{{ f.resolution }}</td>
+                <td>{{ f.ext }}</td>
+                <td>{{ f.filesize }}</td>
+                <td>
+                    <a
+                      href="{% url 'video:youtube_download_file' %}?url={{ url }}&format_id={{ f.format_id }}"
+                    >
+                        Скачать
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
+
+</body>
+</html>

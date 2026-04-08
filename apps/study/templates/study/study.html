@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'study/css/flashcards.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<h2 class="page-title">{{ subtitle_list.title }}</h2>
+
+<div class="study-wrapper">
+
+  <div class="main-container">
+    <!-- Карточка и навигация -->
+    <div class="card-area">
+      <div class="card-container">
+        <div class="flashcard" id="card">
+          <div class="card-face front">
+            <h2 id="word"></h2>
+            <small id="transcription"></small>
+          </div>
+          <div class="card-face back">
+            <h3 id="translation"></h3>
+          </div>
+        </div>
+
+          <!-- Прогресс и поле ввода -->
+        <div class="card-area position-relative mt-0 w-100" style="height: 32px;">
+
+          <!-- Feedback по центру -->
+          <div id="feedback" class="text-center w-100"></div>
+
+          <!-- Progress справа -->
+          <div class="progress-info position-absolute end-0 top-0 text-end">
+            <span id="current-index">1</span> / <span class="total-words">1</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <input
+        type="text"
+        id="answer"
+        class="form-control mt-2"
+        placeholder="Введите перевод">
+
+      <!-- Навигационные кнопки -->
+      <div class="controls mt-1">
+          <button class="btn nav-btn" id="prev" aria-label="Previous">
+              <i class="bi bi-chevron-left"></i>
+          </button>
+          <button class="btn nav-btn" id="check" aria-label="Previous">
+<!--              <i class="bi bi-check2"></i>-->
+<!--              <i class="bi bi-check"></i>-->
+              <i class="bi bi-check-lg"></i>
+          </button>
+          <button class="btn nav-btn" id="next" aria-label="Next">
+              <i class="bi bi-chevron-right"></i>
+          </button>
+      </div>
+    </div>
+
+    <!-- Боковая панель справа -->
+    <div class="sidebar">
+      <div class="timer-box">
+        Таймер: <span id="timer">00:00</span>
+      </div>
+      <div class="correct-box mt-2">
+        Правильных: <span id="correct-count">0</span> / <span class="total-words">л1</span>
+      </div>
+      <div class="finish-box mt-3">
+        <button class="btn btn-danger" id="finish">Завершить тест</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  const WORDS = {{ words_json|safe }};
+</script>
+
+<script src="{% static 'study/js/flashcards.js' %}"></script>
+
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'study/css/word_mini_cards.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Мини карточки: {{ word_list.name }}</h2>
+
+    <div class="row g-3">
+        {% for word in words %}
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="mini-card d-flex align-items-center justify-content-between
+                 {% if word.id in known_word_ids %}border border-success shadow-sm{% endif %}"
+
+                 data-word-id="{{ word.id }}"
+                 data-list-id="{{ word_list.id }}"
+                 data-known="{% if word.id in known_word_ids %}true{% else %}false{% endif %}">
+
+                <button class="btn btn-sm btn-outline-primary plus-btn">+</button>
+
+                <div class="word-text flex-grow-1 text-center">
+                    {{ word.name }}
+                </div>
+
+                <button class="btn btn-sm btn-outline-secondary circle-btn">
+                    <span class="circle">
+                        <i class="bi bi-check-lg d-none"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    function toggleKnown(card) {
+        const wordId = card.dataset.wordId;
+        const listId = card.dataset.listId;
+
+        fetch("{% url 'study:toggle_known_word' %}", {
+            method: "POST",
+            headers: {
+                "X-CSRFToken": "{{ csrf_token }}",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: `word_id=${wordId}&list_id=${listId}`
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.status !== "ok") return;
+
+            card.dataset.known = data.known.toString();
+
+            const icon = card.querySelector(".circle i");
+            icon.classList.toggle("d-none", !data.known);
+
+            // при желании можно обновлять счётчик на странице
+            // document.querySelector("#learned-count").innerText = data.quantity_learned_words;
+            // 🔥 ВИЗУАЛЬНОЕ ВЫДЕЛЕНИЕ
+            card.classList.toggle("border", data.known);
+            card.classList.toggle("border-success", data.known);
+            card.classList.toggle("shadow-sm", data.known);
+        });
+    }
+
+    document.querySelectorAll(".mini-card").forEach(card => {
+
+        // показываем галочку если известно
+        if (card.dataset.known === "true") {
+            card.querySelector(".circle i").classList.remove("d-none");
+        }
+
+        card.querySelector(".word-text").addEventListener("click", () => toggleKnown(card));
+        card.querySelector(".plus-btn").addEventListener("click", () => toggleKnown(card));
+        card.querySelector(".circle-btn").addEventListener("click", () => toggleKnown(card));
+    });
+
+});
+</script>
+{% endblock %}

@@ -1,0 +1,60 @@
+/* ===============================
+   Кнопки
+================================= */
+.icon-btn {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.icon-btn i,
+.icon-btn img {
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.like-btn {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover */
+.list-card:hover .icon-btn {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.list-card:hover .icon-btn:hover,
+.icon-btn:hover {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.list-card:hover .card-overlay {
+    --bs-bg-opacity: 0.75;
+}
+
+/* Switch */
+.publish-switch:checked {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.publish-switch:checked:focus {
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+}
+
+.bi-heart,
+.bi-heart-fill {
+    -webkit-text-stroke: #000;
+}

@@ -1,0 +1,144 @@
+/* Обертка всего контента */
+.study-wrapper {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;  /* горизонтально по центру */
+  align-items: center;      /* вертикально по центру */
+  position: relative;
+  padding: 20px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;   /* карточка по центру по горизонтали */
+  align-items: flex-start;   /* верхний край для боковой панели */
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+}
+
+/* Область карточки + навигация */
+.card-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Карточка */
+.card-container {
+  perspective: 1000px;
+  width: 380px;
+}
+
+.flashcard {
+  height: 220px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+/* Поле ввода */
+#answer {
+  max-width: 320px;
+  display: block;
+  margin: 10px auto;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s, background-color 0.3s;
+  background-color: #fff;
+}
+
+#answer.correct {
+  border-color: green;
+  background-color: #e0ffe0;
+}
+
+/* Прогресс слова под карточкой */
+.progress-info {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Навигация */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  max-width: 360px;
+  margin: 10px auto 0 auto;
+  gap: 10px;
+}
+
+.nav-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  transition: transform .2s, background .2s;
+}
+
+.nav-btn:hover {
+  transform: translateY(-2px);
+  background: #f6f6f6;
+}
+
+.nav-btn:active {
+  transform: translateY(0);
+}
+
+/* Боковая панель справа, абсолютно позиционируем */
+.sidebar {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 12px;
+  background-color: #fafafa;
+
+  position: fixed; /* фиксируем справа */
+  top: 15%; /* вертикально по центру окна */
+  right: 20px; /* отступ от правого края */
+}
+
+.sidebar .timer-box,
+.sidebar .correct-box,
+.sidebar .finish-box {
+  font-size: 16px;
+}

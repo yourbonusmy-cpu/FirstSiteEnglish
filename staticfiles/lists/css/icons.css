@@ -1,0 +1,33 @@
+.icon-btn {
+    background: transparent;          /* прозрачный фон */
+    border: 1px solid #dee2e6;         /* рамка */
+    border-radius: 8px;               /* скругление */
+    padding: 6px 8px;
+    color: #212529;                   /* цвет иконки */
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+/* Hover */
+.icon-btn:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    transform: scale(1.05);
+}
+.icon-btn.edit:hover {
+    color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.icon-btn.delete:hover {
+    color: #dc3545;
+    border-color: #dc3545;
+}

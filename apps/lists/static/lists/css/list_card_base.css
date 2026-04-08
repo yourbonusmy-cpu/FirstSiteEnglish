@@ -1,0 +1,81 @@
+/* ===============================
+   Карточка (структура)
+================================= */
+.list-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.list-card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    position: relative;
+}
+
+/* Верх */
+.learned-counter-wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content-wrapper {
+    padding-top: 32px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.title-wrapper {
+    flex: 1;
+    margin-right: 0.5rem;
+}
+
+.title-progress-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 5.4rem;
+}
+
+.progress-container {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-title {
+    margin: 0;
+    line-height: 1.8rem;
+    word-break: break-word;
+}
+
+/* Низ */
+.bottom-row {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.like-right {
+    position: absolute;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.publish-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

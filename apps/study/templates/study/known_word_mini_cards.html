@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'study/css/known_word_mini_cards.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+
+    <!-- SEARCH + BUTTONS -->
+    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+
+        <form method="get" class="d-flex" style="max-width:300px;">
+            <div class="input-group" style="max-width:300px;">
+                <input type="text"
+                       id="search-input"
+                       class="form-control"
+                       placeholder="Поиск...">
+                <button class="btn btn-outline-secondary">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+
+        </form>
+
+        <div class="d-flex gap-2">
+
+            <a href="{% url 'study:download_known_words' %}"
+               class="btn btn-outline-primary">
+                Скачать
+            </a>
+
+            <form method="post"
+                  action="{% url 'study:upload_known_words' %}"
+                  enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file"
+                       name="file"
+                       accept=".txt"
+                       required
+                       class="form-control form-control-sm d-inline"
+                       style="width:160px;">
+                <button class="btn btn-outline-success btn-sm">
+                    Загрузить
+                </button>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- WORDS -->
+    <div class="row g-3"
+         id="word-container"
+         data-has-next="{{ page_obj.has_next|yesno:'true,false' }}">
+        {% include "study/partials/known_words_list.html" %}
+    </div>
+
+    <div id="loading" class="text-center my-3" style="display:none;">
+        Загрузка...
+    </div>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'study/js/known_words.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'video/css/player.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="video-page">
+  <div class="video-container" id="video-container">
+    <video id="video" controls>
+      <source src="{% url 'stream-video' filename='video_name.mp4' %}" type="video/mp4">
+    </video>
+    <div id="subtitle-layer"></div>
+    <button id="fs-btn" class="custom-fs-btn">⛶</button>
+  </div>
+</div>
+
+
+<script>
+  const SUBTITLE_JSON_URL = "{{ subtitle_json }}";
+</script>
+<script src="{% static 'video/js/player.js' %}"></script>
+{% endblock %}

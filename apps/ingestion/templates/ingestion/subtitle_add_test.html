@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h2>Add subtitles</h2>
+
+<input type="text" id="subtitle-name" placeholder="List name"><br><br>
+
+<textarea id="subtitle-text" rows="10" cols="80"
+          placeholder="Paste subtitles text"></textarea><br><br>
+
+<button id="start-btn">Process</button>
+
+<hr>
+
+<div id="words"></div>
+
+<button id="save-btn">Save list</button>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+const START_URL = "{% url 'ingestion:subtitle_start' %}";
+const PAGE_URL = "{% url 'ingestion:subtitle_page' %}";
+const DELETE_URL = "{% url 'ingestion:subtitle_delete_word' %}";
+const SAVE_URL = "{% url 'ingestion:subtitle_save' %}";
+
+let page = 1;
+
+document.getElementById("start-btn").onclick = async () => {
+    const text = document.getElementById("subtitle-text").value;
+
+    const form = new FormData();
+    form.append("subtitle_text", text);
+
+    await fetch(START_URL, { method: "POST", body: form });
+
+    page = 1;
+    loadPage();
+};
+
+async function loadPage() {
+    const r = await fetch(`${PAGE_URL}?page=${page}`);
+    const data = await r.json();
+
+    const container = document.getElementById("words");
+    container.innerHTML = "";
+
+    data.words.forEach(w => {
+        const div = document.createElement("div");
+        div.innerHTML = `
+            ${w.name} (${w.frequency})
+            <button data-id="${w.temp_id}">x</button>
+        `;
+        div.querySelector("button").onclick = () => deleteWord(w.temp_id);
+        container.appendChild(div);
+    });
+}
+
+async function deleteWord(tempId) {
+    const form = new FormData();
+    form.append("temp_id", tempId);
+    await fetch(DELETE_URL, { method: "POST", body: form });
+    loadPage();
+}
+
+document.getElementById("save-btn").onclick = async () => {
+    const name = document.getElementById("subtitle-name").value;
+
+    const form = new FormData();
+    form.append("subtitle_name", name);
+
+    const r = await fetch(SAVE_URL, { method: "POST", body: form });
+    const data = await r.json();
+
+    if (data.redirect_url) {
+        window.location.href = data.redirect_url;
+    }
+};
+</script>
+{% endblock %}

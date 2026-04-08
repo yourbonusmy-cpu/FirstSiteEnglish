@@ -1,0 +1,210 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'lists/css/lists.css' %}">
+<style>
+.progress-ring-wrapper {
+    --percent: 0;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: inline-block;
+}
+.progress-ring {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#0d6efd calc(var(--percent) * 1%), #e9ecef 0);
+}
+.progress-ring.empty {
+    background: #e9ecef;
+}
+.progress-ring-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <div id="root"></div>
+</div>
+
+<!-- React -->
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script>
+function getCookie(name) {
+    let cookieValue = null;
+    document.cookie.split(";").forEach(c => {
+        c = c.trim();
+        if (c.startsWith(name + "=")) cookieValue = decodeURIComponent(c.substring(name.length + 1));
+    });
+    return cookieValue;
+}
+</script>
+{% verbatim %}
+<script type="text/babel">
+const { useState, useEffect } = React;
+
+function ListCard({ list, refresh }) {
+    const csrftoken = getCookie("csrftoken");
+
+    const handleLike = async () => {
+        await fetch(`/api/lists/${list.id}/like/`, {
+            method: "POST",
+            headers: { "X-CSRFToken": csrftoken }
+        });
+        refresh();
+    };
+
+    const handleDelete = async () => {
+        if (!confirm("Удалить список?")) return;
+        await fetch(`/api/lists/${list.id}/`, {
+            method: "DELETE",
+            headers: { "X-CSRFToken": csrftoken }
+        });
+        refresh();
+    };
+
+    const handleTogglePublish = async () => {
+        await fetch(`/api/lists/${list.id}/toggle_publish/`, {
+            method: "POST",
+            headers: { "X-CSRFToken": csrftoken }
+        });
+        refresh();
+    };
+
+    const handleToggleMenu = async () => {
+        await fetch(`/api/lists/${list.id}/toggle_menu/`, {
+            method: "POST",
+            headers: { "X-CSRFToken": csrftoken, "Content-Type": "application/json" },
+            body: JSON.stringify({ is_open_menu: !list.is_open_menu })
+        });
+        refresh();
+    };
+
+    const handleUpdateProgress = async () => {
+        await fetch(`/api/lists/${list.id}/update_progress/`, {
+            method: "POST",
+            headers: { "X-CSRFToken": csrftoken }
+        });
+        refresh();
+    };
+
+    return (
+        <div className="col">
+            <div
+                className="card shadow-sm list-card"
+                style={{
+                    backgroundImage: list.background_image ? `url(${list.background_image})` : undefined,
+                    backgroundColor: list.background_image ? undefined : list.background_color
+                }}
+            >
+                <div className="card-body d-flex flex-column h-100">
+
+                    {/* Counter */}
+                    <div className="text-center mb-2">
+                        <span className="card-overlay small px-2 py-1 bg-white bg-opacity-50 rounded learned-counter">
+                            {list.user_quantity_learned_words ?? 0} выучено из {list.quantity_words} слов
+                        </span>
+                    </div>
+
+                    {/* Title + arrow */}
+                    <div className="d-flex justify-content-between align-items-start mb-2">
+                        <h5 className="card-title text-break flex-grow-1">
+                            <span className="card-overlay px-2 py-2 bg-white bg-opacity-50 rounded d-inline-block">
+                                {list.name}
+                            </span>
+                        </h5>
+
+                        <button className="btn btn-link p-0" onClick={handleToggleMenu}>
+                            <i className={`bi ${list.is_open_menu ? "bi-chevron-down" : "bi-chevron-right"} fs-5`}></i>
+                        </button>
+                    </div>
+
+                    {/* Collapse section */}
+                    {list.is_open_menu && (
+                        <div className="mb-2">
+                            <div className="d-flex gap-2 mb-2">
+                                <a href={`/lists/${list.id}/detail/`} className="btn btn-light btn-sm">📄</a>
+                                <a href={`/study/${list.id}/mini-cards/`} className="btn btn-light btn-sm">🃏</a>
+                                {list.is_owner && (
+                                    <>
+                                        <button className="btn btn-light btn-sm" onClick={handleDelete}>🗑</button>
+                                        <a href={`/lists/${list.id}/edit/`} className="btn btn-light btn-sm">✏️</a>
+                                    </>
+                                )}
+                            </div>
+
+                            <div className="d-flex gap-2 mb-2">
+                                <button className="btn btn-light btn-sm" onClick={handleUpdateProgress}>Обновить прогресс</button>
+                                {/* Можно добавить кнопки тестов как в старом шаблоне */}
+                                <a href={`/study/${list.id}/easy_3/`} className="btn btn-light btn-sm">📝</a>
+                                <a href={`/study/${list.id}/study/`} className="btn btn-light btn-sm">📚</a>
+                                <a href={`/study/${list.id}/puzzle/`} className="btn btn-light btn-sm">🧩</a>
+                                <a href={`/study/${list.id}/puzzle/`} className="btn btn-light btn-sm">✅</a>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Footer */}
+                    <div className="mt-auto d-flex justify-content-between align-items-center">
+                        {list.is_owner && (
+                            <div className="form-check form-switch d-flex align-items-center gap-1 px-2 py-1 bg-white bg-opacity-50 rounded">
+                                <label className="form-check-label small text-muted">Опубликовать</label>
+                                <input type="checkbox" checked={list.is_public} onChange={handleTogglePublish} />
+                            </div>
+                        )}
+
+                        {list.is_authenticated && (
+                            <div className="d-flex align-items-center gap-2">
+                                <button onClick={handleLike} className="btn btn-link p-0">
+                                    <i className={`bi ${list.is_liked ? "bi-heart-fill text-danger" : "bi-heart"} fs-5`}></i>
+                                </button>
+                                <span>{list.likes_count}</span>
+                            </div>
+                        )}
+
+                        {/* Progress ring */}
+                        <div className="progress-ring-wrapper" style={{ "--percent": list.progress_percent ?? 0 }}>
+                            <div className={`progress-ring ${list.user_quantity_learned_words === null ? "empty" : ""}`}></div>
+                            <div className="progress-ring-label">
+                                {list.progress_percent ?? "?"}%
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    );
+}
+
+function MyLists() {
+    const [lists, setLists] = useState([]);
+    const loadData = async () => {
+        const res = await fetch("/api/lists/my/");
+        const data = await res.json();
+        setLists(data);
+    };
+    useEffect(() => { loadData(); }, []);
+    return (
+        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+            {lists.map(list => <ListCard key={list.id} list={list} refresh={loadData} />)}
+        </div>
+    );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<MyLists />);
+</script>
+{% endverbatim %}
+{% endblock %}

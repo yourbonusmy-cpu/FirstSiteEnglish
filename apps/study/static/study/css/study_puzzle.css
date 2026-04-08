@@ -1,0 +1,171 @@
+/* ===========================
+   CARD WRAPPER
+=========================== */
+.puzzle-card-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 24px;
+    position: relative;
+}
+
+/* ===========================
+   CENTRAL CARD
+   средний размер + адаптация только при длинном слове
+=========================== */
+.puzzle-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 24px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    text-align: center;
+    box-sizing: border-box;
+
+    width: 380px;         /* средний размер по умолчанию */
+    min-width: 380px;     /* не меньше среднего */
+    max-width: 150vw;      /* расширяется только если нужно */
+    transition: width 0.3s ease;
+}
+
+/* ===========================
+   TRANSLATION
+=========================== */
+.puzzle-translate {
+    font-size: 26px;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+/* ===========================
+   SLOTS AND LETTERS
+=========================== */
+.puzzle-slots,
+.puzzle-letters {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: nowrap; /* одна линия */
+}
+
+/* ОБЩИЙ СТИЛЬ ДЛЯ КРУЖКОВ */
+.puzzle-slots span,
+.puzzle-letters span {
+    flex: 0 1 auto;                       /* кружки могут сжиматься */
+    width: clamp(36px, 4vw, 48px);        /* адаптивный размер */
+    height: clamp(36px, 4vw, 48px);
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(14px, 3vw, 20px);
+    font-weight: 600;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* ПРАВИЛЬНЫЕ СЛОТЫ */
+.puzzle-slots span.correct {
+    border-color: #2ecc71;
+    background: #eafaf1;
+    color: #2ecc71;
+}
+
+/* ИСПОЛЬЗОВАННЫЕ БУКВЫ */
+.puzzle-letters span.used {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* ===========================
+   PROGRESS
+=========================== */
+.puzzle-progress {
+    font-size: 14px;
+    color: #777;
+    margin-top: 8px;
+}
+
+/* ===========================
+   CLEAR BUTTON
+=========================== */
+.clear-btn {
+    align-self: center;
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+/* ===========================
+   NAVIGATION ARROWS
+=========================== */
+.nav-arrow {
+    background: none;
+    border: none;
+    font-size: 36px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+}
+
+.nav-arrow.left {
+    margin-right: 16px;
+}
+
+.nav-arrow.right {
+    margin-left: 16px;
+}
+
+/* ===========================
+   SIDE PANEL
+=========================== */
+.puzzle-side-panel {
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* КАРТОЧКА В БОКОВОЙ ПАНЕЛИ */
+.side-card {
+    background: #fff;
+    padding: 16px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.side-card span {
+    display: block;
+    font-size: 13px;
+    color: #777;
+}
+
+.side-card strong {
+    display: block;
+    font-size: 22px;
+    margin-top: 4px;
+}
+
+/* КНОПКА ЗАВЕРШИТЬ */
+.finish-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #ff5c5c;
+    color: #fff;
+    cursor: pointer;
+}

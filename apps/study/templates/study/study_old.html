@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h2 class="page-title">{{ subtitle_list.title }}</h2>
+
+<div class="study-wrapper">
+
+  <div class="card-container">
+    <div class="flashcard" id="card">
+      <div class="card-face front">
+        <h2 id="word"></h2>
+        <small id="transcription"></small>
+      </div>
+      <div class="card-face back">
+        <h3 id="translation"></h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5/20 -->
+  <div class="progress-info">
+    <span id="current-index">1</span> / <span id="total-words">1</span>
+  </div>
+
+  <input
+    type="text"
+    id="answer"
+    class="form-control mt-3"
+    placeholder="Введите перевод">
+
+  <div class="controls mt-3">
+    <button class="btn nav-btn" id="prev">
+        <img src="{% static 'study/icons/left-arrow.png' %}" alt="prev">
+    </button>
+    <button class="btn btn-success nav-btn" id="check">
+        <img src="{% static 'study/icons/check-mark.png' %}" alt="check">
+    </button>
+    <button class="btn nav-btn" id="next">
+        <img src="{% static 'study/icons/right-arrow.png' %}" alt="next">
+    </button>
+  </div>
+
+</div>
+
+<script>
+  const WORDS = {{ words_json|safe }};
+</script>
+
+<script src="{% static 'study/js/flashcards.js' %}"></script>
+<link rel="stylesheet" href="{% static 'study/css/flashcards.css' %}">
+{% endblock %}

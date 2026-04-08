@@ -1,0 +1,393 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'lists/css/subtitle_add.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Добавление списка субтитров</h2>
+
+    <form id="subtitle-form" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="mb-4">
+
+            <label class="form-label fw-bold">Источник субтитров</label>
+
+            <div class="row g-3" id="source-row">
+
+                <div class="col-md-6 col-sm-12" id="file-col">
+                    <label for="subtitle-file" class="form-label small">Файл (.srt, .vtt и др.)</label>
+                    <input type="file" class="form-control" id="subtitle-file" name="subtitle_file"
+                           accept=".srt,.vtt,.txt">
+                </div>
+
+                <div class="col-md-6 col-sm-12" id="text-col">
+                    <label for="subtitle-text" class="form-label small">Или вставьте текст субтитров</label>
+                    <textarea class="form-control mb-2"
+                              id="subtitle-text"
+                              name="subtitle_text"
+                              placeholder="Вставьте сюда текст субтитров..."
+                              rows="1"
+                              style="resize: none; overflow: hidden;  transition: all 0.25s ease;"></textarea>
+
+                    <button type="button" class="btn btn-outline-primary btn-sm d-none" id="process-text-btn">
+                        Обработать текст
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <label for="subtitle-name" class="form-label fw-bold">Название списка</label>
+            <input type="text" class="form-control" id="subtitle-name" name="subtitle_name"
+                   placeholder="Мои субтитры — Friends S01" required>
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label fw-bold">Оформление карточки</label>
+
+            <div class="row g-3 align-items-start">
+
+                <!-- Левая часть — изображение -->
+                <div class="col-md-6">
+                    <label class="form-label small">Фоновое изображение (необязательно)</label>
+                    <input type="file"
+                           class="form-control"
+                           id="background-image"
+                           name="background_image"
+                           accept="image/*">
+
+                    <div class="form-text">
+                        Если выбрано изображение — цвет фона игнорируется
+                    </div>
+                </div>
+
+                <!-- Правая часть — выбор цвета -->
+                <div class="col-md-6">
+                    <label class="form-label small">Цвет фона</label>
+
+                    <div class="d-flex flex-wrap gap-2" id="color-picker">
+
+                        <!-- стандартные цвета -->
+                        <button type="button" class="color-swatch" data-color="#ffffff" style="background:#ffffff"></button>
+                        <button type="button" class="color-swatch" data-color="#dc3545" style="background:#dc3545"></button>
+                        <button type="button" class="color-swatch" data-color="#198754" style="background:#198754"></button>
+                        <button type="button" class="color-swatch" data-color="#0d6efd" style="background:#0d6efd"></button>
+                        <button type="button" class="color-swatch" data-color="#ffc107" style="background:#ffc107"></button>
+
+                        <!-- свой цвет -->
+                        <button type="button"
+                                class="color-swatch custom-color"
+                                id="custom-color-btn">
+                            +
+                        </button>
+
+                        <input type="color"
+                               id="custom-color-input"
+                               class="d-none">
+                    </div>
+
+                    <!-- скрытое поле, которое реально отправляется -->
+                    <input type="hidden"
+                           name="background_color"
+                           id="background-color-input"
+                           value="#ffffff">
+                </div>
+
+            </div>
+        </div>
+
+
+    </form>
+
+    <div id="words-section" class="mt-5" style="display: none;">
+        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+            <div>
+                <button type="button" class="btn btn-primary me-2" id="save-btn-top">Сохранить список</button>
+                <button type="button" class="btn btn-outline-danger" id="clear-btn-top">Очистить всё</button>
+            </div>
+            <span class="badge bg-secondary fs-6 px-3 py-2" id="words-count-top">Слов: 0</span>
+        </div>
+
+        <div id="words-table" class="table-responsive mb-4"></div>
+
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <div>
+                <button type="button" class="btn btn-primary me-2" id="save-btn-bottom">Сохранить список</button>
+                <button type="button" class="btn btn-outline-danger" id="clear-btn-bottom">Очистить всё</button>
+            </div>
+            <span class="badge bg-secondary fs-6 px-3 py-2" id="words-count-bottom">Слов: 0</span>
+        </div>
+    </div>
+</div>
+
+<script>
+// Вспомогательные функции
+function handleInputChange() {
+    const fileInput  = document.getElementById('subtitle-file');
+    const textArea   = document.getElementById('subtitle-text');
+    const fileCol    = document.getElementById('file-col');
+    const textCol    = document.getElementById('text-col');
+    const processBtn = document.getElementById('process-text-btn');
+
+    if (!fileInput || !textArea) return;
+
+    const hasFile = fileInput.files.length > 0;
+    const hasText = textArea.value.trim().length > 0;
+
+    processBtn.classList.toggle('d-none', !(hasText && !hasFile));
+
+    if (hasText) {
+        fileCol.style.display = 'none';
+        textCol.classList.remove('col-md-6');
+        textCol.classList.add('col-12');
+    } else if (hasFile) {
+        textCol.style.display = 'none';
+        fileCol.classList.remove('col-md-6');
+        fileCol.classList.add('col-12');
+    } else {
+        fileCol.style.display = '';
+        textCol.style.display = '';
+        fileCol.classList.remove('col-12');
+        fileCol.classList.add('col-md-6');
+        textCol.classList.remove('col-12');
+        textCol.classList.add('col-md-6');
+    }
+
+    textArea.style.height = '1px';
+    textArea.style.height = textArea.scrollHeight + 'px';
+}
+
+function updateWordsCount() {
+    const count = document.querySelectorAll('.word-row').length;
+    document.getElementById('words-count-top').textContent = `Слов: ${count}`;
+    document.getElementById('words-count-bottom').textContent = `Слов: ${count}`;
+}
+
+function clearAll() {
+    document.getElementById("subtitle-file").value = "";
+    document.getElementById("subtitle-text").value = "";
+    document.getElementById("subtitle-name").value = "";
+    document.getElementById("words-table").innerHTML = "";
+    document.getElementById("words-section").style.display = "none";
+    handleInputChange();
+    updateWordsCount();
+}
+
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+async function autoPreview() {
+    const fileInput = document.getElementById("subtitle-file");
+    const textInput = document.getElementById("subtitle-text");
+    const csrftoken = getCookie('csrftoken');
+
+    if (!fileInput || !textInput) return;
+
+    if (!fileInput.files[0] && !textInput.value.trim()) return;
+
+    const formData = new FormData();
+    if (fileInput.files[0]) {
+        formData.append("subtitle_file", fileInput.files[0]);
+    } else {
+        formData.append("subtitle_text", textInput.value.trim());
+    }
+
+    try {
+        const res = await fetch("{% url 'subtitle_preview' %}", {
+            method: "POST",
+            body: formData,
+            headers: { 'X-CSRFToken': csrftoken }
+        });
+
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+        const data = await res.json();
+
+        if (data.error) {
+            alert("Ошибка предпросмотра: " + data.error);
+            return;
+        }
+
+        if (data.subtitle_name) {
+            document.getElementById("subtitle-name").value = data.subtitle_name;
+        }
+
+        const tableDiv = document.getElementById("words-table");
+        tableDiv.innerHTML = `
+            <table class="table table-striped table-hover table-bordered align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Слово</th>
+                        <th>Транскрипция</th>
+                        <th>Часть речи</th>
+                        <th>Перевод</th>
+                        <th>Частотность</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${data.words.map((w, idx) => `
+                        <tr data-index="${idx}" class="word-row">
+                            <td>${idx+1}</td>
+                            <td>${w.name}</td>
+                            <td>${w.transcription || ''}</td>
+                            <td>
+                                <select class="form-select pos-select">
+                                    ${w.pos_list.map(pos => `<option value="${pos}" ${pos===w.selected_pos?'selected':''}>${pos}</option>`).join('')}
+                                </select>
+                            </td>
+                            <td>
+                                <select class="form-select translation-select">
+                                    ${(w.translations_for_pos[w.selected_pos] || []).map(tr => `<option value="${tr}" ${tr===w.selected_translation?'selected':''}>${tr}</option>`).join('')}
+                                </select>
+                            </td>
+                            <td>${w.frequency || '-'}</td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-outline-danger delete-word">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        `;
+
+        document.getElementById("words-section").style.display = "block";
+        updateWordsCount();
+
+        document.querySelectorAll(".delete-word").forEach(btn => {
+            btn.addEventListener("click", function () {
+                const row = this.closest("tr");
+                row.remove();
+                updateWordsCount();
+                const rowsLeft = document.querySelectorAll("#words-table tbody tr");
+                if (rowsLeft.length === 0) {
+                    document.getElementById("words-section").style.display = "none";
+                    document.getElementById("subtitle-name").value = "";
+                    document.getElementById("subtitle-file").value = "";
+                    document.getElementById("subtitle-text").value = "";
+                }
+            });
+        });
+
+        document.querySelectorAll('.pos-select').forEach((select, idx) => {
+            select.addEventListener('change', function() {
+                const trSelect = document.querySelectorAll('.translation-select')[idx];
+                const translations = data.words[idx].translations_for_pos[this.value] || [];
+                trSelect.innerHTML = translations.map(t => `<option value="${t}">${t}</option>`).join('');
+            });
+        });
+
+        document.getElementById("clear-btn-top").onclick = clearAll;
+        document.getElementById("clear-btn-bottom").onclick = clearAll;
+
+    } catch(e) {
+        console.error("Ошибка предпросмотра:", e);
+        alert("Не удалось сделать предпросмотр\n" + (e.message || ""));
+    }
+}
+
+// ──────────────────────────────────────────────
+// Сохранение (вынесено наружу, работает всегда)
+// ──────────────────────────────────────────────
+async function saveList() {
+    const rows = document.querySelectorAll("#words-table tbody tr");
+    if (rows.length === 0) {
+        alert("Нет слов для сохранения");
+        return;
+    }
+
+    const words = [];
+    rows.forEach((row) => {
+        const cols = row.children;
+        words.push({
+            name: cols[1].innerText,
+            transcription: cols[2].innerText,
+            selected_pos: cols[3].children[0].value,
+            selected_translation: cols[4].children[0].value,
+            frequency: parseInt(cols[5].innerText)
+        });
+    });
+
+    const formDataSave = new FormData();
+    formDataSave.append("subtitle_name", document.getElementById("subtitle-name").value.trim());
+
+    words.forEach(w => formDataSave.append("words", JSON.stringify(w)));
+
+    const csrftoken = getCookie('csrftoken');
+
+    try {
+        const res = await fetch("{% url 'subtitle_save' %}", {
+            method: "POST",
+            body: formDataSave,
+            headers: {'X-CSRFToken': csrftoken}
+        });
+
+        const dataSave = await res.json();
+
+        if (dataSave.status === "ok") {
+            window.location.href = dataSave.redirect_url;
+        } else {
+            alert("Ошибка при сохранении списка: " + (dataSave.message || "неизвестная ошибка"));
+        }
+    } catch (err) {
+        console.error("Ошибка сохранения:", err);
+        alert("Не удалось отправить данные\n" + (err.message || "проверьте консоль"));
+    }
+}
+
+// ──────────────────────────────────────────────
+// Инициализация — всё привязываем здесь
+// ──────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("Скрипт загружен и DOM готов");
+
+    const fileInput = document.getElementById('subtitle-file');
+    const textArea = document.getElementById('subtitle-text');
+    const processBtn = document.getElementById('process-text-btn');
+
+    if (fileInput) {
+        fileInput.addEventListener('change', function(e) {
+            console.log("Файл выбран:", e.target.files.length > 0 ? e.target.files[0].name : "нет файла");
+            if (e.target.files.length > 0) {
+                document.getElementById('subtitle-text').value = '';
+                handleInputChange();
+                autoPreview();
+            }
+        });
+    }
+
+    if (textArea) {
+        textArea.addEventListener('input', handleInputChange);
+    }
+
+    if (processBtn) {
+        processBtn.addEventListener('click', autoPreview);
+    }
+
+    document.getElementById('save-btn-top').addEventListener('click', saveList);
+    document.getElementById('save-btn-bottom').addEventListener('click', saveList);
+    document.getElementById('clear-btn-top').addEventListener('click', clearAll);
+    document.getElementById('clear-btn-bottom').addEventListener('click', clearAll);
+
+    handleInputChange();
+});
+</script>
+{% endblock %}

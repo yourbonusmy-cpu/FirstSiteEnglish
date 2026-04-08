@@ -1,0 +1,10594 @@
+[
+  {
+    "start": 6.16,
+    "end": 15.679,
+    "tokens": [
+      {
+        "raw": "Emily",
+        "lemma": "Emily"
+      },
+      {
+        "raw": "something",
+        "lemma": "something"
+      },
+      {
+        "raw": "strange",
+        "lemma": "strange"
+      },
+      {
+        "raw": "happened",
+        "lemma": "happened"
+      },
+      {
+        "raw": "today",
+        "lemma": "today"
+      }
+    ]
+  },
+  {
+    "start": 11.599,
+    "end": 19.359,
+    "tokens": [
+      {
+        "raw": "Really",
+        "lemma": "Really"
+      },
+      {
+        "raw": "What",
+        "lemma": "What"
+      },
+      {
+        "raw": "happened",
+        "lemma": "happened"
+      }
+    ]
+  },
+  {
+    "start": 15.679,
+    "end": 23.039,
+    "tokens": [
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "sent",
+        "lemma": "sent"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "text",
+        "lemma": "text"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "classmate",
+        "lemma": "classmate"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "wrote",
+        "lemma": "wrote"
+      }
+    ]
+  },
+  {
+    "start": 19.359,
+    "end": 28.16,
+    "tokens": [
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "will",
+        "lemma": "will"
+      },
+      {
+        "raw": "send",
+        "lemma": "send"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "message",
+        "lemma": "message"
+      },
+      {
+        "raw": "later",
+        "lemma": "later"
+      }
+    ]
+  },
+  {
+    "start": 23.039,
+    "end": 31.359,
+    "tokens": [
+      {
+        "raw": "He",
+        "lemma": "He"
+      },
+      {
+        "raw": "texted",
+        "lemma": "texted"
+      },
+      {
+        "raw": "back",
+        "lemma": "back"
+      },
+      {
+        "raw": "Oh",
+        "lemma": "Oh"
+      },
+      {
+        "raw": "are",
+        "lemma": "are"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "new",
+        "lemma": "new"
+      },
+      {
+        "raw": "here",
+        "lemma": "here"
+      }
+    ]
+  },
+  {
+    "start": 28.16,
+    "end": 34.16,
+    "tokens": [
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "was",
+        "lemma": "was"
+      },
+      {
+        "raw": "so",
+        "lemma": "so"
+      },
+      {
+        "raw": "surprised",
+        "lemma": "surprised"
+      }
+    ]
+  },
+  {
+    "start": 31.359,
+    "end": 37.76,
+    "tokens": [
+      {
+        "raw": "How",
+        "lemma": "How"
+      },
+      {
+        "raw": "did",
+        "lemma": "did"
+      },
+      {
+        "raw": "he",
+        "lemma": "he"
+      },
+      {
+        "raw": "know",
+        "lemma": "know"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "am",
+        "lemma": "am"
+      },
+      {
+        "raw": "new",
+        "lemma": "new"
+      }
+    ]
+  },
+  {
+    "start": 34.16,
+    "end": 40.32,
+    "tokens": [
+      {
+        "raw": "Oh",
+        "lemma": "Oh"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "think",
+        "lemma": "think"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "understand",
+        "lemma": "understand"
+      }
+    ]
+  },
+  {
+    "start": 37.76,
+    "end": 44.32,
+    "tokens": [
+      {
+        "raw": "That's",
+        "lemma": "That's"
+      },
+      {
+        "raw": "kind",
+        "lemma": "kind"
+      },
+      {
+        "raw": "of",
+        "lemma": "of"
+      },
+      {
+        "raw": "funny",
+        "lemma": "funny"
+      }
+    ]
+  },
+  {
+    "start": 40.32,
+    "end": 46.879,
+    "tokens": [
+      {
+        "raw": "Wait",
+        "lemma": "Wait"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "understand",
+        "lemma": "understand"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      },
+      {
+        "raw": "Why",
+        "lemma": "Why"
+      },
+      {
+        "raw": "did",
+        "lemma": "did"
+      },
+      {
+        "raw": "he",
+        "lemma": "he"
+      }
+    ]
+  },
+  {
+    "start": 44.32,
+    "end": 49.52,
+    "tokens": [
+      {
+        "raw": "think",
+        "lemma": "think"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "am",
+        "lemma": "am"
+      },
+      {
+        "raw": "new",
+        "lemma": "new"
+      }
+    ]
+  },
+  {
+    "start": 46.879,
+    "end": 54.48,
+    "tokens": [
+      {
+        "raw": "Because",
+        "lemma": "Because"
+      },
+      {
+        "raw": "native",
+        "lemma": "native"
+      },
+      {
+        "raw": "speakers",
+        "lemma": "speakers"
+      },
+      {
+        "raw": "don't",
+        "lemma": "don't"
+      },
+      {
+        "raw": "usually",
+        "lemma": "usually"
+      }
+    ]
+  },
+  {
+    "start": 49.52,
+    "end": 57.48,
+    "tokens": [
+      {
+        "raw": "say",
+        "lemma": "say"
+      },
+      {
+        "raw": "send",
+        "lemma": "send"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "message",
+        "lemma": "message"
+      },
+      {
+        "raw": "They",
+        "lemma": "They"
+      },
+      {
+        "raw": "usually",
+        "lemma": "usually"
+      },
+      {
+        "raw": "say",
+        "lemma": "say"
+      }
+    ]
+  },
+  {
+    "start": 54.48,
+    "end": 57.48,
+    "tokens": [
+      {
+        "raw": "text",
+        "lemma": "text"
+      }
+    ]
+  },
+  {
+    "start": 57.84,
+    "end": 65.199,
+    "tokens": [
+      {
+        "raw": "Really",
+        "lemma": "Really"
+      },
+      {
+        "raw": "But",
+        "lemma": "But"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "textbook",
+        "lemma": "textbook"
+      },
+      {
+        "raw": "says",
+        "lemma": "says"
+      },
+      {
+        "raw": "send",
+        "lemma": "send"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      }
+    ]
+  },
+  {
+    "start": 62.559,
+    "end": 68.64,
+    "tokens": [
+      {
+        "raw": "message",
+        "lemma": "message"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "correct",
+        "lemma": "correct"
+      }
+    ]
+  },
+  {
+    "start": 65.199,
+    "end": 71.68,
+    "tokens": [
+      {
+        "raw": "The",
+        "lemma": "The"
+      },
+      {
+        "raw": "textbook",
+        "lemma": "textbook"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "right",
+        "lemma": "right"
+      },
+      {
+        "raw": "It's",
+        "lemma": "It's"
+      },
+      {
+        "raw": "not",
+        "lemma": "not"
+      },
+      {
+        "raw": "wrong",
+        "lemma": "wrong"
+      }
+    ]
+  },
+  {
+    "start": 68.64,
+    "end": 74.96,
+    "tokens": [
+      {
+        "raw": "But",
+        "lemma": "But"
+      },
+      {
+        "raw": "in",
+        "lemma": "in"
+      },
+      {
+        "raw": "real",
+        "lemma": "real"
+      },
+      {
+        "raw": "life",
+        "lemma": "life"
+      },
+      {
+        "raw": "in",
+        "lemma": "in"
+      },
+      {
+        "raw": "everyday",
+        "lemma": "everyday"
+      },
+      {
+        "raw": "talk",
+        "lemma": "talk"
+      }
+    ]
+  },
+  {
+    "start": 71.68,
+    "end": 77.6,
+    "tokens": [
+      {
+        "raw": "people",
+        "lemma": "people"
+      },
+      {
+        "raw": "just",
+        "lemma": "just"
+      },
+      {
+        "raw": "say",
+        "lemma": "say"
+      },
+      {
+        "raw": "text",
+        "lemma": "text"
+      }
+    ]
+  },
+  {
+    "start": 74.96,
+    "end": 80.72,
+    "tokens": [
+      {
+        "raw": "So",
+        "lemma": "So"
+      },
+      {
+        "raw": "if",
+        "lemma": "if"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "want",
+        "lemma": "want"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "sound",
+        "lemma": "sound"
+      },
+      {
+        "raw": "more",
+        "lemma": "more"
+      },
+      {
+        "raw": "natural",
+        "lemma": "natural"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      }
+    ]
+  },
+  {
+    "start": 77.6,
+    "end": 83.92,
+    "tokens": [
+      {
+        "raw": "should",
+        "lemma": "should"
+      },
+      {
+        "raw": "say",
+        "lemma": "say"
+      },
+      {
+        "raw": "I'll",
+        "lemma": "I'll"
+      },
+      {
+        "raw": "text",
+        "lemma": "text"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      }
+    ]
+  },
+  {
+    "start": 80.72,
+    "end": 87.04,
+    "tokens": [
+      {
+        "raw": "Exactly",
+        "lemma": "Exactly"
+      },
+      {
+        "raw": "I'll",
+        "lemma": "I'll"
+      },
+      {
+        "raw": "text",
+        "lemma": "text"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "sounds",
+        "lemma": "sounds"
+      },
+      {
+        "raw": "like",
+        "lemma": "like"
+      }
+    ]
+  },
+  {
+    "start": 83.92,
+    "end": 89.04,
+    "tokens": [
+      {
+        "raw": "normal",
+        "lemma": "normal"
+      },
+      {
+        "raw": "natural",
+        "lemma": "natural"
+      },
+      {
+        "raw": "English",
+        "lemma": "English"
+      }
+    ]
+  },
+  {
+    "start": 87.04,
+    "end": 90.799,
+    "tokens": [
+      {
+        "raw": "Ah",
+        "lemma": "Ah"
+      }
+    ]
+  },
+  {
+    "start": 89.04,
+    "end": 93.6,
+    "tokens": [
+      {
+        "raw": "now",
+        "lemma": "now"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "see",
+        "lemma": "see"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      }
+    ]
+  },
+  {
+    "start": 90.799,
+    "end": 97.439,
+    "tokens": [
+      {
+        "raw": "Phone",
+        "lemma": "Phone"
+      },
+      {
+        "raw": "English",
+        "lemma": "English"
+      },
+      {
+        "raw": "has",
+        "lemma": "has"
+      },
+      {
+        "raw": "many",
+        "lemma": "many"
+      },
+      {
+        "raw": "small",
+        "lemma": "small"
+      },
+      {
+        "raw": "things",
+        "lemma": "things"
+      },
+      {
+        "raw": "like",
+        "lemma": "like"
+      }
+    ]
+  },
+  {
+    "start": 93.6,
+    "end": 99.92,
+    "tokens": [
+      {
+        "raw": "this",
+        "lemma": "this"
+      },
+      {
+        "raw": "A",
+        "lemma": "A"
+      },
+      {
+        "raw": "lot",
+        "lemma": "lot"
+      },
+      {
+        "raw": "of",
+        "lemma": "of"
+      },
+      {
+        "raw": "learners",
+        "lemma": "learners"
+      },
+      {
+        "raw": "study",
+        "lemma": "study"
+      },
+      {
+        "raw": "for",
+        "lemma": "for"
+      },
+      {
+        "raw": "years",
+        "lemma": "years"
+      }
+    ]
+  },
+  {
+    "start": 97.439,
+    "end": 101.6,
+    "tokens": [
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "still",
+        "lemma": "still"
+      },
+      {
+        "raw": "don't",
+        "lemma": "don't"
+      },
+      {
+        "raw": "know",
+        "lemma": "know"
+      },
+      {
+        "raw": "them",
+        "lemma": "them"
+      }
+    ]
+  },
+  {
+    "start": 99.92,
+    "end": 103.84,
+    "tokens": [
+      {
+        "raw": "Then",
+        "lemma": "Then"
+      }
+    ]
+  },
+  {
+    "start": 101.6,
+    "end": 105.6,
+    "tokens": [
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "really",
+        "lemma": "really"
+      },
+      {
+        "raw": "need",
+        "lemma": "need"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "learn",
+        "lemma": "learn"
+      },
+      {
+        "raw": "more",
+        "lemma": "more"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      }
+    ]
+  },
+  {
+    "start": 103.84,
+    "end": 108.88,
+    "tokens": [
+      {
+        "raw": "English",
+        "lemma": "English"
+      }
+    ]
+  },
+  {
+    "start": 105.6,
+    "end": 111.439,
+    "tokens": [
+      {
+        "raw": "Don't",
+        "lemma": "Don't"
+      },
+      {
+        "raw": "worry",
+        "lemma": "worry"
+      },
+      {
+        "raw": "Today",
+        "lemma": "Today"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "can",
+        "lemma": "can"
+      },
+      {
+        "raw": "learn",
+        "lemma": "learn"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      }
+    ]
+  },
+  {
+    "start": 108.88,
+    "end": 113.92,
+    "tokens": [
+      {
+        "raw": "day",
+        "lemma": "day"
+      },
+      {
+        "raw": "I'll",
+        "lemma": "I'll"
+      },
+      {
+        "raw": "tell",
+        "lemma": "tell"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "about",
+        "lemma": "about"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "day",
+        "lemma": "day"
+      }
+    ]
+  },
+  {
+    "start": 111.439,
+    "end": 116.88,
+    "tokens": [
+      {
+        "raw": "yesterday",
+        "lemma": "yesterday"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      }
+    ]
+  },
+  {
+    "start": 113.92,
+    "end": 119.84,
+    "tokens": [
+      {
+        "raw": "Your",
+        "lemma": "Your"
+      },
+      {
+        "raw": "day",
+        "lemma": "day"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      }
+    ]
+  },
+  {
+    "start": 116.88,
+    "end": 123.52,
+    "tokens": [
+      {
+        "raw": "Yes",
+        "lemma": "Yes"
+      },
+      {
+        "raw": "From",
+        "lemma": "From"
+      },
+      {
+        "raw": "morning",
+        "lemma": "morning"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "night",
+        "lemma": "night"
+      },
+      {
+        "raw": "I'll",
+        "lemma": "I'll"
+      },
+      {
+        "raw": "show",
+        "lemma": "show"
+      }
+    ]
+  },
+  {
+    "start": 119.84,
+    "end": 127.439,
+    "tokens": [
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "how",
+        "lemma": "how"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "use",
+        "lemma": "use"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      }
+    ]
+  },
+  {
+    "start": 123.52,
+    "end": 129.599,
+    "tokens": [
+      {
+        "raw": "Every",
+        "lemma": "Every"
+      },
+      {
+        "raw": "little",
+        "lemma": "little"
+      },
+      {
+        "raw": "thing",
+        "lemma": "thing"
+      },
+      {
+        "raw": "every",
+        "lemma": "every"
+      },
+      {
+        "raw": "little",
+        "lemma": "little"
+      },
+      {
+        "raw": "word",
+        "lemma": "word"
+      }
+    ]
+  },
+  {
+    "start": 127.439,
+    "end": 132.239,
+    "tokens": [
+      {
+        "raw": "You",
+        "lemma": "You"
+      },
+      {
+        "raw": "can",
+        "lemma": "can"
+      },
+      {
+        "raw": "learn",
+        "lemma": "learn"
+      },
+      {
+        "raw": "English",
+        "lemma": "English"
+      },
+      {
+        "raw": "through",
+        "lemma": "through"
+      },
+      {
+        "raw": "stories",
+        "lemma": "stories"
+      }
+    ]
+  },
+  {
+    "start": 129.599,
+    "end": 135.76,
+    "tokens": [
+      {
+        "raw": "like",
+        "lemma": "like"
+      },
+      {
+        "raw": "this",
+        "lemma": "this"
+      }
+    ]
+  },
+  {
+    "start": 132.239,
+    "end": 139.239,
+    "tokens": [
+      {
+        "raw": "Okay",
+        "lemma": "Okay"
+      },
+      {
+        "raw": "let's",
+        "lemma": "let's"
+      },
+      {
+        "raw": "go",
+        "lemma": "go"
+      },
+      {
+        "raw": "I'm",
+        "lemma": "I'm"
+      },
+      {
+        "raw": "ready",
+        "lemma": "ready"
+      },
+      {
+        "raw": "Slow",
+        "lemma": "Slow"
+      },
+      {
+        "raw": "English",
+        "lemma": "English"
+      }
+    ]
+  },
+  {
+    "start": 135.76,
+    "end": 139.239,
+    "tokens": [
+      {
+        "raw": "practice",
+        "lemma": "practice"
+      },
+      {
+        "raw": "time",
+        "lemma": "time"
+      }
+    ]
+  },
+  {
+    "start": 139.44,
+    "end": 147.2,
+    "tokens": [
+      {
+        "raw": "Every",
+        "lemma": "Every"
+      },
+      {
+        "raw": "morning",
+        "lemma": "morning"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "use",
+        "lemma": "use"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "as",
+        "lemma": "as"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "alarm",
+        "lemma": "alarm"
+      }
+    ]
+  },
+  {
+    "start": 142.319,
+    "end": 151.36,
+    "tokens": [
+      {
+        "raw": "clock",
+        "lemma": "clock"
+      },
+      {
+        "raw": "Beep",
+        "lemma": "Beep"
+      },
+      {
+        "raw": "beep",
+        "lemma": "beep"
+      },
+      {
+        "raw": "It",
+        "lemma": "It"
+      },
+      {
+        "raw": "wakes",
+        "lemma": "wakes"
+      },
+      {
+        "raw": "me",
+        "lemma": "me"
+      },
+      {
+        "raw": "up",
+        "lemma": "up"
+      }
+    ]
+  },
+  {
+    "start": 147.2,
+    "end": 156.44,
+    "tokens": [
+      {
+        "raw": "You",
+        "lemma": "You"
+      },
+      {
+        "raw": "use",
+        "lemma": "use"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "as",
+        "lemma": "as"
+      },
+      {
+        "raw": "an",
+        "lemma": "an"
+      },
+      {
+        "raw": "alarm",
+        "lemma": "alarm"
+      },
+      {
+        "raw": "clock",
+        "lemma": "clock"
+      }
+    ]
+  },
+  {
+    "start": 151.36,
+    "end": 156.44,
+    "tokens": [
+      {
+        "raw": "Yes",
+        "lemma": "Yes"
+      },
+      {
+        "raw": "Many",
+        "lemma": "Many"
+      },
+      {
+        "raw": "people",
+        "lemma": "people"
+      },
+      {
+        "raw": "do",
+        "lemma": "do"
+      },
+      {
+        "raw": "that",
+        "lemma": "that"
+      },
+      {
+        "raw": "now",
+        "lemma": "now"
+      }
+    ]
+  },
+  {
+    "start": 159.04,
+    "end": 166.04,
+    "tokens": [
+      {
+        "raw": "The",
+        "lemma": "The"
+      },
+      {
+        "raw": "alarm",
+        "lemma": "alarm"
+      },
+      {
+        "raw": "rings",
+        "lemma": "rings"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "press",
+        "lemma": "press"
+      },
+      {
+        "raw": "snooze",
+        "lemma": "snooze"
+      }
+    ]
+  },
+  {
+    "start": 163.04,
+    "end": 166.04,
+    "tokens": [
+      {
+        "raw": "Snooze",
+        "lemma": "Snooze"
+      }
+    ]
+  },
+  {
+    "start": 166.16,
+    "end": 175.04,
+    "tokens": [
+      {
+        "raw": "Snooze",
+        "lemma": "Snooze"
+      },
+      {
+        "raw": "means",
+        "lemma": "means"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "sleep",
+        "lemma": "sleep"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "few",
+        "lemma": "few"
+      },
+      {
+        "raw": "more",
+        "lemma": "more"
+      },
+      {
+        "raw": "minutes",
+        "lemma": "minutes"
+      }
+    ]
+  },
+  {
+    "start": 170.64,
+    "end": 181.2,
+    "tokens": [
+      {
+        "raw": "Maybe",
+        "lemma": "Maybe"
+      },
+      {
+        "raw": "five",
+        "lemma": "five"
+      },
+      {
+        "raw": "minutes",
+        "lemma": "minutes"
+      },
+      {
+        "raw": "maybe",
+        "lemma": "maybe"
+      }
+    ]
+  },
+  {
+    "start": 175.04,
+    "end": 185.0,
+    "tokens": [
+      {
+        "raw": "Oh",
+        "lemma": "Oh"
+      },
+      {
+        "raw": "so",
+        "lemma": "so"
+      },
+      {
+        "raw": "snooze",
+        "lemma": "snooze"
+      },
+      {
+        "raw": "means",
+        "lemma": "means"
+      },
+      {
+        "raw": "sleep",
+        "lemma": "sleep"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "little",
+        "lemma": "little"
+      },
+      {
+        "raw": "more",
+        "lemma": "more"
+      }
+    ]
+  },
+  {
+    "start": 181.2,
+    "end": 185.0,
+    "tokens": [
+      {
+        "raw": "Just",
+        "lemma": "Just"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "short",
+        "lemma": "short"
+      },
+      {
+        "raw": "time",
+        "lemma": "time"
+      }
+    ]
+  },
+  {
+    "start": 186.319,
+    "end": 191.76,
+    "tokens": [
+      {
+        "raw": "Exactly",
+        "lemma": "Exactly"
+      }
+    ]
+  },
+  {
+    "start": 187.92,
+    "end": 194.4,
+    "tokens": [
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "press",
+        "lemma": "press"
+      },
+      {
+        "raw": "snooze",
+        "lemma": "snooze"
+      },
+      {
+        "raw": "then",
+        "lemma": "then"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "wake",
+        "lemma": "wake"
+      },
+      {
+        "raw": "up",
+        "lemma": "up"
+      },
+      {
+        "raw": "again",
+        "lemma": "again"
+      }
+    ]
+  },
+  {
+    "start": 191.76,
+    "end": 197.28,
+    "tokens": [
+      {
+        "raw": "If",
+        "lemma": "If"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "press",
+        "lemma": "press"
+      },
+      {
+        "raw": "snooze",
+        "lemma": "snooze"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "will",
+        "lemma": "will"
+      },
+      {
+        "raw": "sleep",
+        "lemma": "sleep"
+      },
+      {
+        "raw": "for",
+        "lemma": "for"
+      },
+      {
+        "raw": "two",
+        "lemma": "two"
+      }
+    ]
+  },
+  {
+    "start": 194.4,
+    "end": 197.28,
+    "tokens": [
+      {
+        "raw": "more",
+        "lemma": "more"
+      },
+      {
+        "raw": "hours",
+        "lemma": "hours"
+      }
+    ]
+  },
+  {
+    "start": 199.599,
+    "end": 205.44,
+    "tokens": [
+      {
+        "raw": "That's",
+        "lemma": "That's"
+      },
+      {
+        "raw": "dangerous",
+        "lemma": "dangerous"
+      }
+    ]
+  },
+  {
+    "start": 202.48,
+    "end": 209.0,
+    "tokens": [
+      {
+        "raw": "After",
+        "lemma": "After"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "alarm",
+        "lemma": "alarm"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "look",
+        "lemma": "look"
+      },
+      {
+        "raw": "at",
+        "lemma": "at"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      }
+    ]
+  },
+  {
+    "start": 205.44,
+    "end": 209.0,
+    "tokens": [
+      {
+        "raw": "check",
+        "lemma": "check"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "notifications",
+        "lemma": "notifications"
+      }
+    ]
+  },
+  {
+    "start": 209.92,
+    "end": 215.12,
+    "tokens": [
+      {
+        "raw": "Notifications",
+        "lemma": "Notifications"
+      }
+    ]
+  },
+  {
+    "start": 211.76,
+    "end": 219.04,
+    "tokens": [
+      {
+        "raw": "Yes",
+        "lemma": "Yes"
+      },
+      {
+        "raw": "Notifications",
+        "lemma": "Notifications"
+      },
+      {
+        "raw": "are",
+        "lemma": "are"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "little",
+        "lemma": "little"
+      }
+    ]
+  },
+  {
+    "start": 215.12,
+    "end": 222.879,
+    "tokens": [
+      {
+        "raw": "messages",
+        "lemma": "messages"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "screen",
+        "lemma": "screen"
+      }
+    ]
+  },
+  {
+    "start": 219.04,
+    "end": 228.159,
+    "tokens": [
+      {
+        "raw": "They",
+        "lemma": "They"
+      },
+      {
+        "raw": "tell",
+        "lemma": "tell"
+      },
+      {
+        "raw": "me",
+        "lemma": "me"
+      },
+      {
+        "raw": "new",
+        "lemma": "new"
+      },
+      {
+        "raw": "things",
+        "lemma": "things"
+      },
+      {
+        "raw": "like",
+        "lemma": "like"
+      },
+      {
+        "raw": "new",
+        "lemma": "new"
+      },
+      {
+        "raw": "emails",
+        "lemma": "emails"
+      }
+    ]
+  },
+  {
+    "start": 222.879,
+    "end": 232.08,
+    "tokens": [
+      {
+        "raw": "new",
+        "lemma": "new"
+      },
+      {
+        "raw": "texts",
+        "lemma": "texts"
+      },
+      {
+        "raw": "news",
+        "lemma": "news"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "so",
+        "lemma": "so"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      }
+    ]
+  },
+  {
+    "start": 228.159,
+    "end": 235.76,
+    "tokens": [
+      {
+        "raw": "Ah",
+        "lemma": "Ah"
+      },
+      {
+        "raw": "so",
+        "lemma": "so"
+      },
+      {
+        "raw": "notification",
+        "lemma": "notification"
+      },
+      {
+        "raw": "means",
+        "lemma": "means"
+      },
+      {
+        "raw": "hey",
+        "lemma": "hey"
+      },
+      {
+        "raw": "something",
+        "lemma": "something"
+      }
+    ]
+  },
+  {
+    "start": 232.08,
+    "end": 238.08,
+    "tokens": [
+      {
+        "raw": "new",
+        "lemma": "new"
+      },
+      {
+        "raw": "for",
+        "lemma": "for"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "can",
+        "lemma": "can"
+      },
+      {
+        "raw": "say",
+        "lemma": "say"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "have",
+        "lemma": "have"
+      }
+    ]
+  },
+  {
+    "start": 235.76,
+    "end": 243.0,
+    "tokens": [
+      {
+        "raw": "notifications",
+        "lemma": "notifications"
+      },
+      {
+        "raw": "this",
+        "lemma": "this"
+      },
+      {
+        "raw": "morning",
+        "lemma": "morning"
+      }
+    ]
+  },
+  {
+    "start": 238.08,
+    "end": 243.0,
+    "tokens": [
+      {
+        "raw": "Perfect",
+        "lemma": "Perfect"
+      },
+      {
+        "raw": "That's",
+        "lemma": "That's"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "great",
+        "lemma": "great"
+      },
+      {
+        "raw": "sentence",
+        "lemma": "sentence"
+      }
+    ]
+  },
+  {
+    "start": 244.56,
+    "end": 250.159,
+    "tokens": [
+      {
+        "raw": "So",
+        "lemma": "So"
+      },
+      {
+        "raw": "in",
+        "lemma": "in"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "morning",
+        "lemma": "morning"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      }
+    ]
+  },
+  {
+    "start": 246.959,
+    "end": 253.159,
+    "tokens": [
+      {
+        "raw": "alarm",
+        "lemma": "alarm"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "snooze",
+        "lemma": "snooze"
+      },
+      {
+        "raw": "button",
+        "lemma": "button"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      }
+    ]
+  },
+  {
+    "start": 250.159,
+    "end": 253.159,
+    "tokens": [
+      {
+        "raw": "notifications",
+        "lemma": "notifications"
+      }
+    ]
+  },
+  {
+    "start": 253.68,
+    "end": 261.519,
+    "tokens": [
+      {
+        "raw": "right",
+        "lemma": "right"
+      },
+      {
+        "raw": "My",
+        "lemma": "My"
+      },
+      {
+        "raw": "day",
+        "lemma": "day"
+      },
+      {
+        "raw": "starts",
+        "lemma": "starts"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      }
+    ]
+  },
+  {
+    "start": 258.16,
+    "end": 264.479,
+    "tokens": [
+      {
+        "raw": "After",
+        "lemma": "After"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "alarm",
+        "lemma": "alarm"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "go",
+        "lemma": "go"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "kitchen",
+        "lemma": "kitchen"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      }
+    ]
+  },
+  {
+    "start": 261.519,
+    "end": 267.88,
+    "tokens": [
+      {
+        "raw": "make",
+        "lemma": "make"
+      },
+      {
+        "raw": "breakfast",
+        "lemma": "breakfast"
+      },
+      {
+        "raw": "And",
+        "lemma": "And"
+      },
+      {
+        "raw": "of",
+        "lemma": "of"
+      },
+      {
+        "raw": "course",
+        "lemma": "course"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "take",
+        "lemma": "take"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      }
+    ]
+  },
+  {
+    "start": 264.479,
+    "end": 267.88,
+    "tokens": [
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "me",
+        "lemma": "me"
+      }
+    ]
+  },
+  {
+    "start": 269.36,
+    "end": 273.52,
+    "tokens": [
+      {
+        "raw": "Do",
+        "lemma": "Do"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "really",
+        "lemma": "really"
+      },
+      {
+        "raw": "need",
+        "lemma": "need"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "for",
+        "lemma": "for"
+      }
+    ]
+  },
+  {
+    "start": 271.36,
+    "end": 279.8,
+    "tokens": [
+      {
+        "raw": "breakfast",
+        "lemma": "breakfast"
+      }
+    ]
+  },
+  {
+    "start": 273.52,
+    "end": 279.8,
+    "tokens": [
+      {
+        "raw": "Yes",
+        "lemma": "Yes"
+      },
+      {
+        "raw": "While",
+        "lemma": "While"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "eat",
+        "lemma": "eat"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "look",
+        "lemma": "look"
+      },
+      {
+        "raw": "at",
+        "lemma": "at"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      }
+    ]
+  },
+  {
+    "start": 280.72,
+    "end": 286.12,
+    "tokens": [
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "open",
+        "lemma": "open"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "news",
+        "lemma": "news"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      }
+    ]
+  },
+  {
+    "start": 282.88,
+    "end": 286.12,
+    "tokens": [
+      {
+        "raw": "The",
+        "lemma": "The"
+      },
+      {
+        "raw": "news",
+        "lemma": "news"
+      }
+    ]
+  },
+  {
+    "start": 286.32,
+    "end": 292.0,
+    "tokens": [
+      {
+        "raw": "Not",
+        "lemma": "Not"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "P",
+        "lemma": "P"
+      },
+      {
+        "raw": "We",
+        "lemma": "We"
+      },
+      {
+        "raw": "just",
+        "lemma": "just"
+      },
+      {
+        "raw": "say",
+        "lemma": "say"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      }
+    ]
+  },
+  {
+    "start": 290.24,
+    "end": 296.639,
+    "tokens": [
+      {
+        "raw": "Oh",
+        "lemma": "Oh"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      }
+    ]
+  },
+  {
+    "start": 292.0,
+    "end": 300.32,
+    "tokens": [
+      {
+        "raw": "Yes",
+        "lemma": "Yes"
+      },
+      {
+        "raw": "like",
+        "lemma": "like"
+      },
+      {
+        "raw": "map",
+        "lemma": "map"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "music",
+        "lemma": "music"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "weather",
+        "lemma": "weather"
+      }
+    ]
+  },
+  {
+    "start": 296.639,
+    "end": 302.08,
+    "tokens": [
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "Just",
+        "lemma": "Just"
+      },
+      {
+        "raw": "say",
+        "lemma": "say"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      }
+    ]
+  },
+  {
+    "start": 300.32,
+    "end": 304.72,
+    "tokens": [
+      {
+        "raw": "App",
+        "lemma": "App"
+      }
+    ]
+  },
+  {
+    "start": 302.08,
+    "end": 308.24,
+    "tokens": [
+      {
+        "raw": "Good",
+        "lemma": "Good"
+      },
+      {
+        "raw": "Say",
+        "lemma": "Say"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      },
+      {
+        "raw": "one",
+        "lemma": "one"
+      },
+      {
+        "raw": "more",
+        "lemma": "more"
+      },
+      {
+        "raw": "time",
+        "lemma": "time"
+      }
+    ]
+  },
+  {
+    "start": 304.72,
+    "end": 312.639,
+    "tokens": [
+      {
+        "raw": "App",
+        "lemma": "App"
+      },
+      {
+        "raw": "App",
+        "lemma": "App"
+      }
+    ]
+  },
+  {
+    "start": 308.24,
+    "end": 314.32,
+    "tokens": [
+      {
+        "raw": "Perfect",
+        "lemma": "Perfect"
+      },
+      {
+        "raw": "So",
+        "lemma": "So"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "open",
+        "lemma": "open"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "news",
+        "lemma": "news"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      }
+    ]
+  },
+  {
+    "start": 312.639,
+    "end": 315.919,
+    "tokens": [
+      {
+        "raw": "read",
+        "lemma": "read"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "headlines",
+        "lemma": "headlines"
+      }
+    ]
+  },
+  {
+    "start": 314.32,
+    "end": 318.56,
+    "tokens": [
+      {
+        "raw": "Headlines",
+        "lemma": "Headlines"
+      }
+    ]
+  },
+  {
+    "start": 315.919,
+    "end": 321.12,
+    "tokens": [
+      {
+        "raw": "What",
+        "lemma": "What"
+      },
+      {
+        "raw": "are",
+        "lemma": "are"
+      },
+      {
+        "raw": "headlines",
+        "lemma": "headlines"
+      }
+    ]
+  },
+  {
+    "start": 318.56,
+    "end": 325.28,
+    "tokens": [
+      {
+        "raw": "Headlines",
+        "lemma": "Headlines"
+      },
+      {
+        "raw": "are",
+        "lemma": "are"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "big",
+        "lemma": "big"
+      },
+      {
+        "raw": "news",
+        "lemma": "news"
+      },
+      {
+        "raw": "titles",
+        "lemma": "titles"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      }
+    ]
+  },
+  {
+    "start": 321.12,
+    "end": 328.4,
+    "tokens": [
+      {
+        "raw": "see",
+        "lemma": "see"
+      },
+      {
+        "raw": "first",
+        "lemma": "first"
+      },
+      {
+        "raw": "For",
+        "lemma": "For"
+      },
+      {
+        "raw": "example",
+        "lemma": "example"
+      },
+      {
+        "raw": "big",
+        "lemma": "big"
+      },
+      {
+        "raw": "storm",
+        "lemma": "storm"
+      },
+      {
+        "raw": "today",
+        "lemma": "today"
+      }
+    ]
+  },
+  {
+    "start": 325.28,
+    "end": 332.32,
+    "tokens": [
+      {
+        "raw": "or",
+        "lemma": "or"
+      },
+      {
+        "raw": "new",
+        "lemma": "new"
+      },
+      {
+        "raw": "movie",
+        "lemma": "movie"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "number",
+        "lemma": "number"
+      },
+      {
+        "raw": "one",
+        "lemma": "one"
+      }
+    ]
+  },
+  {
+    "start": 328.4,
+    "end": 334.56,
+    "tokens": [
+      {
+        "raw": "Ah",
+        "lemma": "Ah"
+      },
+      {
+        "raw": "so",
+        "lemma": "so"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "headline",
+        "lemma": "headline"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "short",
+        "lemma": "short"
+      },
+      {
+        "raw": "news",
+        "lemma": "news"
+      },
+      {
+        "raw": "title",
+        "lemma": "title"
+      }
+    ]
+  },
+  {
+    "start": 332.32,
+    "end": 338.479,
+    "tokens": [
+      {
+        "raw": "Exactly",
+        "lemma": "Exactly"
+      }
+    ]
+  },
+  {
+    "start": 334.56,
+    "end": 340.639,
+    "tokens": [
+      {
+        "raw": "And",
+        "lemma": "And"
+      },
+      {
+        "raw": "after",
+        "lemma": "after"
+      },
+      {
+        "raw": "that",
+        "lemma": "that"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "check",
+        "lemma": "check"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "group",
+        "lemma": "group"
+      },
+      {
+        "raw": "chat",
+        "lemma": "chat"
+      }
+    ]
+  },
+  {
+    "start": 338.479,
+    "end": 345.919,
+    "tokens": [
+      {
+        "raw": "Your",
+        "lemma": "Your"
+      },
+      {
+        "raw": "friends",
+        "lemma": "friends"
+      },
+      {
+        "raw": "text",
+        "lemma": "text"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "in",
+        "lemma": "in"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "morning",
+        "lemma": "morning"
+      }
+    ]
+  },
+  {
+    "start": 340.639,
+    "end": 348.56,
+    "tokens": [
+      {
+        "raw": "Uh",
+        "lemma": "Uh"
+      },
+      {
+        "raw": "no",
+        "lemma": "no"
+      },
+      {
+        "raw": "they",
+        "lemma": "they"
+      },
+      {
+        "raw": "text",
+        "lemma": "text"
+      },
+      {
+        "raw": "at",
+        "lemma": "at"
+      },
+      {
+        "raw": "night",
+        "lemma": "night"
+      },
+      {
+        "raw": "but",
+        "lemma": "but"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "read",
+        "lemma": "read"
+      }
+    ]
+  },
+  {
+    "start": 345.919,
+    "end": 351.039,
+    "tokens": [
+      {
+        "raw": "everything",
+        "lemma": "everything"
+      },
+      {
+        "raw": "in",
+        "lemma": "in"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "morning",
+        "lemma": "morning"
+      }
+    ]
+  },
+  {
+    "start": 348.56,
+    "end": 353.44,
+    "tokens": [
+      {
+        "raw": "That's",
+        "lemma": "That's"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "lot",
+        "lemma": "lot"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "read",
+        "lemma": "read"
+      }
+    ]
+  },
+  {
+    "start": 351.039,
+    "end": 356.08,
+    "tokens": [
+      {
+        "raw": "So",
+        "lemma": "So"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "open",
+        "lemma": "open"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "news",
+        "lemma": "news"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "read",
+        "lemma": "read"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      }
+    ]
+  },
+  {
+    "start": 353.44,
+    "end": 358.96,
+    "tokens": [
+      {
+        "raw": "headlines",
+        "lemma": "headlines"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "then",
+        "lemma": "then"
+      },
+      {
+        "raw": "check",
+        "lemma": "check"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "group",
+        "lemma": "group"
+      }
+    ]
+  },
+  {
+    "start": 356.08,
+    "end": 362.96,
+    "tokens": [
+      {
+        "raw": "chat",
+        "lemma": "chat"
+      }
+    ]
+  },
+  {
+    "start": 358.96,
+    "end": 367.199,
+    "tokens": [
+      {
+        "raw": "Yes",
+        "lemma": "Yes"
+      },
+      {
+        "raw": "that",
+        "lemma": "that"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "breakfast",
+        "lemma": "breakfast"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      }
+    ]
+  },
+  {
+    "start": 362.96,
+    "end": 368.96,
+    "tokens": [
+      {
+        "raw": "And",
+        "lemma": "And"
+      },
+      {
+        "raw": "remember",
+        "lemma": "remember"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "not",
+        "lemma": "not"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "easy",
+        "lemma": "easy"
+      },
+      {
+        "raw": "English",
+        "lemma": "English"
+      }
+    ]
+  },
+  {
+    "start": 367.199,
+    "end": 373.039,
+    "tokens": [
+      {
+        "raw": "snack",
+        "lemma": "snack"
+      }
+    ]
+  },
+  {
+    "start": 368.96,
+    "end": 376.4,
+    "tokens": [
+      {
+        "raw": "Look",
+        "lemma": "Look"
+      },
+      {
+        "raw": "Emily",
+        "lemma": "Emily"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "just",
+        "lemma": "just"
+      },
+      {
+        "raw": "got",
+        "lemma": "got"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "text",
+        "lemma": "text"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "only",
+        "lemma": "only"
+      }
+    ]
+  },
+  {
+    "start": 373.039,
+    "end": 378.479,
+    "tokens": [
+      {
+        "raw": "emojis",
+        "lemma": "emojis"
+      },
+      {
+        "raw": "Just",
+        "lemma": "Just"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "smiley",
+        "lemma": "smiley"
+      },
+      {
+        "raw": "face",
+        "lemma": "face"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "slice",
+        "lemma": "slice"
+      }
+    ]
+  },
+  {
+    "start": 376.4,
+    "end": 382.08,
+    "tokens": [
+      {
+        "raw": "of",
+        "lemma": "of"
+      },
+      {
+        "raw": "pizza",
+        "lemma": "pizza"
+      }
+    ]
+  },
+  {
+    "start": 378.479,
+    "end": 384.24,
+    "tokens": [
+      {
+        "raw": "That's",
+        "lemma": "That's"
+      },
+      {
+        "raw": "easy",
+        "lemma": "easy"
+      },
+      {
+        "raw": "It",
+        "lemma": "It"
+      },
+      {
+        "raw": "means",
+        "lemma": "means"
+      },
+      {
+        "raw": "let's",
+        "lemma": "let's"
+      },
+      {
+        "raw": "eat",
+        "lemma": "eat"
+      },
+      {
+        "raw": "pizza",
+        "lemma": "pizza"
+      }
+    ]
+  },
+  {
+    "start": 382.08,
+    "end": 388.88,
+    "tokens": [
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "be",
+        "lemma": "be"
+      },
+      {
+        "raw": "happy",
+        "lemma": "happy"
+      }
+    ]
+  },
+  {
+    "start": 384.24,
+    "end": 390.479,
+    "tokens": [
+      {
+        "raw": "True",
+        "lemma": "True"
+      },
+      {
+        "raw": "Emojis",
+        "lemma": "Emojis"
+      },
+      {
+        "raw": "are",
+        "lemma": "are"
+      },
+      {
+        "raw": "like",
+        "lemma": "like"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "new",
+        "lemma": "new"
+      },
+      {
+        "raw": "language",
+        "lemma": "language"
+      }
+    ]
+  },
+  {
+    "start": 388.88,
+    "end": 393.28,
+    "tokens": [
+      {
+        "raw": "Yeah",
+        "lemma": "Yeah"
+      }
+    ]
+  },
+  {
+    "start": 390.479,
+    "end": 396.6,
+    "tokens": [
+      {
+        "raw": "Sometimes",
+        "lemma": "Sometimes"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "think",
+        "lemma": "think"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "speak",
+        "lemma": "speak"
+      },
+      {
+        "raw": "emoji",
+        "lemma": "emoji"
+      },
+      {
+        "raw": "better",
+        "lemma": "better"
+      }
+    ]
+  },
+  {
+    "start": 393.28,
+    "end": 396.6,
+    "tokens": [
+      {
+        "raw": "than",
+        "lemma": "than"
+      },
+      {
+        "raw": "English",
+        "lemma": "English"
+      }
+    ]
+  },
+  {
+    "start": 396.639,
+    "end": 403.88,
+    "tokens": [
+      {
+        "raw": "After",
+        "lemma": "After"
+      },
+      {
+        "raw": "breakfast",
+        "lemma": "breakfast"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "leave",
+        "lemma": "leave"
+      },
+      {
+        "raw": "home",
+        "lemma": "home"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "put",
+        "lemma": "put"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      }
+    ]
+  },
+  {
+    "start": 400.639,
+    "end": 403.88,
+    "tokens": [
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "headphones",
+        "lemma": "headphones"
+      }
+    ]
+  },
+  {
+    "start": 405.68,
+    "end": 409.52,
+    "tokens": [
+      {
+        "raw": "Headphones",
+        "lemma": "Headphones"
+      },
+      {
+        "raw": "Let",
+        "lemma": "Let"
+      },
+      {
+        "raw": "me",
+        "lemma": "me"
+      },
+      {
+        "raw": "guess",
+        "lemma": "guess"
+      },
+      {
+        "raw": "for",
+        "lemma": "for"
+      },
+      {
+        "raw": "music",
+        "lemma": "music"
+      }
+    ]
+  },
+  {
+    "start": 408.479,
+    "end": 413.759,
+    "tokens": [
+      {
+        "raw": "right",
+        "lemma": "right"
+      }
+    ]
+  },
+  {
+    "start": 409.52,
+    "end": 415.6,
+    "tokens": [
+      {
+        "raw": "Yes",
+        "lemma": "Yes"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "open",
+        "lemma": "open"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "music",
+        "lemma": "music"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "love",
+        "lemma": "love"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      }
+    ]
+  },
+  {
+    "start": 413.759,
+    "end": 419.599,
+    "tokens": [
+      {
+        "raw": "music",
+        "lemma": "music"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "in",
+        "lemma": "in"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "morning",
+        "lemma": "morning"
+      }
+    ]
+  },
+  {
+    "start": 415.6,
+    "end": 422.56,
+    "tokens": [
+      {
+        "raw": "Music",
+        "lemma": "Music"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "have",
+        "lemma": "have"
+      },
+      {
+        "raw": "one",
+        "lemma": "one"
+      },
+      {
+        "raw": "too",
+        "lemma": "too"
+      },
+      {
+        "raw": "but",
+        "lemma": "but"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "often",
+        "lemma": "often"
+      }
+    ]
+  },
+  {
+    "start": 419.599,
+    "end": 425.88,
+    "tokens": [
+      {
+        "raw": "forget",
+        "lemma": "forget"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "open",
+        "lemma": "open"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "just",
+        "lemma": "just"
+      },
+      {
+        "raw": "sit",
+        "lemma": "sit"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "bus",
+        "lemma": "bus"
+      }
+    ]
+  },
+  {
+    "start": 422.56,
+    "end": 425.88,
+    "tokens": [
+      {
+        "raw": "in",
+        "lemma": "in"
+      },
+      {
+        "raw": "silence",
+        "lemma": "silence"
+      }
+    ]
+  },
+  {
+    "start": 426.479,
+    "end": 433.36,
+    "tokens": [
+      {
+        "raw": "You",
+        "lemma": "You"
+      },
+      {
+        "raw": "need",
+        "lemma": "need"
+      },
+      {
+        "raw": "music",
+        "lemma": "music"
+      },
+      {
+        "raw": "in",
+        "lemma": "in"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "morning",
+        "lemma": "morning"
+      }
+    ]
+  },
+  {
+    "start": 429.68,
+    "end": 435.919,
+    "tokens": [
+      {
+        "raw": "Sometimes",
+        "lemma": "Sometimes"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "listen",
+        "lemma": "listen"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "songs",
+        "lemma": "songs"
+      },
+      {
+        "raw": "Sometimes",
+        "lemma": "Sometimes"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      }
+    ]
+  },
+  {
+    "start": 433.36,
+    "end": 439.36,
+    "tokens": [
+      {
+        "raw": "listen",
+        "lemma": "listen"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "an",
+        "lemma": "an"
+      },
+      {
+        "raw": "audio",
+        "lemma": "audio"
+      },
+      {
+        "raw": "book",
+        "lemma": "book"
+      }
+    ]
+  },
+  {
+    "start": 435.919,
+    "end": 441.68,
+    "tokens": [
+      {
+        "raw": "Audio",
+        "lemma": "Audio"
+      },
+      {
+        "raw": "book",
+        "lemma": "book"
+      },
+      {
+        "raw": "You",
+        "lemma": "You"
+      },
+      {
+        "raw": "mean",
+        "lemma": "mean"
+      },
+      {
+        "raw": "like",
+        "lemma": "like"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "book",
+        "lemma": "book"
+      },
+      {
+        "raw": "that",
+        "lemma": "that"
+      }
+    ]
+  },
+  {
+    "start": 439.36,
+    "end": 446.919,
+    "tokens": [
+      {
+        "raw": "talks",
+        "lemma": "talks"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      }
+    ]
+  },
+  {
+    "start": 441.68,
+    "end": 446.919,
+    "tokens": [
+      {
+        "raw": "Exactly",
+        "lemma": "Exactly"
+      },
+      {
+        "raw": "A",
+        "lemma": "A"
+      },
+      {
+        "raw": "book",
+        "lemma": "book"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "can",
+        "lemma": "can"
+      },
+      {
+        "raw": "listen",
+        "lemma": "listen"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      }
+    ]
+  },
+  {
+    "start": 448.72,
+    "end": 455.08,
+    "tokens": [
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "listen",
+        "lemma": "listen"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "audiobooks",
+        "lemma": "audiobooks"
+      },
+      {
+        "raw": "when",
+        "lemma": "when"
+      },
+      {
+        "raw": "I'm",
+        "lemma": "I'm"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      }
+    ]
+  },
+  {
+    "start": 451.039,
+    "end": 455.08,
+    "tokens": [
+      {
+        "raw": "bus",
+        "lemma": "bus"
+      },
+      {
+        "raw": "or",
+        "lemma": "or"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "train",
+        "lemma": "train"
+      }
+    ]
+  },
+  {
+    "start": 455.84,
+    "end": 461.759,
+    "tokens": [
+      {
+        "raw": "That's",
+        "lemma": "That's"
+      },
+      {
+        "raw": "cool",
+        "lemma": "cool"
+      }
+    ]
+  },
+  {
+    "start": 458.72,
+    "end": 465.08,
+    "tokens": [
+      {
+        "raw": "My",
+        "lemma": "My"
+      },
+      {
+        "raw": "books",
+        "lemma": "books"
+      },
+      {
+        "raw": "just",
+        "lemma": "just"
+      },
+      {
+        "raw": "sit",
+        "lemma": "sit"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "shelf",
+        "lemma": "shelf"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "never",
+        "lemma": "never"
+      }
+    ]
+  },
+  {
+    "start": 461.759,
+    "end": 465.08,
+    "tokens": [
+      {
+        "raw": "read",
+        "lemma": "read"
+      },
+      {
+        "raw": "them",
+        "lemma": "them"
+      }
+    ]
+  },
+  {
+    "start": 465.919,
+    "end": 472.639,
+    "tokens": [
+      {
+        "raw": "Oh",
+        "lemma": "Oh"
+      },
+      {
+        "raw": "look",
+        "lemma": "look"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "see",
+        "lemma": "see"
+      },
+      {
+        "raw": "two",
+        "lemma": "two"
+      },
+      {
+        "raw": "missed",
+        "lemma": "missed"
+      },
+      {
+        "raw": "calls",
+        "lemma": "calls"
+      }
+    ]
+  },
+  {
+    "start": 469.12,
+    "end": 476.12,
+    "tokens": [
+      {
+        "raw": "Missed",
+        "lemma": "Missed"
+      },
+      {
+        "raw": "calls",
+        "lemma": "calls"
+      },
+      {
+        "raw": "So",
+        "lemma": "So"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "rang",
+        "lemma": "rang"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      }
+    ]
+  },
+  {
+    "start": 472.639,
+    "end": 476.12,
+    "tokens": [
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "didn't",
+        "lemma": "didn't"
+      },
+      {
+        "raw": "answer",
+        "lemma": "answer"
+      }
+    ]
+  },
+  {
+    "start": 476.4,
+    "end": 482.56,
+    "tokens": [
+      {
+        "raw": "Yes",
+        "lemma": "Yes"
+      },
+      {
+        "raw": "Missed",
+        "lemma": "Missed"
+      },
+      {
+        "raw": "calls",
+        "lemma": "calls"
+      },
+      {
+        "raw": "are",
+        "lemma": "are"
+      },
+      {
+        "raw": "calls",
+        "lemma": "calls"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "don't",
+        "lemma": "don't"
+      }
+    ]
+  },
+  {
+    "start": 479.199,
+    "end": 485.879,
+    "tokens": [
+      {
+        "raw": "answer",
+        "lemma": "answer"
+      },
+      {
+        "raw": "If",
+        "lemma": "If"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "don't",
+        "lemma": "don't"
+      },
+      {
+        "raw": "want",
+        "lemma": "want"
+      },
+      {
+        "raw": "pickup",
+        "lemma": "pickup"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "get",
+        "lemma": "get"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      }
+    ]
+  },
+  {
+    "start": 482.56,
+    "end": 485.879,
+    "tokens": [
+      {
+        "raw": "missed",
+        "lemma": "missed"
+      },
+      {
+        "raw": "call",
+        "lemma": "call"
+      }
+    ]
+  },
+  {
+    "start": 485.919,
+    "end": 492.479,
+    "tokens": [
+      {
+        "raw": "Got",
+        "lemma": "Got"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      }
+    ]
+  },
+  {
+    "start": 488.879,
+    "end": 495.759,
+    "tokens": [
+      {
+        "raw": "So",
+        "lemma": "So"
+      },
+      {
+        "raw": "if",
+        "lemma": "if"
+      },
+      {
+        "raw": "I'm",
+        "lemma": "I'm"
+      },
+      {
+        "raw": "sleeping",
+        "lemma": "sleeping"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "mom",
+        "lemma": "mom"
+      },
+      {
+        "raw": "calls",
+        "lemma": "calls"
+      }
+    ]
+  },
+  {
+    "start": 492.479,
+    "end": 499.919,
+    "tokens": [
+      {
+        "raw": "later",
+        "lemma": "later"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "see",
+        "lemma": "see"
+      },
+      {
+        "raw": "five",
+        "lemma": "five"
+      },
+      {
+        "raw": "missed",
+        "lemma": "missed"
+      },
+      {
+        "raw": "calls",
+        "lemma": "calls"
+      }
+    ]
+  },
+  {
+    "start": 495.759,
+    "end": 503.039,
+    "tokens": [
+      {
+        "raw": "Exactly",
+        "lemma": "Exactly"
+      },
+      {
+        "raw": "And",
+        "lemma": "And"
+      },
+      {
+        "raw": "later",
+        "lemma": "later"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "call",
+        "lemma": "call"
+      },
+      {
+        "raw": "back",
+        "lemma": "back"
+      }
+    ]
+  },
+  {
+    "start": 499.919,
+    "end": 505.599,
+    "tokens": [
+      {
+        "raw": "Call",
+        "lemma": "Call"
+      },
+      {
+        "raw": "back",
+        "lemma": "back"
+      },
+      {
+        "raw": "after",
+        "lemma": "after"
+      },
+      {
+        "raw": "missed",
+        "lemma": "missed"
+      },
+      {
+        "raw": "calls",
+        "lemma": "calls"
+      },
+      {
+        "raw": "That",
+        "lemma": "That"
+      },
+      {
+        "raw": "one",
+        "lemma": "one"
+      }
+    ]
+  },
+  {
+    "start": 503.039,
+    "end": 507.28,
+    "tokens": [
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "easy",
+        "lemma": "easy"
+      }
+    ]
+  },
+  {
+    "start": 505.599,
+    "end": 509.68,
+    "tokens": [
+      {
+        "raw": "Right",
+        "lemma": "Right"
+      }
+    ]
+  },
+  {
+    "start": 507.28,
+    "end": 513.039,
+    "tokens": [
+      {
+        "raw": "So",
+        "lemma": "So"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "way",
+        "lemma": "way"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "school",
+        "lemma": "school"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "use",
+        "lemma": "use"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      }
+    ]
+  },
+  {
+    "start": 509.68,
+    "end": 516.399,
+    "tokens": [
+      {
+        "raw": "headphones",
+        "lemma": "headphones"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "music",
+        "lemma": "music"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "or",
+        "lemma": "or"
+      },
+      {
+        "raw": "audio",
+        "lemma": "audio"
+      },
+      {
+        "raw": "book",
+        "lemma": "book"
+      }
+    ]
+  },
+  {
+    "start": 513.039,
+    "end": 520.32,
+    "tokens": [
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "also",
+        "lemma": "also"
+      },
+      {
+        "raw": "check",
+        "lemma": "check"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "missed",
+        "lemma": "missed"
+      },
+      {
+        "raw": "calls",
+        "lemma": "calls"
+      }
+    ]
+  },
+  {
+    "start": 516.399,
+    "end": 524.159,
+    "tokens": [
+      {
+        "raw": "When",
+        "lemma": "When"
+      },
+      {
+        "raw": "I'm",
+        "lemma": "I'm"
+      },
+      {
+        "raw": "in",
+        "lemma": "in"
+      },
+      {
+        "raw": "class",
+        "lemma": "class"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "don't",
+        "lemma": "don't"
+      },
+      {
+        "raw": "use",
+        "lemma": "use"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      }
+    ]
+  },
+  {
+    "start": 520.32,
+    "end": 527.159,
+    "tokens": [
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "put",
+        "lemma": "put"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      },
+      {
+        "raw": "away",
+        "lemma": "away"
+      },
+      {
+        "raw": "My",
+        "lemma": "My"
+      },
+      {
+        "raw": "bag",
+        "lemma": "bag"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "closed",
+        "lemma": "closed"
+      },
+      {
+        "raw": "Phone",
+        "lemma": "Phone"
+      }
+    ]
+  },
+  {
+    "start": 524.159,
+    "end": 527.159,
+    "tokens": [
+      {
+        "raw": "inside",
+        "lemma": "inside"
+      }
+    ]
+  },
+  {
+    "start": 527.92,
+    "end": 533.32,
+    "tokens": [
+      {
+        "raw": "Put",
+        "lemma": "Put"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      },
+      {
+        "raw": "away",
+        "lemma": "away"
+      },
+      {
+        "raw": "So",
+        "lemma": "So"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "hide",
+        "lemma": "hide"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      },
+      {
+        "raw": "in",
+        "lemma": "in"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      }
+    ]
+  },
+  {
+    "start": 530.32,
+    "end": 533.32,
+    "tokens": [
+      {
+        "raw": "bag",
+        "lemma": "bag"
+      }
+    ]
+  },
+  {
+    "start": 533.92,
+    "end": 542.36,
+    "tokens": [
+      {
+        "raw": "Yes",
+        "lemma": "Yes"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "put",
+        "lemma": "put"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      },
+      {
+        "raw": "away",
+        "lemma": "away"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "don't",
+        "lemma": "don't"
+      },
+      {
+        "raw": "look",
+        "lemma": "look"
+      },
+      {
+        "raw": "at",
+        "lemma": "at"
+      }
+    ]
+  },
+  {
+    "start": 536.88,
+    "end": 542.36,
+    "tokens": [
+      {
+        "raw": "it",
+        "lemma": "it"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "also",
+        "lemma": "also"
+      },
+      {
+        "raw": "turn",
+        "lemma": "turn"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "do",
+        "lemma": "do"
+      },
+      {
+        "raw": "not",
+        "lemma": "not"
+      },
+      {
+        "raw": "disturb",
+        "lemma": "disturb"
+      }
+    ]
+  },
+  {
+    "start": 544.16,
+    "end": 553.8,
+    "tokens": [
+      {
+        "raw": "Do",
+        "lemma": "Do"
+      },
+      {
+        "raw": "not",
+        "lemma": "not"
+      },
+      {
+        "raw": "disturb",
+        "lemma": "disturb"
+      },
+      {
+        "raw": "That",
+        "lemma": "That"
+      },
+      {
+        "raw": "means",
+        "lemma": "means"
+      },
+      {
+        "raw": "no",
+        "lemma": "no"
+      },
+      {
+        "raw": "calls",
+        "lemma": "calls"
+      },
+      {
+        "raw": "no",
+        "lemma": "no"
+      }
+    ]
+  },
+  {
+    "start": 549.92,
+    "end": 553.8,
+    "tokens": [
+      {
+        "raw": "texts",
+        "lemma": "texts"
+      },
+      {
+        "raw": "right",
+        "lemma": "right"
+      }
+    ]
+  },
+  {
+    "start": 554.56,
+    "end": 558.72,
+    "tokens": [
+      {
+        "raw": "Yes",
+        "lemma": "Yes"
+      }
+    ]
+  },
+  {
+    "start": 556.08,
+    "end": 562.0,
+    "tokens": [
+      {
+        "raw": "When",
+        "lemma": "When"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "turn",
+        "lemma": "turn"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "do",
+        "lemma": "do"
+      },
+      {
+        "raw": "not",
+        "lemma": "not"
+      },
+      {
+        "raw": "disturb",
+        "lemma": "disturb"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "don't",
+        "lemma": "don't"
+      }
+    ]
+  },
+  {
+    "start": 558.72,
+    "end": 563.839,
+    "tokens": [
+      {
+        "raw": "get",
+        "lemma": "get"
+      },
+      {
+        "raw": "calls",
+        "lemma": "calls"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "don't",
+        "lemma": "don't"
+      },
+      {
+        "raw": "get",
+        "lemma": "get"
+      },
+      {
+        "raw": "texts",
+        "lemma": "texts"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "don't",
+        "lemma": "don't"
+      }
+    ]
+  },
+  {
+    "start": 562.0,
+    "end": 568.16,
+    "tokens": [
+      {
+        "raw": "hear",
+        "lemma": "hear"
+      },
+      {
+        "raw": "sounds",
+        "lemma": "sounds"
+      }
+    ]
+  },
+  {
+    "start": 563.839,
+    "end": 571.12,
+    "tokens": [
+      {
+        "raw": "Oh",
+        "lemma": "Oh"
+      },
+      {
+        "raw": "so",
+        "lemma": "so"
+      },
+      {
+        "raw": "do",
+        "lemma": "do"
+      },
+      {
+        "raw": "not",
+        "lemma": "not"
+      },
+      {
+        "raw": "disturb",
+        "lemma": "disturb"
+      },
+      {
+        "raw": "makes",
+        "lemma": "makes"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      }
+    ]
+  },
+  {
+    "start": 568.16,
+    "end": 574.0,
+    "tokens": [
+      {
+        "raw": "quiet",
+        "lemma": "quiet"
+      }
+    ]
+  },
+  {
+    "start": 571.12,
+    "end": 577.839,
+    "tokens": [
+      {
+        "raw": "Very",
+        "lemma": "Very"
+      },
+      {
+        "raw": "quiet",
+        "lemma": "quiet"
+      }
+    ]
+  },
+  {
+    "start": 574.0,
+    "end": 580.08,
+    "tokens": [
+      {
+        "raw": "Exactly",
+        "lemma": "Exactly"
+      },
+      {
+        "raw": "Do",
+        "lemma": "Do"
+      },
+      {
+        "raw": "not",
+        "lemma": "not"
+      },
+      {
+        "raw": "disturb",
+        "lemma": "disturb"
+      },
+      {
+        "raw": "equals",
+        "lemma": "equals"
+      },
+      {
+        "raw": "total",
+        "lemma": "total"
+      }
+    ]
+  },
+  {
+    "start": 577.839,
+    "end": 584.92,
+    "tokens": [
+      {
+        "raw": "silence",
+        "lemma": "silence"
+      }
+    ]
+  },
+  {
+    "start": 580.08,
+    "end": 584.92,
+    "tokens": [
+      {
+        "raw": "And",
+        "lemma": "And"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "stop",
+        "lemma": "stop"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "vibration",
+        "lemma": "vibration"
+      },
+      {
+        "raw": "too",
+        "lemma": "too"
+      }
+    ]
+  },
+  {
+    "start": 585.279,
+    "end": 591.36,
+    "tokens": [
+      {
+        "raw": "Vibration",
+        "lemma": "Vibration"
+      }
+    ]
+  },
+  {
+    "start": 587.6,
+    "end": 596.32,
+    "tokens": [
+      {
+        "raw": "You",
+        "lemma": "You"
+      },
+      {
+        "raw": "mean",
+        "lemma": "mean"
+      },
+      {
+        "raw": "when",
+        "lemma": "when"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "shakes",
+        "lemma": "shakes"
+      }
+    ]
+  },
+  {
+    "start": 591.36,
+    "end": 598.16,
+    "tokens": [
+      {
+        "raw": "Yes",
+        "lemma": "Yes"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "little",
+        "lemma": "little"
+      },
+      {
+        "raw": "buzz",
+        "lemma": "buzz"
+      },
+      {
+        "raw": "Vibration",
+        "lemma": "Vibration"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      }
+    ]
+  },
+  {
+    "start": 596.32,
+    "end": 602.08,
+    "tokens": [
+      {
+        "raw": "shake",
+        "lemma": "shake"
+      }
+    ]
+  },
+  {
+    "start": 598.16,
+    "end": 605.72,
+    "tokens": [
+      {
+        "raw": "So",
+        "lemma": "So"
+      },
+      {
+        "raw": "no",
+        "lemma": "no"
+      },
+      {
+        "raw": "ring",
+        "lemma": "ring"
+      },
+      {
+        "raw": "no",
+        "lemma": "no"
+      },
+      {
+        "raw": "vibration",
+        "lemma": "vibration"
+      },
+      {
+        "raw": "The",
+        "lemma": "The"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      }
+    ]
+  },
+  {
+    "start": 602.08,
+    "end": 605.72,
+    "tokens": [
+      {
+        "raw": "completely",
+        "lemma": "completely"
+      },
+      {
+        "raw": "quiet",
+        "lemma": "quiet"
+      }
+    ]
+  },
+  {
+    "start": 606.24,
+    "end": 615.68,
+    "tokens": [
+      {
+        "raw": "right",
+        "lemma": "right"
+      },
+      {
+        "raw": "No",
+        "lemma": "No"
+      },
+      {
+        "raw": "sound",
+        "lemma": "sound"
+      },
+      {
+        "raw": "no",
+        "lemma": "no"
+      },
+      {
+        "raw": "vibration",
+        "lemma": "vibration"
+      }
+    ]
+  },
+  {
+    "start": 612.0,
+    "end": 619.2,
+    "tokens": [
+      {
+        "raw": "So",
+        "lemma": "So"
+      },
+      {
+        "raw": "in",
+        "lemma": "in"
+      },
+      {
+        "raw": "class",
+        "lemma": "class"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "put",
+        "lemma": "put"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "away",
+        "lemma": "away"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      }
+    ]
+  },
+  {
+    "start": 615.68,
+    "end": 621.04,
+    "tokens": [
+      {
+        "raw": "turn",
+        "lemma": "turn"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "do",
+        "lemma": "do"
+      },
+      {
+        "raw": "not",
+        "lemma": "not"
+      },
+      {
+        "raw": "disturb",
+        "lemma": "disturb"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "stop",
+        "lemma": "stop"
+      }
+    ]
+  },
+  {
+    "start": 619.2,
+    "end": 625.36,
+    "tokens": [
+      {
+        "raw": "vibration",
+        "lemma": "vibration"
+      }
+    ]
+  },
+  {
+    "start": 621.04,
+    "end": 629.04,
+    "tokens": [
+      {
+        "raw": "The",
+        "lemma": "The"
+      },
+      {
+        "raw": "teacher",
+        "lemma": "teacher"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "happy",
+        "lemma": "happy"
+      },
+      {
+        "raw": "At",
+        "lemma": "At"
+      },
+      {
+        "raw": "lunchtime",
+        "lemma": "lunchtime"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "go",
+        "lemma": "go"
+      }
+    ]
+  },
+  {
+    "start": 625.36,
+    "end": 635.64,
+    "tokens": [
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "cafeteria",
+        "lemma": "cafeteria"
+      },
+      {
+        "raw": "To",
+        "lemma": "To"
+      },
+      {
+        "raw": "get",
+        "lemma": "get"
+      },
+      {
+        "raw": "in",
+        "lemma": "in"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "scan",
+        "lemma": "scan"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      }
+    ]
+  },
+  {
+    "start": 629.04,
+    "end": 635.64,
+    "tokens": [
+      {
+        "raw": "QR",
+        "lemma": "QR"
+      },
+      {
+        "raw": "code",
+        "lemma": "code"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "Beep",
+        "lemma": "Beep"
+      },
+      {
+        "raw": "Door",
+        "lemma": "Door"
+      },
+      {
+        "raw": "open",
+        "lemma": "open"
+      }
+    ]
+  },
+  {
+    "start": 636.48,
+    "end": 641.88,
+    "tokens": [
+      {
+        "raw": "QR",
+        "lemma": "QR"
+      },
+      {
+        "raw": "code",
+        "lemma": "code"
+      },
+      {
+        "raw": "What",
+        "lemma": "What"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "that",
+        "lemma": "that"
+      }
+    ]
+  },
+  {
+    "start": 642.32,
+    "end": 648.839,
+    "tokens": [
+      {
+        "raw": "A",
+        "lemma": "A"
+      },
+      {
+        "raw": "QR",
+        "lemma": "QR"
+      },
+      {
+        "raw": "code",
+        "lemma": "code"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "little",
+        "lemma": "little"
+      },
+      {
+        "raw": "black",
+        "lemma": "black"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "white",
+        "lemma": "white"
+      }
+    ]
+  },
+  {
+    "start": 645.2,
+    "end": 648.839,
+    "tokens": [
+      {
+        "raw": "square",
+        "lemma": "square"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "scan",
+        "lemma": "scan"
+      }
+    ]
+  },
+  {
+    "start": 649.68,
+    "end": 657.8,
+    "tokens": [
+      {
+        "raw": "Oh",
+        "lemma": "Oh"
+      },
+      {
+        "raw": "QR",
+        "lemma": "QR"
+      },
+      {
+        "raw": "code",
+        "lemma": "code"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "see",
+        "lemma": "see"
+      }
+    ]
+  },
+  {
+    "start": 653.519,
+    "end": 657.8,
+    "tokens": [
+      {
+        "raw": "Then",
+        "lemma": "Then"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "walk",
+        "lemma": "walk"
+      },
+      {
+        "raw": "into",
+        "lemma": "into"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "cafeteria",
+        "lemma": "cafeteria"
+      }
+    ]
+  },
+  {
+    "start": 658.32,
+    "end": 665.76,
+    "tokens": [
+      {
+        "raw": "Cafeteria",
+        "lemma": "Cafeteria"
+      },
+      {
+        "raw": "Oh",
+        "lemma": "Oh"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "mean",
+        "lemma": "mean"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "big",
+        "lemma": "big"
+      },
+      {
+        "raw": "room",
+        "lemma": "room"
+      },
+      {
+        "raw": "at",
+        "lemma": "at"
+      }
+    ]
+  },
+  {
+    "start": 662.399,
+    "end": 669.519,
+    "tokens": [
+      {
+        "raw": "school",
+        "lemma": "school"
+      },
+      {
+        "raw": "where",
+        "lemma": "where"
+      },
+      {
+        "raw": "students",
+        "lemma": "students"
+      },
+      {
+        "raw": "eat",
+        "lemma": "eat"
+      }
+    ]
+  },
+  {
+    "start": 665.76,
+    "end": 673.72,
+    "tokens": [
+      {
+        "raw": "Yes",
+        "lemma": "Yes"
+      },
+      {
+        "raw": "exactly",
+        "lemma": "exactly"
+      },
+      {
+        "raw": "The",
+        "lemma": "The"
+      },
+      {
+        "raw": "cafeteria",
+        "lemma": "cafeteria"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "place",
+        "lemma": "place"
+      }
+    ]
+  },
+  {
+    "start": 669.519,
+    "end": 673.72,
+    "tokens": [
+      {
+        "raw": "where",
+        "lemma": "where"
+      },
+      {
+        "raw": "many",
+        "lemma": "many"
+      },
+      {
+        "raw": "students",
+        "lemma": "students"
+      },
+      {
+        "raw": "eat",
+        "lemma": "eat"
+      }
+    ]
+  },
+  {
+    "start": 674.48,
+    "end": 682.32,
+    "tokens": [
+      {
+        "raw": "Then",
+        "lemma": "Then"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "open",
+        "lemma": "open"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "cafeteria",
+        "lemma": "cafeteria"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "order",
+        "lemma": "order"
+      }
+    ]
+  },
+  {
+    "start": 677.36,
+    "end": 685.839,
+    "tokens": [
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "lunch",
+        "lemma": "lunch"
+      },
+      {
+        "raw": "No",
+        "lemma": "No"
+      },
+      {
+        "raw": "waiting",
+        "lemma": "waiting"
+      },
+      {
+        "raw": "in",
+        "lemma": "in"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "long",
+        "lemma": "long"
+      },
+      {
+        "raw": "line",
+        "lemma": "line"
+      }
+    ]
+  },
+  {
+    "start": 682.32,
+    "end": 688.8,
+    "tokens": [
+      {
+        "raw": "So",
+        "lemma": "So"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "order",
+        "lemma": "order"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "later",
+        "lemma": "later"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      }
+    ]
+  },
+  {
+    "start": 685.839,
+    "end": 692.0,
+    "tokens": [
+      {
+        "raw": "just",
+        "lemma": "just"
+      },
+      {
+        "raw": "pick",
+        "lemma": "pick"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      },
+      {
+        "raw": "up",
+        "lemma": "up"
+      }
+    ]
+  },
+  {
+    "start": 688.8,
+    "end": 695.0,
+    "tokens": [
+      {
+        "raw": "Yes",
+        "lemma": "Yes"
+      },
+      {
+        "raw": "My",
+        "lemma": "My"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "tells",
+        "lemma": "tells"
+      },
+      {
+        "raw": "me",
+        "lemma": "me"
+      },
+      {
+        "raw": "when",
+        "lemma": "when"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "food",
+        "lemma": "food"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      }
+    ]
+  },
+  {
+    "start": 692.0,
+    "end": 695.0,
+    "tokens": [
+      {
+        "raw": "ready",
+        "lemma": "ready"
+      }
+    ]
+  },
+  {
+    "start": 695.44,
+    "end": 701.04,
+    "tokens": [
+      {
+        "raw": "Sometimes",
+        "lemma": "Sometimes"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "friends",
+        "lemma": "friends"
+      },
+      {
+        "raw": "come",
+        "lemma": "come"
+      },
+      {
+        "raw": "too",
+        "lemma": "too"
+      },
+      {
+        "raw": "We",
+        "lemma": "We"
+      },
+      {
+        "raw": "sit",
+        "lemma": "sit"
+      }
+    ]
+  },
+  {
+    "start": 698.8,
+    "end": 703.839,
+    "tokens": [
+      {
+        "raw": "talk",
+        "lemma": "talk"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "wait",
+        "lemma": "wait"
+      },
+      {
+        "raw": "for",
+        "lemma": "for"
+      },
+      {
+        "raw": "our",
+        "lemma": "our"
+      },
+      {
+        "raw": "names",
+        "lemma": "names"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      }
+    ]
+  },
+  {
+    "start": 701.04,
+    "end": 703.839,
+    "tokens": [
+      {
+        "raw": "screen",
+        "lemma": "screen"
+      }
+    ]
+  },
+  {
+    "start": 705.92,
+    "end": 712.64,
+    "tokens": [
+      {
+        "raw": "So",
+        "lemma": "So"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "does",
+        "lemma": "does"
+      },
+      {
+        "raw": "everything",
+        "lemma": "everything"
+      }
+    ]
+  },
+  {
+    "start": 708.8,
+    "end": 717.68,
+    "tokens": [
+      {
+        "raw": "Door",
+        "lemma": "Door"
+      },
+      {
+        "raw": "order",
+        "lemma": "order"
+      },
+      {
+        "raw": "pickup",
+        "lemma": "pickup"
+      }
+    ]
+  },
+  {
+    "start": 712.64,
+    "end": 721.04,
+    "tokens": [
+      {
+        "raw": "And",
+        "lemma": "And"
+      },
+      {
+        "raw": "before",
+        "lemma": "before"
+      },
+      {
+        "raw": "we",
+        "lemma": "we"
+      },
+      {
+        "raw": "eat",
+        "lemma": "eat"
+      },
+      {
+        "raw": "we",
+        "lemma": "we"
+      },
+      {
+        "raw": "take",
+        "lemma": "take"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "selfie",
+        "lemma": "selfie"
+      }
+    ]
+  },
+  {
+    "start": 717.68,
+    "end": 722.72,
+    "tokens": [
+      {
+        "raw": "Oh",
+        "lemma": "Oh"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "always",
+        "lemma": "always"
+      },
+      {
+        "raw": "said",
+        "lemma": "said"
+      },
+      {
+        "raw": "take",
+        "lemma": "take"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "picture",
+        "lemma": "picture"
+      },
+      {
+        "raw": "of",
+        "lemma": "of"
+      }
+    ]
+  },
+  {
+    "start": 721.04,
+    "end": 727.2,
+    "tokens": [
+      {
+        "raw": "myself",
+        "lemma": "myself"
+      }
+    ]
+  },
+  {
+    "start": 722.72,
+    "end": 729.44,
+    "tokens": [
+      {
+        "raw": "That",
+        "lemma": "That"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "okay",
+        "lemma": "okay"
+      },
+      {
+        "raw": "But",
+        "lemma": "But"
+      },
+      {
+        "raw": "we",
+        "lemma": "we"
+      },
+      {
+        "raw": "usually",
+        "lemma": "usually"
+      },
+      {
+        "raw": "just",
+        "lemma": "just"
+      },
+      {
+        "raw": "say",
+        "lemma": "say"
+      }
+    ]
+  },
+  {
+    "start": 727.2,
+    "end": 732.72,
+    "tokens": [
+      {
+        "raw": "selfie",
+        "lemma": "selfie"
+      }
+    ]
+  },
+  {
+    "start": 729.44,
+    "end": 736.079,
+    "tokens": [
+      {
+        "raw": "Selfie",
+        "lemma": "Selfie"
+      },
+      {
+        "raw": "Short",
+        "lemma": "Short"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "easy",
+        "lemma": "easy"
+      }
+    ]
+  },
+  {
+    "start": 732.72,
+    "end": 738.0,
+    "tokens": [
+      {
+        "raw": "Exactly",
+        "lemma": "Exactly"
+      },
+      {
+        "raw": "We",
+        "lemma": "We"
+      },
+      {
+        "raw": "always",
+        "lemma": "always"
+      },
+      {
+        "raw": "take",
+        "lemma": "take"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "selfie",
+        "lemma": "selfie"
+      },
+      {
+        "raw": "before",
+        "lemma": "before"
+      }
+    ]
+  },
+  {
+    "start": 736.079,
+    "end": 741.519,
+    "tokens": [
+      {
+        "raw": "we",
+        "lemma": "we"
+      },
+      {
+        "raw": "start",
+        "lemma": "start"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "eat",
+        "lemma": "eat"
+      }
+    ]
+  },
+  {
+    "start": 738.0,
+    "end": 742.399,
+    "tokens": [
+      {
+        "raw": "First",
+        "lemma": "First"
+      },
+      {
+        "raw": "selfie",
+        "lemma": "selfie"
+      },
+      {
+        "raw": "then",
+        "lemma": "then"
+      },
+      {
+        "raw": "food",
+        "lemma": "food"
+      },
+      {
+        "raw": "That's",
+        "lemma": "That's"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      }
+    ]
+  },
+  {
+    "start": 741.519,
+    "end": 745.12,
+    "tokens": [
+      {
+        "raw": "rule",
+        "lemma": "rule"
+      }
+    ]
+  },
+  {
+    "start": 742.399,
+    "end": 747.92,
+    "tokens": [
+      {
+        "raw": "English",
+        "lemma": "English"
+      },
+      {
+        "raw": "snack",
+        "lemma": "snack"
+      }
+    ]
+  },
+  {
+    "start": 745.12,
+    "end": 749.68,
+    "tokens": [
+      {
+        "raw": "John",
+        "lemma": "John"
+      },
+      {
+        "raw": "have",
+        "lemma": "have"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "ever",
+        "lemma": "ever"
+      },
+      {
+        "raw": "heard",
+        "lemma": "heard"
+      },
+      {
+        "raw": "of",
+        "lemma": "of"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "pocket",
+        "lemma": "pocket"
+      }
+    ]
+  },
+  {
+    "start": 747.92,
+    "end": 756.2,
+    "tokens": [
+      {
+        "raw": "call",
+        "lemma": "call"
+      }
+    ]
+  },
+  {
+    "start": 749.68,
+    "end": 756.2,
+    "tokens": [
+      {
+        "raw": "A",
+        "lemma": "A"
+      },
+      {
+        "raw": "pocket",
+        "lemma": "pocket"
+      },
+      {
+        "raw": "call",
+        "lemma": "call"
+      },
+      {
+        "raw": "Like",
+        "lemma": "Like"
+      },
+      {
+        "raw": "call",
+        "lemma": "call"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "pocket",
+        "lemma": "pocket"
+      }
+    ]
+  },
+  {
+    "start": 757.2,
+    "end": 761.68,
+    "tokens": [
+      {
+        "raw": "No",
+        "lemma": "No"
+      }
+    ]
+  },
+  {
+    "start": 759.279,
+    "end": 764.24,
+    "tokens": [
+      {
+        "raw": "A",
+        "lemma": "A"
+      },
+      {
+        "raw": "pocket",
+        "lemma": "pocket"
+      },
+      {
+        "raw": "call",
+        "lemma": "call"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "when",
+        "lemma": "when"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "calls",
+        "lemma": "calls"
+      }
+    ]
+  },
+  {
+    "start": 761.68,
+    "end": 767.48,
+    "tokens": [
+      {
+        "raw": "someone",
+        "lemma": "someone"
+      },
+      {
+        "raw": "by",
+        "lemma": "by"
+      },
+      {
+        "raw": "mistake",
+        "lemma": "mistake"
+      },
+      {
+        "raw": "from",
+        "lemma": "from"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "pocket",
+        "lemma": "pocket"
+      },
+      {
+        "raw": "or",
+        "lemma": "or"
+      }
+    ]
+  },
+  {
+    "start": 764.24,
+    "end": 767.48,
+    "tokens": [
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "bag",
+        "lemma": "bag"
+      }
+    ]
+  },
+  {
+    "start": 768.16,
+    "end": 774.48,
+    "tokens": [
+      {
+        "raw": "Ah",
+        "lemma": "Ah"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "know",
+        "lemma": "know"
+      },
+      {
+        "raw": "that",
+        "lemma": "that"
+      }
+    ]
+  },
+  {
+    "start": 771.12,
+    "end": 778.279,
+    "tokens": [
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "once",
+        "lemma": "once"
+      },
+      {
+        "raw": "pocket",
+        "lemma": "pocket"
+      },
+      {
+        "raw": "called",
+        "lemma": "called"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "teacher",
+        "lemma": "teacher"
+      }
+    ]
+  },
+  {
+    "start": 774.48,
+    "end": 778.279,
+    "tokens": [
+      {
+        "raw": "It",
+        "lemma": "It"
+      },
+      {
+        "raw": "was",
+        "lemma": "was"
+      },
+      {
+        "raw": "so",
+        "lemma": "so"
+      },
+      {
+        "raw": "embarrassing",
+        "lemma": "embarrassing"
+      }
+    ]
+  },
+  {
+    "start": 778.32,
+    "end": 784.72,
+    "tokens": [
+      {
+        "raw": "After",
+        "lemma": "After"
+      },
+      {
+        "raw": "lunch",
+        "lemma": "lunch"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "walk",
+        "lemma": "walk"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "library",
+        "lemma": "library"
+      }
+    ]
+  },
+  {
+    "start": 782.0,
+    "end": 787.04,
+    "tokens": [
+      {
+        "raw": "My",
+        "lemma": "My"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "comes",
+        "lemma": "comes"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "me",
+        "lemma": "me"
+      },
+      {
+        "raw": "because",
+        "lemma": "because"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "use",
+        "lemma": "use"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      }
+    ]
+  },
+  {
+    "start": 784.72,
+    "end": 790.04,
+    "tokens": [
+      {
+        "raw": "there",
+        "lemma": "there"
+      },
+      {
+        "raw": "too",
+        "lemma": "too"
+      }
+    ]
+  },
+  {
+    "start": 787.04,
+    "end": 790.04,
+    "tokens": [
+      {
+        "raw": "Really",
+        "lemma": "Really"
+      }
+    ]
+  },
+  {
+    "start": 791.12,
+    "end": 798.16,
+    "tokens": [
+      {
+        "raw": "You",
+        "lemma": "You"
+      },
+      {
+        "raw": "need",
+        "lemma": "need"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "even",
+        "lemma": "even"
+      },
+      {
+        "raw": "in",
+        "lemma": "in"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "library",
+        "lemma": "library"
+      }
+    ]
+  },
+  {
+    "start": 794.56,
+    "end": 803.88,
+    "tokens": [
+      {
+        "raw": "Yes",
+        "lemma": "Yes"
+      },
+      {
+        "raw": "If",
+        "lemma": "If"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "want",
+        "lemma": "want"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "borrow",
+        "lemma": "borrow"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "book",
+        "lemma": "book"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "open",
+        "lemma": "open"
+      }
+    ]
+  },
+  {
+    "start": 798.16,
+    "end": 803.88,
+    "tokens": [
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "library",
+        "lemma": "library"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "scan",
+        "lemma": "scan"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "QR",
+        "lemma": "QR"
+      },
+      {
+        "raw": "code",
+        "lemma": "code"
+      }
+    ]
+  },
+  {
+    "start": 804.16,
+    "end": 810.0,
+    "tokens": [
+      {
+        "raw": "Scan",
+        "lemma": "Scan"
+      },
+      {
+        "raw": "like",
+        "lemma": "like"
+      },
+      {
+        "raw": "take",
+        "lemma": "take"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "picture",
+        "lemma": "picture"
+      }
+    ]
+  },
+  {
+    "start": 807.839,
+    "end": 813.92,
+    "tokens": [
+      {
+        "raw": "Almost",
+        "lemma": "Almost"
+      }
+    ]
+  },
+  {
+    "start": 810.0,
+    "end": 816.32,
+    "tokens": [
+      {
+        "raw": "A",
+        "lemma": "A"
+      },
+      {
+        "raw": "scan",
+        "lemma": "scan"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "like",
+        "lemma": "like"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "photo",
+        "lemma": "photo"
+      },
+      {
+        "raw": "but",
+        "lemma": "but"
+      },
+      {
+        "raw": "for",
+        "lemma": "for"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "code",
+        "lemma": "code"
+      }
+    ]
+  },
+  {
+    "start": 813.92,
+    "end": 819.32,
+    "tokens": [
+      {
+        "raw": "The",
+        "lemma": "The"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "reads",
+        "lemma": "reads"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "code",
+        "lemma": "code"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "gets",
+        "lemma": "gets"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      }
+    ]
+  },
+  {
+    "start": 816.32,
+    "end": 819.32,
+    "tokens": [
+      {
+        "raw": "information",
+        "lemma": "information"
+      }
+    ]
+  },
+  {
+    "start": 821.68,
+    "end": 829.68,
+    "tokens": [
+      {
+        "raw": "Ah",
+        "lemma": "Ah"
+      },
+      {
+        "raw": "scan",
+        "lemma": "scan"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "code",
+        "lemma": "code"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "understand",
+        "lemma": "understand"
+      }
+    ]
+  },
+  {
+    "start": 825.68,
+    "end": 833.92,
+    "tokens": [
+      {
+        "raw": "Yes",
+        "lemma": "Yes"
+      },
+      {
+        "raw": "Now",
+        "lemma": "Now"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "can",
+        "lemma": "can"
+      },
+      {
+        "raw": "borrow",
+        "lemma": "borrow"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "book",
+        "lemma": "book"
+      },
+      {
+        "raw": "Then",
+        "lemma": "Then"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      }
+    ]
+  },
+  {
+    "start": 829.68,
+    "end": 836.16,
+    "tokens": [
+      {
+        "raw": "sit",
+        "lemma": "sit"
+      },
+      {
+        "raw": "down",
+        "lemma": "down"
+      },
+      {
+        "raw": "at",
+        "lemma": "at"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "table",
+        "lemma": "table"
+      },
+      {
+        "raw": "Time",
+        "lemma": "Time"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "study",
+        "lemma": "study"
+      },
+      {
+        "raw": "Shh",
+        "lemma": "Shh"
+      }
+    ]
+  },
+  {
+    "start": 833.92,
+    "end": 840.399,
+    "tokens": [
+      {
+        "raw": "This",
+        "lemma": "This"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "library",
+        "lemma": "library"
+      }
+    ]
+  },
+  {
+    "start": 836.16,
+    "end": 842.0,
+    "tokens": [
+      {
+        "raw": "Okay",
+        "lemma": "Okay"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "will",
+        "lemma": "will"
+      },
+      {
+        "raw": "be",
+        "lemma": "be"
+      },
+      {
+        "raw": "quiet",
+        "lemma": "quiet"
+      }
+    ]
+  },
+  {
+    "start": 840.399,
+    "end": 845.68,
+    "tokens": [
+      {
+        "raw": "Wait",
+        "lemma": "Wait"
+      }
+    ]
+  },
+  {
+    "start": 842.0,
+    "end": 848.079,
+    "tokens": [
+      {
+        "raw": "why",
+        "lemma": "why"
+      },
+      {
+        "raw": "are",
+        "lemma": "are"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "looking",
+        "lemma": "looking"
+      },
+      {
+        "raw": "at",
+        "lemma": "at"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "again",
+        "lemma": "again"
+      }
+    ]
+  },
+  {
+    "start": 845.68,
+    "end": 850.8,
+    "tokens": [
+      {
+        "raw": "I'm",
+        "lemma": "I'm"
+      },
+      {
+        "raw": "using",
+        "lemma": "using"
+      },
+      {
+        "raw": "flashcards",
+        "lemma": "flashcards"
+      }
+    ]
+  },
+  {
+    "start": 848.079,
+    "end": 853.36,
+    "tokens": [
+      {
+        "raw": "Flash",
+        "lemma": "Flash"
+      },
+      {
+        "raw": "cards",
+        "lemma": "cards"
+      },
+      {
+        "raw": "are",
+        "lemma": "are"
+      },
+      {
+        "raw": "small",
+        "lemma": "small"
+      },
+      {
+        "raw": "cards",
+        "lemma": "cards"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "word",
+        "lemma": "word"
+      }
+    ]
+  },
+  {
+    "start": 850.8,
+    "end": 855.199,
+    "tokens": [
+      {
+        "raw": "or",
+        "lemma": "or"
+      },
+      {
+        "raw": "picture",
+        "lemma": "picture"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "them",
+        "lemma": "them"
+      },
+      {
+        "raw": "They",
+        "lemma": "They"
+      },
+      {
+        "raw": "help",
+        "lemma": "help"
+      },
+      {
+        "raw": "me",
+        "lemma": "me"
+      }
+    ]
+  },
+  {
+    "start": 853.36,
+    "end": 858.56,
+    "tokens": [
+      {
+        "raw": "remember",
+        "lemma": "remember"
+      },
+      {
+        "raw": "words",
+        "lemma": "words"
+      }
+    ]
+  },
+  {
+    "start": 855.199,
+    "end": 861.279,
+    "tokens": [
+      {
+        "raw": "Ah",
+        "lemma": "Ah"
+      },
+      {
+        "raw": "flash",
+        "lemma": "flash"
+      },
+      {
+        "raw": "cards",
+        "lemma": "cards"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      }
+    ]
+  },
+  {
+    "start": 858.56,
+    "end": 864.279,
+    "tokens": [
+      {
+        "raw": "Yes",
+        "lemma": "Yes"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "flashc",
+        "lemma": "flashc"
+      },
+      {
+        "raw": "card",
+        "lemma": "card"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "It",
+        "lemma": "It"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "very",
+        "lemma": "very"
+      }
+    ]
+  },
+  {
+    "start": 861.279,
+    "end": 864.279,
+    "tokens": [
+      {
+        "raw": "simple",
+        "lemma": "simple"
+      }
+    ]
+  },
+  {
+    "start": 865.6,
+    "end": 872.399,
+    "tokens": [
+      {
+        "raw": "Cool",
+        "lemma": "Cool"
+      },
+      {
+        "raw": "And",
+        "lemma": "And"
+      },
+      {
+        "raw": "what",
+        "lemma": "what"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "that",
+        "lemma": "that"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "video",
+        "lemma": "video"
+      }
+    ]
+  },
+  {
+    "start": 869.04,
+    "end": 874.8,
+    "tokens": [
+      {
+        "raw": "Those",
+        "lemma": "Those"
+      },
+      {
+        "raw": "are",
+        "lemma": "are"
+      },
+      {
+        "raw": "subtitles",
+        "lemma": "subtitles"
+      }
+    ]
+  },
+  {
+    "start": 872.399,
+    "end": 877.519,
+    "tokens": [
+      {
+        "raw": "Subtitles",
+        "lemma": "Subtitles"
+      },
+      {
+        "raw": "are",
+        "lemma": "are"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "words",
+        "lemma": "words"
+      },
+      {
+        "raw": "at",
+        "lemma": "at"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "bottom",
+        "lemma": "bottom"
+      },
+      {
+        "raw": "of",
+        "lemma": "of"
+      }
+    ]
+  },
+  {
+    "start": 874.8,
+    "end": 880.519,
+    "tokens": [
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "video",
+        "lemma": "video"
+      },
+      {
+        "raw": "They",
+        "lemma": "They"
+      },
+      {
+        "raw": "help",
+        "lemma": "help"
+      },
+      {
+        "raw": "me",
+        "lemma": "me"
+      },
+      {
+        "raw": "read",
+        "lemma": "read"
+      },
+      {
+        "raw": "while",
+        "lemma": "while"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      }
+    ]
+  },
+  {
+    "start": 877.519,
+    "end": 880.519,
+    "tokens": [
+      {
+        "raw": "listen",
+        "lemma": "listen"
+      }
+    ]
+  },
+  {
+    "start": 881.6,
+    "end": 887.76,
+    "tokens": [
+      {
+        "raw": "Oh",
+        "lemma": "Oh"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "see",
+        "lemma": "see"
+      },
+      {
+        "raw": "words",
+        "lemma": "words"
+      },
+      {
+        "raw": "at",
+        "lemma": "at"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "bottom",
+        "lemma": "bottom"
+      }
+    ]
+  },
+  {
+    "start": 883.92,
+    "end": 893.079,
+    "tokens": [
+      {
+        "raw": "Subtitles",
+        "lemma": "Subtitles"
+      },
+      {
+        "raw": "Nice",
+        "lemma": "Nice"
+      }
+    ]
+  },
+  {
+    "start": 887.76,
+    "end": 893.079,
+    "tokens": [
+      {
+        "raw": "And",
+        "lemma": "And"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "do",
+        "lemma": "do"
+      },
+      {
+        "raw": "not",
+        "lemma": "not"
+      },
+      {
+        "raw": "disturb",
+        "lemma": "disturb"
+      },
+      {
+        "raw": "again",
+        "lemma": "again"
+      }
+    ]
+  },
+  {
+    "start": 898.24,
+    "end": 904.399,
+    "tokens": [
+      {
+        "raw": "After",
+        "lemma": "After"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "library",
+        "lemma": "library"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "walk",
+        "lemma": "walk"
+      },
+      {
+        "raw": "home",
+        "lemma": "home"
+      }
+    ]
+  },
+  {
+    "start": 902.16,
+    "end": 907.399,
+    "tokens": [
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "open",
+        "lemma": "open"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "check",
+        "lemma": "check"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "weather",
+        "lemma": "weather"
+      }
+    ]
+  },
+  {
+    "start": 904.399,
+    "end": 907.399,
+    "tokens": [
+      {
+        "raw": "app",
+        "lemma": "app"
+      }
+    ]
+  },
+  {
+    "start": 907.76,
+    "end": 915.24,
+    "tokens": [
+      {
+        "raw": "Weather",
+        "lemma": "Weather"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "You",
+        "lemma": "You"
+      },
+      {
+        "raw": "mean",
+        "lemma": "mean"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      },
+      {
+        "raw": "tells",
+        "lemma": "tells"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "if",
+        "lemma": "if"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      }
+    ]
+  },
+  {
+    "start": 910.72,
+    "end": 915.24,
+    "tokens": [
+      {
+        "raw": "will",
+        "lemma": "will"
+      },
+      {
+        "raw": "rain",
+        "lemma": "rain"
+      },
+      {
+        "raw": "or",
+        "lemma": "or"
+      },
+      {
+        "raw": "be",
+        "lemma": "be"
+      },
+      {
+        "raw": "sunny",
+        "lemma": "sunny"
+      }
+    ]
+  },
+  {
+    "start": 915.6,
+    "end": 923.279,
+    "tokens": [
+      {
+        "raw": "Yes",
+        "lemma": "Yes"
+      }
+    ]
+  },
+  {
+    "start": 918.079,
+    "end": 926.639,
+    "tokens": [
+      {
+        "raw": "It",
+        "lemma": "It"
+      },
+      {
+        "raw": "shows",
+        "lemma": "shows"
+      },
+      {
+        "raw": "sun",
+        "lemma": "sun"
+      },
+      {
+        "raw": "rain",
+        "lemma": "rain"
+      },
+      {
+        "raw": "clouds",
+        "lemma": "clouds"
+      },
+      {
+        "raw": "snow",
+        "lemma": "snow"
+      },
+      {
+        "raw": "Today",
+        "lemma": "Today"
+      }
+    ]
+  },
+  {
+    "start": 923.279,
+    "end": 929.76,
+    "tokens": [
+      {
+        "raw": "it",
+        "lemma": "it"
+      },
+      {
+        "raw": "says",
+        "lemma": "says"
+      },
+      {
+        "raw": "sunny",
+        "lemma": "sunny"
+      }
+    ]
+  },
+  {
+    "start": 926.639,
+    "end": 932.24,
+    "tokens": [
+      {
+        "raw": "So",
+        "lemma": "So"
+      },
+      {
+        "raw": "no",
+        "lemma": "no"
+      },
+      {
+        "raw": "umbrella",
+        "lemma": "umbrella"
+      }
+    ]
+  },
+  {
+    "start": 929.76,
+    "end": 932.24,
+    "tokens": [
+      {
+        "raw": "Huh",
+        "lemma": "Huh"
+      }
+    ]
+  },
+  {
+    "start": 934.32,
+    "end": 939.68,
+    "tokens": [
+      {
+        "raw": "Good",
+        "lemma": "Good"
+      },
+      {
+        "raw": "news",
+        "lemma": "news"
+      }
+    ]
+  },
+  {
+    "start": 935.76,
+    "end": 942.88,
+    "tokens": [
+      {
+        "raw": "right",
+        "lemma": "right"
+      },
+      {
+        "raw": "The",
+        "lemma": "The"
+      },
+      {
+        "raw": "weather",
+        "lemma": "weather"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "saves",
+        "lemma": "saves"
+      },
+      {
+        "raw": "me",
+        "lemma": "me"
+      },
+      {
+        "raw": "If",
+        "lemma": "If"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      }
+    ]
+  },
+  {
+    "start": 939.68,
+    "end": 945.839,
+    "tokens": [
+      {
+        "raw": "says",
+        "lemma": "says"
+      },
+      {
+        "raw": "rain",
+        "lemma": "rain"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "take",
+        "lemma": "take"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "umbrella",
+        "lemma": "umbrella"
+      },
+      {
+        "raw": "If",
+        "lemma": "If"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      }
+    ]
+  },
+  {
+    "start": 942.88,
+    "end": 950.0,
+    "tokens": [
+      {
+        "raw": "says",
+        "lemma": "says"
+      },
+      {
+        "raw": "sun",
+        "lemma": "sun"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "don't",
+        "lemma": "don't"
+      },
+      {
+        "raw": "need",
+        "lemma": "need"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      }
+    ]
+  },
+  {
+    "start": 945.839,
+    "end": 953.519,
+    "tokens": [
+      {
+        "raw": "Weather",
+        "lemma": "Weather"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "Umbrella",
+        "lemma": "Umbrella"
+      },
+      {
+        "raw": "Sunny",
+        "lemma": "Sunny"
+      }
+    ]
+  },
+  {
+    "start": 950.0,
+    "end": 955.68,
+    "tokens": [
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "can",
+        "lemma": "can"
+      },
+      {
+        "raw": "say",
+        "lemma": "say"
+      },
+      {
+        "raw": "My",
+        "lemma": "My"
+      },
+      {
+        "raw": "weather",
+        "lemma": "weather"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "says",
+        "lemma": "says"
+      },
+      {
+        "raw": "rainy",
+        "lemma": "rainy"
+      }
+    ]
+  },
+  {
+    "start": 953.519,
+    "end": 959.12,
+    "tokens": [
+      {
+        "raw": "so",
+        "lemma": "so"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "take",
+        "lemma": "take"
+      },
+      {
+        "raw": "an",
+        "lemma": "an"
+      },
+      {
+        "raw": "umbrella",
+        "lemma": "umbrella"
+      }
+    ]
+  },
+  {
+    "start": 955.68,
+    "end": 961.839,
+    "tokens": [
+      {
+        "raw": "Perfect",
+        "lemma": "Perfect"
+      },
+      {
+        "raw": "sentence",
+        "lemma": "sentence"
+      },
+      {
+        "raw": "Sometimes",
+        "lemma": "Sometimes"
+      },
+      {
+        "raw": "if",
+        "lemma": "if"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "want",
+        "lemma": "want"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      }
+    ]
+  },
+  {
+    "start": 959.12,
+    "end": 966.079,
+    "tokens": [
+      {
+        "raw": "visit",
+        "lemma": "visit"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "friend",
+        "lemma": "friend"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "open",
+        "lemma": "open"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "map",
+        "lemma": "map"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      }
+    ]
+  },
+  {
+    "start": 961.839,
+    "end": 970.88,
+    "tokens": [
+      {
+        "raw": "GPS",
+        "lemma": "GPS"
+      },
+      {
+        "raw": "It",
+        "lemma": "It"
+      },
+      {
+        "raw": "shows",
+        "lemma": "shows"
+      },
+      {
+        "raw": "me",
+        "lemma": "me"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "way",
+        "lemma": "way"
+      },
+      {
+        "raw": "step",
+        "lemma": "step"
+      },
+      {
+        "raw": "by",
+        "lemma": "by"
+      },
+      {
+        "raw": "step",
+        "lemma": "step"
+      }
+    ]
+  },
+  {
+    "start": 966.079,
+    "end": 976.36,
+    "tokens": [
+      {
+        "raw": "Oh",
+        "lemma": "Oh"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "map",
+        "lemma": "map"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "GPS",
+        "lemma": "GPS"
+      },
+      {
+        "raw": "So",
+        "lemma": "So"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "can",
+        "lemma": "can"
+      },
+      {
+        "raw": "say",
+        "lemma": "say"
+      }
+    ]
+  },
+  {
+    "start": 970.88,
+    "end": 976.36,
+    "tokens": [
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "use",
+        "lemma": "use"
+      },
+      {
+        "raw": "GPS",
+        "lemma": "GPS"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "go",
+        "lemma": "go"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "friend's",
+        "lemma": "friend's"
+      },
+      {
+        "raw": "house",
+        "lemma": "house"
+      }
+    ]
+  },
+  {
+    "start": 976.639,
+    "end": 986.04,
+    "tokens": [
+      {
+        "raw": "Exactly",
+        "lemma": "Exactly"
+      },
+      {
+        "raw": "Weather",
+        "lemma": "Weather"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "map",
+        "lemma": "map"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      }
+    ]
+  },
+  {
+    "start": 980.32,
+    "end": 986.04,
+    "tokens": [
+      {
+        "raw": "GPS",
+        "lemma": "GPS"
+      },
+      {
+        "raw": "Two",
+        "lemma": "Two"
+      },
+      {
+        "raw": "apps",
+        "lemma": "apps"
+      },
+      {
+        "raw": "that",
+        "lemma": "that"
+      },
+      {
+        "raw": "make",
+        "lemma": "make"
+      },
+      {
+        "raw": "life",
+        "lemma": "life"
+      },
+      {
+        "raw": "easier",
+        "lemma": "easier"
+      }
+    ]
+  },
+  {
+    "start": 987.279,
+    "end": 994.959,
+    "tokens": [
+      {
+        "raw": "English",
+        "lemma": "English"
+      },
+      {
+        "raw": "snack",
+        "lemma": "snack"
+      },
+      {
+        "raw": "again",
+        "lemma": "again"
+      },
+      {
+        "raw": "Do",
+        "lemma": "Do"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "know",
+        "lemma": "know"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      }
+    ]
+  },
+  {
+    "start": 990.24,
+    "end": 997.44,
+    "tokens": [
+      {
+        "raw": "phrase",
+        "lemma": "phrase"
+      },
+      {
+        "raw": "call",
+        "lemma": "call"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "day",
+        "lemma": "day"
+      },
+      {
+        "raw": "John",
+        "lemma": "John"
+      }
+    ]
+  },
+  {
+    "start": 994.959,
+    "end": 1002.8,
+    "tokens": [
+      {
+        "raw": "Is",
+        "lemma": "Is"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      },
+      {
+        "raw": "about",
+        "lemma": "about"
+      },
+      {
+        "raw": "making",
+        "lemma": "making"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "call",
+        "lemma": "call"
+      }
+    ]
+  },
+  {
+    "start": 997.44,
+    "end": 1005.92,
+    "tokens": [
+      {
+        "raw": "No",
+        "lemma": "No"
+      },
+      {
+        "raw": "Call",
+        "lemma": "Call"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "day",
+        "lemma": "day"
+      },
+      {
+        "raw": "means",
+        "lemma": "means"
+      },
+      {
+        "raw": "stop",
+        "lemma": "stop"
+      },
+      {
+        "raw": "working",
+        "lemma": "working"
+      }
+    ]
+  },
+  {
+    "start": 1002.8,
+    "end": 1012.48,
+    "tokens": [
+      {
+        "raw": "Finish",
+        "lemma": "Finish"
+      },
+      {
+        "raw": "for",
+        "lemma": "for"
+      },
+      {
+        "raw": "today",
+        "lemma": "today"
+      }
+    ]
+  },
+  {
+    "start": 1005.92,
+    "end": 1014.88,
+    "tokens": [
+      {
+        "raw": "Oh",
+        "lemma": "Oh"
+      },
+      {
+        "raw": "so",
+        "lemma": "so"
+      },
+      {
+        "raw": "no",
+        "lemma": "no"
+      },
+      {
+        "raw": "more",
+        "lemma": "more"
+      },
+      {
+        "raw": "study",
+        "lemma": "study"
+      },
+      {
+        "raw": "We",
+        "lemma": "We"
+      },
+      {
+        "raw": "call",
+        "lemma": "call"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "day",
+        "lemma": "day"
+      }
+    ]
+  },
+  {
+    "start": 1012.48,
+    "end": 1018.399,
+    "tokens": [
+      {
+        "raw": "That's",
+        "lemma": "That's"
+      },
+      {
+        "raw": "easy",
+        "lemma": "easy"
+      }
+    ]
+  },
+  {
+    "start": 1014.88,
+    "end": 1023.24,
+    "tokens": [
+      {
+        "raw": "At",
+        "lemma": "At"
+      },
+      {
+        "raw": "home",
+        "lemma": "home"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "sit",
+        "lemma": "sit"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "sofa",
+        "lemma": "sofa"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "open",
+        "lemma": "open"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      }
+    ]
+  },
+  {
+    "start": 1018.399,
+    "end": 1023.24,
+    "tokens": [
+      {
+        "raw": "video",
+        "lemma": "video"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "stream",
+        "lemma": "stream"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "show",
+        "lemma": "show"
+      }
+    ]
+  },
+  {
+    "start": 1025.12,
+    "end": 1033.199,
+    "tokens": [
+      {
+        "raw": "Stream",
+        "lemma": "Stream"
+      },
+      {
+        "raw": "You",
+        "lemma": "You"
+      },
+      {
+        "raw": "mean",
+        "lemma": "mean"
+      },
+      {
+        "raw": "watch",
+        "lemma": "watch"
+      },
+      {
+        "raw": "online",
+        "lemma": "online"
+      }
+    ]
+  },
+  {
+    "start": 1028.959,
+    "end": 1035.439,
+    "tokens": [
+      {
+        "raw": "Yes",
+        "lemma": "Yes"
+      },
+      {
+        "raw": "stream",
+        "lemma": "stream"
+      },
+      {
+        "raw": "means",
+        "lemma": "means"
+      },
+      {
+        "raw": "watch",
+        "lemma": "watch"
+      },
+      {
+        "raw": "online",
+        "lemma": "online"
+      },
+      {
+        "raw": "not",
+        "lemma": "not"
+      }
+    ]
+  },
+  {
+    "start": 1033.199,
+    "end": 1040.4,
+    "tokens": [
+      {
+        "raw": "download",
+        "lemma": "download"
+      }
+    ]
+  },
+  {
+    "start": 1035.439,
+    "end": 1044.12,
+    "tokens": [
+      {
+        "raw": "Ah",
+        "lemma": "Ah"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "also",
+        "lemma": "also"
+      },
+      {
+        "raw": "stream",
+        "lemma": "stream"
+      },
+      {
+        "raw": "shows",
+        "lemma": "shows"
+      },
+      {
+        "raw": "but",
+        "lemma": "but"
+      },
+      {
+        "raw": "sometimes",
+        "lemma": "sometimes"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      }
+    ]
+  },
+  {
+    "start": 1040.4,
+    "end": 1044.12,
+    "tokens": [
+      {
+        "raw": "watch",
+        "lemma": "watch"
+      },
+      {
+        "raw": "without",
+        "lemma": "without"
+      },
+      {
+        "raw": "subtitles",
+        "lemma": "subtitles"
+      }
+    ]
+  },
+  {
+    "start": 1045.28,
+    "end": 1052.919,
+    "tokens": [
+      {
+        "raw": "Subtitles",
+        "lemma": "Subtitles"
+      },
+      {
+        "raw": "help",
+        "lemma": "help"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "lot",
+        "lemma": "lot"
+      },
+      {
+        "raw": "They",
+        "lemma": "They"
+      },
+      {
+        "raw": "are",
+        "lemma": "are"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "words",
+        "lemma": "words"
+      }
+    ]
+  },
+  {
+    "start": 1048.64,
+    "end": 1052.919,
+    "tokens": [
+      {
+        "raw": "at",
+        "lemma": "at"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "bottom",
+        "lemma": "bottom"
+      },
+      {
+        "raw": "of",
+        "lemma": "of"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "screen",
+        "lemma": "screen"
+      }
+    ]
+  },
+  {
+    "start": 1053.52,
+    "end": 1059.28,
+    "tokens": [
+      {
+        "raw": "Okay",
+        "lemma": "Okay"
+      },
+      {
+        "raw": "Subtitles",
+        "lemma": "Subtitles"
+      }
+    ]
+  },
+  {
+    "start": 1056.16,
+    "end": 1061.6,
+    "tokens": [
+      {
+        "raw": "So",
+        "lemma": "So"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "can",
+        "lemma": "can"
+      },
+      {
+        "raw": "say",
+        "lemma": "say"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "stream",
+        "lemma": "stream"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "movie",
+        "lemma": "movie"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      }
+    ]
+  },
+  {
+    "start": 1059.28,
+    "end": 1064.48,
+    "tokens": [
+      {
+        "raw": "subtitles",
+        "lemma": "subtitles"
+      }
+    ]
+  },
+  {
+    "start": 1061.6,
+    "end": 1066.4,
+    "tokens": [
+      {
+        "raw": "Exactly",
+        "lemma": "Exactly"
+      },
+      {
+        "raw": "That",
+        "lemma": "That"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "very",
+        "lemma": "very"
+      },
+      {
+        "raw": "natural",
+        "lemma": "natural"
+      }
+    ]
+  },
+  {
+    "start": 1064.48,
+    "end": 1071.52,
+    "tokens": [
+      {
+        "raw": "sentence",
+        "lemma": "sentence"
+      }
+    ]
+  },
+  {
+    "start": 1066.4,
+    "end": 1075.12,
+    "tokens": [
+      {
+        "raw": "Subtitles",
+        "lemma": "Subtitles"
+      },
+      {
+        "raw": "stream",
+        "lemma": "stream"
+      },
+      {
+        "raw": "Now",
+        "lemma": "Now"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "understand",
+        "lemma": "understand"
+      }
+    ]
+  },
+  {
+    "start": 1071.52,
+    "end": 1078.559,
+    "tokens": [
+      {
+        "raw": "In",
+        "lemma": "In"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "evening",
+        "lemma": "evening"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "make",
+        "lemma": "make"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "few",
+        "lemma": "few"
+      },
+      {
+        "raw": "calls",
+        "lemma": "calls"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      }
+    ]
+  },
+  {
+    "start": 1075.12,
+    "end": 1080.48,
+    "tokens": [
+      {
+        "raw": "call",
+        "lemma": "call"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "mom",
+        "lemma": "mom"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "call",
+        "lemma": "call"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "friend",
+        "lemma": "friend"
+      }
+    ]
+  },
+  {
+    "start": 1078.559,
+    "end": 1084.72,
+    "tokens": [
+      {
+        "raw": "Do",
+        "lemma": "Do"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "call",
+        "lemma": "call"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      }
+    ]
+  },
+  {
+    "start": 1080.48,
+    "end": 1087.6,
+    "tokens": [
+      {
+        "raw": "Careful",
+        "lemma": "Careful"
+      },
+      {
+        "raw": "We",
+        "lemma": "We"
+      },
+      {
+        "raw": "say",
+        "lemma": "say"
+      },
+      {
+        "raw": "call",
+        "lemma": "call"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "or",
+        "lemma": "or"
+      },
+      {
+        "raw": "use",
+        "lemma": "use"
+      }
+    ]
+  },
+  {
+    "start": 1084.72,
+    "end": 1088.48,
+    "tokens": [
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "call",
+        "lemma": "call"
+      },
+      {
+        "raw": "not",
+        "lemma": "not"
+      },
+      {
+        "raw": "call",
+        "lemma": "call"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      }
+    ]
+  },
+  {
+    "start": 1087.6,
+    "end": 1091.2,
+    "tokens": [
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      }
+    ]
+  },
+  {
+    "start": 1088.48,
+    "end": 1093.679,
+    "tokens": [
+      {
+        "raw": "Oh",
+        "lemma": "Oh"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "always",
+        "lemma": "always"
+      },
+      {
+        "raw": "said",
+        "lemma": "said"
+      },
+      {
+        "raw": "call",
+        "lemma": "call"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      }
+    ]
+  },
+  {
+    "start": 1091.2,
+    "end": 1096.799,
+    "tokens": [
+      {
+        "raw": "Many",
+        "lemma": "Many"
+      },
+      {
+        "raw": "learners",
+        "lemma": "learners"
+      },
+      {
+        "raw": "do",
+        "lemma": "do"
+      },
+      {
+        "raw": "but",
+        "lemma": "but"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      },
+      {
+        "raw": "sounds",
+        "lemma": "sounds"
+      },
+      {
+        "raw": "strange",
+        "lemma": "strange"
+      }
+    ]
+  },
+  {
+    "start": 1093.679,
+    "end": 1099.36,
+    "tokens": [
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "native",
+        "lemma": "native"
+      },
+      {
+        "raw": "speakers",
+        "lemma": "speakers"
+      },
+      {
+        "raw": "It's",
+        "lemma": "It's"
+      },
+      {
+        "raw": "better",
+        "lemma": "better"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "say",
+        "lemma": "say"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      }
+    ]
+  },
+  {
+    "start": 1096.799,
+    "end": 1102.96,
+    "tokens": [
+      {
+        "raw": "call",
+        "lemma": "call"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      }
+    ]
+  },
+  {
+    "start": 1099.36,
+    "end": 1105.76,
+    "tokens": [
+      {
+        "raw": "Okay",
+        "lemma": "Okay"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "call",
+        "lemma": "call"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      }
+    ]
+  },
+  {
+    "start": 1102.96,
+    "end": 1107.36,
+    "tokens": [
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "call",
+        "lemma": "call"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "will",
+        "lemma": "will"
+      },
+      {
+        "raw": "practice",
+        "lemma": "practice"
+      }
+    ]
+  },
+  {
+    "start": 1105.76,
+    "end": 1112.08,
+    "tokens": [
+      {
+        "raw": "that",
+        "lemma": "that"
+      }
+    ]
+  },
+  {
+    "start": 1107.36,
+    "end": 1115.039,
+    "tokens": [
+      {
+        "raw": "Great",
+        "lemma": "Great"
+      },
+      {
+        "raw": "Now",
+        "lemma": "Now"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      },
+      {
+        "raw": "sounds",
+        "lemma": "sounds"
+      },
+      {
+        "raw": "natural",
+        "lemma": "natural"
+      }
+    ]
+  },
+  {
+    "start": 1112.08,
+    "end": 1116.88,
+    "tokens": [
+      {
+        "raw": "Sometimes",
+        "lemma": "Sometimes"
+      },
+      {
+        "raw": "when",
+        "lemma": "when"
+      },
+      {
+        "raw": "people",
+        "lemma": "people"
+      },
+      {
+        "raw": "don't",
+        "lemma": "don't"
+      },
+      {
+        "raw": "answer",
+        "lemma": "answer"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      }
+    ]
+  },
+  {
+    "start": 1115.039,
+    "end": 1119.36,
+    "tokens": [
+      {
+        "raw": "leave",
+        "lemma": "leave"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "voicemail",
+        "lemma": "voicemail"
+      }
+    ]
+  },
+  {
+    "start": 1116.88,
+    "end": 1120.559,
+    "tokens": [
+      {
+        "raw": "Voicemail",
+        "lemma": "Voicemail"
+      },
+      {
+        "raw": "That",
+        "lemma": "That"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "message",
+        "lemma": "message"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      }
+    ]
+  },
+  {
+    "start": 1119.36,
+    "end": 1124.24,
+    "tokens": [
+      {
+        "raw": "voice",
+        "lemma": "voice"
+      }
+    ]
+  },
+  {
+    "start": 1120.559,
+    "end": 1127.36,
+    "tokens": [
+      {
+        "raw": "Exactly",
+        "lemma": "Exactly"
+      },
+      {
+        "raw": "Like",
+        "lemma": "Like"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "voice",
+        "lemma": "voice"
+      },
+      {
+        "raw": "note",
+        "lemma": "note"
+      },
+      {
+        "raw": "You",
+        "lemma": "You"
+      },
+      {
+        "raw": "speak",
+        "lemma": "speak"
+      }
+    ]
+  },
+  {
+    "start": 1124.24,
+    "end": 1128.799,
+    "tokens": [
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "other",
+        "lemma": "other"
+      },
+      {
+        "raw": "person",
+        "lemma": "person"
+      },
+      {
+        "raw": "listens",
+        "lemma": "listens"
+      },
+      {
+        "raw": "later",
+        "lemma": "later"
+      }
+    ]
+  },
+  {
+    "start": 1127.36,
+    "end": 1132.64,
+    "tokens": [
+      {
+        "raw": "Okay",
+        "lemma": "Okay"
+      }
+    ]
+  },
+  {
+    "start": 1128.799,
+    "end": 1134.48,
+    "tokens": [
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "can",
+        "lemma": "can"
+      },
+      {
+        "raw": "say",
+        "lemma": "say"
+      },
+      {
+        "raw": "Sorry",
+        "lemma": "Sorry"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "missed",
+        "lemma": "missed"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "call",
+        "lemma": "call"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      }
+    ]
+  },
+  {
+    "start": 1132.64,
+    "end": 1138.16,
+    "tokens": [
+      {
+        "raw": "left",
+        "lemma": "left"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "voicemail",
+        "lemma": "voicemail"
+      }
+    ]
+  },
+  {
+    "start": 1134.48,
+    "end": 1140.559,
+    "tokens": [
+      {
+        "raw": "Perfect",
+        "lemma": "Perfect"
+      },
+      {
+        "raw": "sentence",
+        "lemma": "sentence"
+      },
+      {
+        "raw": "Before",
+        "lemma": "Before"
+      },
+      {
+        "raw": "bed",
+        "lemma": "bed"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "set",
+        "lemma": "set"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      }
+    ]
+  },
+  {
+    "start": 1138.16,
+    "end": 1143.28,
+    "tokens": [
+      {
+        "raw": "alarm",
+        "lemma": "alarm"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "Beep",
+        "lemma": "Beep"
+      },
+      {
+        "raw": "beep",
+        "lemma": "beep"
+      },
+      {
+        "raw": "for",
+        "lemma": "for"
+      }
+    ]
+  },
+  {
+    "start": 1140.559,
+    "end": 1146.16,
+    "tokens": [
+      {
+        "raw": "tomorrow",
+        "lemma": "tomorrow"
+      },
+      {
+        "raw": "morning",
+        "lemma": "morning"
+      }
+    ]
+  },
+  {
+    "start": 1143.28,
+    "end": 1149.4,
+    "tokens": [
+      {
+        "raw": "Good",
+        "lemma": "Good"
+      },
+      {
+        "raw": "idea",
+        "lemma": "idea"
+      },
+      {
+        "raw": "So",
+        "lemma": "So"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "will",
+        "lemma": "will"
+      },
+      {
+        "raw": "wake",
+        "lemma": "wake"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      }
+    ]
+  },
+  {
+    "start": 1146.16,
+    "end": 1149.4,
+    "tokens": [
+      {
+        "raw": "up",
+        "lemma": "up"
+      },
+      {
+        "raw": "again",
+        "lemma": "again"
+      }
+    ]
+  },
+  {
+    "start": 1150.64,
+    "end": 1159.12,
+    "tokens": [
+      {
+        "raw": "Then",
+        "lemma": "Then"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "put",
+        "lemma": "put"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "on",
+        "lemma": "on"
+      },
+      {
+        "raw": "do",
+        "lemma": "do"
+      },
+      {
+        "raw": "not",
+        "lemma": "not"
+      },
+      {
+        "raw": "disturb",
+        "lemma": "disturb"
+      }
+    ]
+  },
+  {
+    "start": 1153.76,
+    "end": 1159.12,
+    "tokens": [
+      {
+        "raw": "brush",
+        "lemma": "brush"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "teeth",
+        "lemma": "teeth"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "get",
+        "lemma": "get"
+      },
+      {
+        "raw": "ready",
+        "lemma": "ready"
+      },
+      {
+        "raw": "for",
+        "lemma": "for"
+      },
+      {
+        "raw": "sleep",
+        "lemma": "sleep"
+      }
+    ]
+  },
+  {
+    "start": 1159.44,
+    "end": 1167.72,
+    "tokens": [
+      {
+        "raw": "Do",
+        "lemma": "Do"
+      },
+      {
+        "raw": "not",
+        "lemma": "not"
+      },
+      {
+        "raw": "disturb",
+        "lemma": "disturb"
+      },
+      {
+        "raw": "again",
+        "lemma": "again"
+      },
+      {
+        "raw": "No",
+        "lemma": "No"
+      },
+      {
+        "raw": "calls",
+        "lemma": "calls"
+      },
+      {
+        "raw": "no",
+        "lemma": "no"
+      }
+    ]
+  },
+  {
+    "start": 1163.12,
+    "end": 1167.72,
+    "tokens": [
+      {
+        "raw": "sounds",
+        "lemma": "sounds"
+      },
+      {
+        "raw": "Perfect",
+        "lemma": "Perfect"
+      },
+      {
+        "raw": "for",
+        "lemma": "for"
+      },
+      {
+        "raw": "night",
+        "lemma": "night"
+      }
+    ]
+  },
+  {
+    "start": 1168.32,
+    "end": 1175.44,
+    "tokens": [
+      {
+        "raw": "Exactly",
+        "lemma": "Exactly"
+      }
+    ]
+  },
+  {
+    "start": 1170.48,
+    "end": 1178.64,
+    "tokens": [
+      {
+        "raw": "Then",
+        "lemma": "Then"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "close",
+        "lemma": "close"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "eyes",
+        "lemma": "eyes"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "sleep",
+        "lemma": "sleep"
+      }
+    ]
+  },
+  {
+    "start": 1175.44,
+    "end": 1181.2,
+    "tokens": [
+      {
+        "raw": "So",
+        "lemma": "So"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "whole",
+        "lemma": "whole"
+      },
+      {
+        "raw": "day",
+        "lemma": "day"
+      },
+      {
+        "raw": "is",
+        "lemma": "is"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "your",
+        "lemma": "your"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      }
+    ]
+  },
+  {
+    "start": 1178.64,
+    "end": 1182.72,
+    "tokens": [
+      {
+        "raw": "From",
+        "lemma": "From"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "alarm",
+        "lemma": "alarm"
+      },
+      {
+        "raw": "in",
+        "lemma": "in"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "morning",
+        "lemma": "morning"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      }
+    ]
+  },
+  {
+    "start": 1181.2,
+    "end": 1187.36,
+    "tokens": [
+      {
+        "raw": "alarm",
+        "lemma": "alarm"
+      },
+      {
+        "raw": "at",
+        "lemma": "at"
+      },
+      {
+        "raw": "night",
+        "lemma": "night"
+      }
+    ]
+  },
+  {
+    "start": 1182.72,
+    "end": 1190.48,
+    "tokens": [
+      {
+        "raw": "That's",
+        "lemma": "That's"
+      },
+      {
+        "raw": "right",
+        "lemma": "right"
+      },
+      {
+        "raw": "My",
+        "lemma": "My"
+      },
+      {
+        "raw": "day",
+        "lemma": "day"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "So",
+        "lemma": "So"
+      }
+    ]
+  },
+  {
+    "start": 1187.36,
+    "end": 1194.72,
+    "tokens": [
+      {
+        "raw": "John",
+        "lemma": "John"
+      },
+      {
+        "raw": "think",
+        "lemma": "think"
+      },
+      {
+        "raw": "about",
+        "lemma": "about"
+      },
+      {
+        "raw": "one",
+        "lemma": "one"
+      },
+      {
+        "raw": "full",
+        "lemma": "full"
+      },
+      {
+        "raw": "day",
+        "lemma": "day"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      }
+    ]
+  },
+  {
+    "start": 1190.48,
+    "end": 1196.48,
+    "tokens": [
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "In",
+        "lemma": "In"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "morning",
+        "lemma": "morning"
+      },
+      {
+        "raw": "alarm",
+        "lemma": "alarm"
+      },
+      {
+        "raw": "snooze",
+        "lemma": "snooze"
+      }
+    ]
+  },
+  {
+    "start": 1194.72,
+    "end": 1200.24,
+    "tokens": [
+      {
+        "raw": "notifications",
+        "lemma": "notifications"
+      }
+    ]
+  },
+  {
+    "start": 1196.48,
+    "end": 1201.84,
+    "tokens": [
+      {
+        "raw": "then",
+        "lemma": "then"
+      },
+      {
+        "raw": "breakfast",
+        "lemma": "breakfast"
+      },
+      {
+        "raw": "news",
+        "lemma": "news"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "headlines",
+        "lemma": "headlines"
+      }
+    ]
+  },
+  {
+    "start": 1200.24,
+    "end": 1205.36,
+    "tokens": [
+      {
+        "raw": "group",
+        "lemma": "group"
+      },
+      {
+        "raw": "chat",
+        "lemma": "chat"
+      }
+    ]
+  },
+  {
+    "start": 1201.84,
+    "end": 1209.919,
+    "tokens": [
+      {
+        "raw": "On",
+        "lemma": "On"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "way",
+        "lemma": "way"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "school",
+        "lemma": "school"
+      },
+      {
+        "raw": "headphones",
+        "lemma": "headphones"
+      },
+      {
+        "raw": "music",
+        "lemma": "music"
+      }
+    ]
+  },
+  {
+    "start": 1205.36,
+    "end": 1212.16,
+    "tokens": [
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "audio",
+        "lemma": "audio"
+      },
+      {
+        "raw": "book",
+        "lemma": "book"
+      },
+      {
+        "raw": "missed",
+        "lemma": "missed"
+      },
+      {
+        "raw": "calls",
+        "lemma": "calls"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "call",
+        "lemma": "call"
+      }
+    ]
+  },
+  {
+    "start": 1209.919,
+    "end": 1215.84,
+    "tokens": [
+      {
+        "raw": "back",
+        "lemma": "back"
+      }
+    ]
+  },
+  {
+    "start": 1212.16,
+    "end": 1220.679,
+    "tokens": [
+      {
+        "raw": "in",
+        "lemma": "in"
+      },
+      {
+        "raw": "class",
+        "lemma": "class"
+      },
+      {
+        "raw": "Put",
+        "lemma": "Put"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      },
+      {
+        "raw": "away",
+        "lemma": "away"
+      },
+      {
+        "raw": "Do",
+        "lemma": "Do"
+      },
+      {
+        "raw": "not",
+        "lemma": "not"
+      },
+      {
+        "raw": "disturb",
+        "lemma": "disturb"
+      }
+    ]
+  },
+  {
+    "start": 1215.84,
+    "end": 1220.679,
+    "tokens": [
+      {
+        "raw": "No",
+        "lemma": "No"
+      },
+      {
+        "raw": "vibration",
+        "lemma": "vibration"
+      },
+      {
+        "raw": "total",
+        "lemma": "total"
+      },
+      {
+        "raw": "silence",
+        "lemma": "silence"
+      }
+    ]
+  },
+  {
+    "start": 1221.76,
+    "end": 1229.28,
+    "tokens": [
+      {
+        "raw": "At",
+        "lemma": "At"
+      },
+      {
+        "raw": "lunch",
+        "lemma": "lunch"
+      },
+      {
+        "raw": "cafeteria",
+        "lemma": "cafeteria"
+      },
+      {
+        "raw": "Scan",
+        "lemma": "Scan"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "QR",
+        "lemma": "QR"
+      },
+      {
+        "raw": "code",
+        "lemma": "code"
+      }
+    ]
+  },
+  {
+    "start": 1225.76,
+    "end": 1231.84,
+    "tokens": [
+      {
+        "raw": "Cafeteria",
+        "lemma": "Cafeteria"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "Order",
+        "lemma": "Order"
+      },
+      {
+        "raw": "food",
+        "lemma": "food"
+      },
+      {
+        "raw": "Selfie",
+        "lemma": "Selfie"
+      }
+    ]
+  },
+  {
+    "start": 1229.28,
+    "end": 1234.88,
+    "tokens": [
+      {
+        "raw": "Pocket",
+        "lemma": "Pocket"
+      },
+      {
+        "raw": "call",
+        "lemma": "call"
+      }
+    ]
+  },
+  {
+    "start": 1231.84,
+    "end": 1238.32,
+    "tokens": [
+      {
+        "raw": "in",
+        "lemma": "in"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "library",
+        "lemma": "library"
+      },
+      {
+        "raw": "Scan",
+        "lemma": "Scan"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "borrow",
+        "lemma": "borrow"
+      }
+    ]
+  },
+  {
+    "start": 1234.88,
+    "end": 1241.84,
+    "tokens": [
+      {
+        "raw": "Flashcards",
+        "lemma": "Flashcards"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "study",
+        "lemma": "study"
+      },
+      {
+        "raw": "subtitles",
+        "lemma": "subtitles"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "read",
+        "lemma": "read"
+      }
+    ]
+  },
+  {
+    "start": 1238.32,
+    "end": 1247.2,
+    "tokens": [
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "do",
+        "lemma": "do"
+      },
+      {
+        "raw": "not",
+        "lemma": "not"
+      },
+      {
+        "raw": "disturb",
+        "lemma": "disturb"
+      },
+      {
+        "raw": "to",
+        "lemma": "to"
+      },
+      {
+        "raw": "stay",
+        "lemma": "stay"
+      },
+      {
+        "raw": "focused",
+        "lemma": "focused"
+      }
+    ]
+  },
+  {
+    "start": 1241.84,
+    "end": 1252.72,
+    "tokens": [
+      {
+        "raw": "Walking",
+        "lemma": "Walking"
+      },
+      {
+        "raw": "home",
+        "lemma": "home"
+      },
+      {
+        "raw": "Weather",
+        "lemma": "Weather"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "Sun",
+        "lemma": "Sun"
+      },
+      {
+        "raw": "or",
+        "lemma": "or"
+      },
+      {
+        "raw": "rain",
+        "lemma": "rain"
+      }
+    ]
+  },
+  {
+    "start": 1247.2,
+    "end": 1256.4,
+    "tokens": [
+      {
+        "raw": "umbrella",
+        "lemma": "umbrella"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "map",
+        "lemma": "map"
+      },
+      {
+        "raw": "app",
+        "lemma": "app"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "GPS",
+        "lemma": "GPS"
+      }
+    ]
+  },
+  {
+    "start": 1252.72,
+    "end": 1259.6,
+    "tokens": [
+      {
+        "raw": "In",
+        "lemma": "In"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "evening",
+        "lemma": "evening"
+      },
+      {
+        "raw": "stream",
+        "lemma": "stream"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "show",
+        "lemma": "show"
+      },
+      {
+        "raw": "watch",
+        "lemma": "watch"
+      }
+    ]
+  },
+  {
+    "start": 1256.4,
+    "end": 1262.559,
+    "tokens": [
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "subtitles",
+        "lemma": "subtitles"
+      }
+    ]
+  },
+  {
+    "start": 1259.6,
+    "end": 1265.36,
+    "tokens": [
+      {
+        "raw": "At",
+        "lemma": "At"
+      },
+      {
+        "raw": "night",
+        "lemma": "night"
+      },
+      {
+        "raw": "make",
+        "lemma": "make"
+      },
+      {
+        "raw": "calls",
+        "lemma": "calls"
+      },
+      {
+        "raw": "leave",
+        "lemma": "leave"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "voicemail",
+        "lemma": "voicemail"
+      }
+    ]
+  },
+  {
+    "start": 1262.559,
+    "end": 1269.12,
+    "tokens": [
+      {
+        "raw": "if",
+        "lemma": "if"
+      },
+      {
+        "raw": "they",
+        "lemma": "they"
+      },
+      {
+        "raw": "don't",
+        "lemma": "don't"
+      },
+      {
+        "raw": "answer",
+        "lemma": "answer"
+      },
+      {
+        "raw": "set",
+        "lemma": "set"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "alarm",
+        "lemma": "alarm"
+      },
+      {
+        "raw": "do",
+        "lemma": "do"
+      }
+    ]
+  },
+  {
+    "start": 1265.36,
+    "end": 1273.52,
+    "tokens": [
+      {
+        "raw": "not",
+        "lemma": "not"
+      },
+      {
+        "raw": "disturb",
+        "lemma": "disturb"
+      },
+      {
+        "raw": "then",
+        "lemma": "then"
+      },
+      {
+        "raw": "sleep",
+        "lemma": "sleep"
+      }
+    ]
+  },
+  {
+    "start": 1269.12,
+    "end": 1276.4,
+    "tokens": [
+      {
+        "raw": "My",
+        "lemma": "My"
+      },
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "never",
+        "lemma": "never"
+      },
+      {
+        "raw": "rests",
+        "lemma": "rests"
+      },
+      {
+        "raw": "True",
+        "lemma": "True"
+      },
+      {
+        "raw": "But",
+        "lemma": "But"
+      },
+      {
+        "raw": "every",
+        "lemma": "every"
+      }
+    ]
+  },
+  {
+    "start": 1273.52,
+    "end": 1278.24,
+    "tokens": [
+      {
+        "raw": "time",
+        "lemma": "time"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "use",
+        "lemma": "use"
+      },
+      {
+        "raw": "it",
+        "lemma": "it"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "also",
+        "lemma": "also"
+      },
+      {
+        "raw": "learn",
+        "lemma": "learn"
+      },
+      {
+        "raw": "small",
+        "lemma": "small"
+      }
+    ]
+  },
+  {
+    "start": 1276.4,
+    "end": 1280.08,
+    "tokens": [
+      {
+        "raw": "English",
+        "lemma": "English"
+      },
+      {
+        "raw": "words",
+        "lemma": "words"
+      }
+    ]
+  },
+  {
+    "start": 1278.24,
+    "end": 1283.44,
+    "tokens": [
+      {
+        "raw": "Exactly",
+        "lemma": "Exactly"
+      }
+    ]
+  },
+  {
+    "start": 1280.08,
+    "end": 1285.6,
+    "tokens": [
+      {
+        "raw": "Many",
+        "lemma": "Many"
+      },
+      {
+        "raw": "learners",
+        "lemma": "learners"
+      },
+      {
+        "raw": "study",
+        "lemma": "study"
+      },
+      {
+        "raw": "for",
+        "lemma": "for"
+      },
+      {
+        "raw": "years",
+        "lemma": "years"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "still",
+        "lemma": "still"
+      }
+    ]
+  },
+  {
+    "start": 1283.44,
+    "end": 1287.919,
+    "tokens": [
+      {
+        "raw": "make",
+        "lemma": "make"
+      },
+      {
+        "raw": "these",
+        "lemma": "these"
+      },
+      {
+        "raw": "mistakes",
+        "lemma": "mistakes"
+      }
+    ]
+  },
+  {
+    "start": 1285.6,
+    "end": 1292.559,
+    "tokens": [
+      {
+        "raw": "But",
+        "lemma": "But"
+      },
+      {
+        "raw": "not",
+        "lemma": "not"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "now",
+        "lemma": "now"
+      },
+      {
+        "raw": "John",
+        "lemma": "John"
+      }
+    ]
+  },
+  {
+    "start": 1287.919,
+    "end": 1296.0,
+    "tokens": [
+      {
+        "raw": "Right",
+        "lemma": "Right"
+      },
+      {
+        "raw": "now",
+        "lemma": "now"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "know",
+        "lemma": "know"
+      },
+      {
+        "raw": "Next",
+        "lemma": "Next"
+      },
+      {
+        "raw": "time",
+        "lemma": "time"
+      },
+      {
+        "raw": "I",
+        "lemma": "I"
+      },
+      {
+        "raw": "will",
+        "lemma": "will"
+      },
+      {
+        "raw": "text",
+        "lemma": "text"
+      }
+    ]
+  },
+  {
+    "start": 1292.559,
+    "end": 1299.44,
+    "tokens": [
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "not",
+        "lemma": "not"
+      },
+      {
+        "raw": "send",
+        "lemma": "send"
+      },
+      {
+        "raw": "you",
+        "lemma": "you"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "message",
+        "lemma": "message"
+      }
+    ]
+  },
+  {
+    "start": 1296.0,
+    "end": 1303.88,
+    "tokens": [
+      {
+        "raw": "Yes",
+        "lemma": "Yes"
+      },
+      {
+        "raw": "that's",
+        "lemma": "that's"
+      },
+      {
+        "raw": "the",
+        "lemma": "the"
+      },
+      {
+        "raw": "idea",
+        "lemma": "idea"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "day",
+        "lemma": "day"
+      },
+      {
+        "raw": "with",
+        "lemma": "with"
+      },
+      {
+        "raw": "my",
+        "lemma": "my"
+      }
+    ]
+  },
+  {
+    "start": 1299.44,
+    "end": 1303.88,
+    "tokens": [
+      {
+        "raw": "phone",
+        "lemma": "phone"
+      },
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "lot",
+        "lemma": "lot"
+      },
+      {
+        "raw": "of",
+        "lemma": "of"
+      },
+      {
+        "raw": "English",
+        "lemma": "English"
+      }
+    ]
+  },
+  {
+    "start": 1303.919,
+    "end": 1310.559,
+    "tokens": [
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "a",
+        "lemma": "a"
+      },
+      {
+        "raw": "lot",
+        "lemma": "lot"
+      },
+      {
+        "raw": "of",
+        "lemma": "of"
+      },
+      {
+        "raw": "slow",
+        "lemma": "slow"
+      },
+      {
+        "raw": "English",
+        "lemma": "English"
+      },
+      {
+        "raw": "practice",
+        "lemma": "practice"
+      }
+    ]
+  },
+  {
+    "start": 1307.2,
+    "end": 1313.52,
+    "tokens": [
+      {
+        "raw": "and",
+        "lemma": "and"
+      },
+      {
+        "raw": "we",
+        "lemma": "we"
+      },
+      {
+        "raw": "learn",
+        "lemma": "learn"
+      },
+      {
+        "raw": "English",
+        "lemma": "English"
+      },
+      {
+        "raw": "through",
+        "lemma": "through"
+      },
+      {
+        "raw": "stories",
+        "lemma": "stories"
+      }
+    ]
+  },
+  {
+    "start": 1310.559,
+    "end": 1313.52,
+    "tokens": [
+      {
+        "raw": "every",
+        "lemma": "every"
+      },
+      {
+        "raw": "day",
+        "lemma": "day"
+      }
+    ]
+  }
+]

@@ -1,0 +1,98 @@
+/* ===== Reset ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Page ===== */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top, #0b0f1a, #05060a);
+    font-family: Inter, system-ui, sans-serif;
+    color: #fff;
+}
+
+/* ===== Card ===== */
+.card {
+    width: 320px;
+    height: 200px;
+    border-radius: 20px;
+    padding: 24px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(0, 240, 255, 0.15),
+        rgba(255, 0, 255, 0.15)
+    );
+
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        0 0 20px rgba(0, 240, 255, 0.3),
+        0 0 40px rgba(255, 0, 255, 0.2);
+
+    /*  animation: pulse 3s ease-in-out infinite; */
+}
+
+/* ===== Gradient Text ===== */
+.gradient-text {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    background: linear-gradient(
+        90deg,
+        #00f0ff,
+        #ff00ff,
+        #00ff88
+    );
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+
+    animation: textGradient 4s linear infinite;
+}
+
+/* ===== Subtitle ===== */
+.subtitle {
+    margin-top: 8px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* ===== Animations ===== */
+@keyframes pulse {
+    0% {
+        box-shadow:
+            0 0 20px rgba(0, 240, 255, 0.3),
+            0 0 40px rgba(255, 0, 255, 0.2);
+    }
+    50% {
+        box-shadow:
+            0 0 35px rgba(0, 240, 255, 0.6),
+            0 0 70px rgba(255, 0, 255, 0.4);
+    }
+    100% {
+        box-shadow:
+            0 0 20px rgba(0, 240, 255, 0.3),
+            0 0 40px rgba(255, 0, 255, 0.2);
+    }
+}
+
+@keyframes textGradient {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}

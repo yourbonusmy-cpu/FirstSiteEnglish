@@ -1,0 +1,9 @@
+/* НЕ выучено — есть рамка */
+.card.not-learned {
+    border: 5px solid #198754; /* bootstrap success */
+}
+
+/* Выучено — рамки нет */
+.card.learned {
+    border: none;
+}

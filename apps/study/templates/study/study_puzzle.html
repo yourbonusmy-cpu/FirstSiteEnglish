@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'study/css/study_puzzle.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="puzzle-container">
+
+    <!-- Центральная карточка слова -->
+    <div class="puzzle-card-wrapper">
+
+        <!-- Левая стрелка -->
+        <button class="nav-arrow left" onclick="prevWord()">
+            <i class="bi bi-chevron-compact-left"></i>
+        </button>
+
+        <div class="puzzle-card">
+            <!-- Перевод -->
+            <div class="puzzle-translate" id="word-translate"></div>
+
+            <!-- Пустые кружки -->
+            <div class="puzzle-slots" id="word-slots"></div>
+
+            <!-- Кружки с буквами -->
+            <div class="puzzle-letters" id="letters"></div>
+
+            <!-- Прогресс 1/N -->
+            <div class="puzzle-progress" id="progress"></div>
+
+            <!-- Очистить -->
+            <button class="clear-btn" onclick="clearWord()">Очистить</button>
+        </div>
+
+        <!-- Правая стрелка -->
+        <button class="nav-arrow right" onclick="nextWord()">
+            <i class="bi bi-chevron-compact-right"></i>
+        </button>
+
+    </div>
+
+    <!-- Боковая панель справа -->
+    <aside class="puzzle-side-panel">
+        <div class="side-card">
+            <div class="timer">
+                <span>Время</span>
+                <strong id="timer">00:00</strong>
+            </div>
+            <div class="score">
+                <span>Правильных</span>
+                <strong id="score">0</strong>
+            </div>
+            <div class="total-words">
+                <span>Всего слов</span>
+                <strong>{{ words|length }}</strong>
+            </div>
+        </div>
+
+        <div class="side-card">
+            <button class="finish-btn">Завершить</button>
+        </div>
+    </aside>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    window.STUDY_WORDS = {{ words_json|safe }};
+</script>
+<script src="{% static 'study/js/study_puzzle.js' %}"></script>
+{% endblock %}

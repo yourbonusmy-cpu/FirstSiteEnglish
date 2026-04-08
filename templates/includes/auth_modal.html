@@ -1,0 +1,62 @@
+<div class="modal fade" id="authModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Аккаунт</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- Tabs -->
+        <ul class="nav nav-tabs mb-3" role="tablist">
+          <li class="nav-item">
+            <button class="nav-link active"
+                    data-bs-toggle="tab"
+                    data-bs-target="#loginTab">
+              Вход
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#registerTab">
+              Регистрация
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+
+          <!-- LOGIN -->
+          <form id="loginTab"
+                class="tab-pane fade show active"
+                data-url="{% url 'login_ajax' %}">
+            {% csrf_token %}
+            <input name="username" class="form-control mb-2" placeholder="Логин">
+            <input name="password" type="password" class="form-control mb-2">
+            <div class="text-danger small" id="loginError"></div>
+            <button class="btn btn-primary w-100 mt-2">Войти</button>
+          </form>
+
+          <!-- REGISTER -->
+          <form id="registerTab"
+                class="tab-pane fade"
+                data-url="{% url 'register_ajax' %}">
+            {% csrf_token %}
+            <input name="username" class="form-control mb-2" placeholder="Логин">
+            <input name="email" type="email" class="form-control mb-2" placeholder="Email">
+            <input name="password" type="password" class="form-control mb-2" placeholder="Пароль">
+            <div class="text-danger small" id="registerError"></div>
+            <button class="btn btn-success w-100 mt-2">
+              Создать аккаунт
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

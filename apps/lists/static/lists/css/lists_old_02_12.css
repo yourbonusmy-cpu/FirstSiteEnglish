@@ -1,0 +1,150 @@
+/* Контейнер */
+.container {
+    max-width: 100%;
+}
+
+/* Слова сверху */
+.list-card .card-body > .text-center:first-child {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.85rem;
+}
+
+/* Карточка */
+.list-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-card .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;        /* для margin-top: auto */
+    flex: 1 1 auto;      /* растягиваем содержимое */
+    padding-bottom: 0;
+}
+
+/* Закругления */
+.bottom-rounded {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+.top-rounded {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+/* Наведение */
+.list-card:hover .card-overlay {
+    --bs-bg-opacity: 0.75;
+}
+
+/* Кнопки */
+.toggle-btn i { color: #111; }
+.icon-btn {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.test-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Publish */
+.publish-switch:checked {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.publish-switch:checked:focus {
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+}
+
+.list-card .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;      /* чтобы margin-top: auto работал */
+    padding-bottom: 0; /* убираем лишние отступы снизу */
+}
+
+.publish-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;    /* не сжимается */
+    margin-top: auto;  /* прижимает к низу */
+    width: 100%;
+    padding: 0;        /* минимальные отступы */
+}
+
+.publish-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.publish-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.publish-right .card-overlay {
+    padding: 0.15rem 0.22rem; /* уменьшаем внутренние отступы */
+    min-width: auto;          /* чтобы не растягивалось */
+}
+
+.publish-right .like-btn {
+    width: 22px;   /* уменьшить кнопку */
+    height: 22px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Прогресс */
+.progress-ring-wrapper {
+    --size: 40px;
+    --thickness: 6px;
+    --track-color: #dee2e6;
+    --progress-color: #333;
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+    cursor: pointer;
+}
+
+.progress-ring {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--progress-color) calc(var(--percent) * 1%),
+        var(--track-color) 0
+    );
+    -webkit-mask: radial-gradient(circle, transparent 52%, #000 calc(52% + 1px));
+    mask: radial-gradient(circle, transparent 52%, #000 calc(52% + 1px));
+}
+
+.progress-ring.empty { background: var(--track-color); }
+
+.progress-ring-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #495057;
+    pointer-events: none;
+}

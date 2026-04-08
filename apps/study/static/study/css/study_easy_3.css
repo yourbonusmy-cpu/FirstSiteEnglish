@@ -1,0 +1,179 @@
+.study-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    height: 80vh;
+}
+
+
+.study-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.study-card-frame {
+    display: flex;
+    gap: 20px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    background: #f8f9fa;
+    position: relative;
+    align-items: flex-start;
+}
+
+/* Карточка слова */
+.card-wrapper {
+    perspective: 1500px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    height: 150px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #1e90ff, #00bfff);
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    text-align: center;
+    position: relative;
+}
+
+.card .front,
+.card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card .back {
+    transform: rotateY(180deg);
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.progress-bar {
+    margin-top: 10px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Варианты ответов */
+.answer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+}
+
+.answer-options button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.answer-options button.correct {
+    background-color: #28a745;
+    color: #fff;
+    border-color: #28a745;
+}
+
+.answer-options button.wrong {
+    background-color: #dc3545;
+    color: #fff;
+    border-color: #dc3545;
+}
+
+/* Навигационные стрелки */
+.nav-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    transition: background 0.3s, transform 0.2s;
+}
+
+
+
+.nav-left { left: -60px; }
+.nav-right { right: -60px; }
+
+.nav-arrow i {
+    font-size: 4rem;
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    pointer-events: none;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.nav-arrow:hover i {
+    color: #1e90ff;
+    transform: scale(1.1);
+}
+
+/* Боковая панель */
+.sidebar {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    height: fit-content;
+    position: fixed;
+    right: 20px;
+    top: 20%;
+    background: #fff;
+}
+
+.sidebar .timer,
+.sidebar .score {
+    font-size: 1.2rem;
+}
+
+.sidebar button {
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    background-color: #1e90ff;
+    color: #fff;
+    font-size: 1rem;
+}
+

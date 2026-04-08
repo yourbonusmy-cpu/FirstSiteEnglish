@@ -1,0 +1,97 @@
+{% load static %}
+
+<div class="col">
+    <div class="card shadow-sm list-card preview-card"
+         id="preview-card"
+         style="background-color: #6c757d;">
+
+        <div class="card-body list-card-body">
+
+            <!-- ===== Верхний счетчик ===== -->
+            <div class="learned-counter-wrapper">
+                <span class="card-overlay small px-2 py-1
+                             bg-white bg-opacity-50 rounded-bottom learned-counter">
+                    <span id="preview-learned-count">0</span> слов
+                </span>
+            </div>
+
+            <!-- ===== Основной контент ===== -->
+            <div class="content-wrapper flex-grow-1 d-flex flex-column">
+
+                <!-- Заголовок + прогресс -->
+                <div class="title-progress-wrapper mb-2">
+
+                    <div class="title-wrapper">
+                        <h5 class="card-title mb-0">
+                            <span id="preview-title"
+                                  class="card-overlay px-2 py-1 bg-white bg-opacity-50 rounded d-inline-block">
+                                Название списка
+                            </span>
+                        </h5>
+                    </div>
+
+                    <div class="progress-container">
+                        <div class="progress-ring-wrapper"
+                             id="preview-progress-wrapper"
+                             style="--percent: 0">
+
+                            <div class="progress-ring empty"></div>
+                            <div class="card-overlay bg-white bg-opacity-50 progress-ring-center"></div>
+
+                            <div class="progress-ring-label"
+                                 id="preview-progress-label">
+                                0%
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ===== Плейсхолдер кнопок ===== -->
+                <!-- Просто пустой блок чтобы сохранить высоту -->
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-1 mb-2 opacity-25">
+                    <div class="d-flex gap-1 flex-wrap">
+                        <div class="btn btn-light btn-sm icon-btn bg-white bg-opacity-10 disabled">
+                            <img src="{% static 'lists/icons/list-ul.svg' %}" alt="">
+                        </div>
+                        <div class="btn btn-light btn-sm icon-btn bg-white bg-opacity-10 disabled">
+                            <img src="{% static 'lists/icons/card-checklist.svg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== Плейсхолдер тестов ===== -->
+                <div class="tests-section d-flex flex-wrap align-items-center gap-1 mb-2 opacity-25">
+                    <span class="card-overlay small px-1 py-1 fw-medium text-muted me-1 bg-white bg-opacity-50 rounded">
+                        Тесты:
+                    </span>
+
+                    <div class="btn btn-light btn-sm icon-btn bg-white bg-opacity-10 disabled">
+                        <img src="{% static 'lists/icons/healthicons--i-training-class.svg' %}" alt="">
+                    </div>
+
+                    <div class="btn btn-light btn-sm icon-btn bg-white bg-opacity-10 disabled">
+                        <img src="{% static 'lists/icons/book-check.svg' %}" alt="">
+                    </div>
+
+                    <div class="btn btn-light btn-sm icon-btn bg-white bg-opacity-10 disabled">
+                        <img src="{% static 'lists/icons/puzzle.svg' %}" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ===== Нижний блок (заглушка) ===== -->
+            <div class="bottom-row d-flex justify-content-end">
+
+                <div class="card-overlay px-2 py-1 bg-white bg-opacity-50 rounded-top opacity-25">
+                    <i class="bi bi-heart-fill text-secondary fs-5"></i>
+                    <span class="small text-muted">0</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

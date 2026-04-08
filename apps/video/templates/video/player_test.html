@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Video Player Test{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'video/css/player_test.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="video-page">
+
+    <div class="video-player" id="player">
+        <!-- HLS video -->
+        <video id="video" preload="metadata" controls="false" playsinline></video>
+
+        <!-- overlay for click -->
+        <div class="video-overlay" id="overlay"></div>
+
+        <!-- controls -->
+        <div class="controls" id="controls">
+            <div class="controls-row">
+
+                <button id="playPause" class="icon-btn">
+                    <i class="bi bi-play-fill"></i>
+                </button>
+
+                <div class="time">
+                    <span id="currentTime">0:00</span> /
+                    <span id="duration">0:00</span>
+                </div>
+
+                <div class="progress-wrapper">
+                    <input type="range" id="progress" value="0" min="0" max="100">
+                </div>
+
+                <button id="mute" class="icon-btn">
+                    <i class="bi bi-volume-up"></i>
+                </button>
+
+                <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+
+                <button id="fullscreen" class="icon-btn">
+                    <i class="bi bi-fullscreen"></i>
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="{% static 'video/js/player_test.js' %}"></script>
+{% endblock %}

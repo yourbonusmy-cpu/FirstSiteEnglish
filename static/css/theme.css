@@ -1,0 +1,72 @@
+body.light-theme {
+    background-color: #ffffff;
+    color: #212529;
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: #f8f9fa;
+}
+
+/* Navbar */
+.navbar.light-theme {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+.navbar.dark-theme {
+    background-color: #1f1f1f;
+    color: #f8f9fa;
+}
+
+.navbar-dark-theme a.nav-link,
+.navbar-dark-theme .dropdown-item {
+    color: #f8f9fa;
+}
+
+.navbar-light-theme a.nav-link,
+.navbar-light-theme .dropdown-item {
+    color: #212529;
+}
+
+
+/* === TOAST CONTAINER === */
+#toast-container > .toast {
+    background-color: #1f2937 !important; /* тёмно-серый */
+    color: #f9fafb !important;            /* светлый текст */
+    border-radius: 10px;
+    padding: 14px 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    opacity: 1 !important;
+}
+
+/* Заголовок */
+#toast-container > .toast .toast-title {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Текст */
+#toast-container > .toast .toast-message {
+    color: #e5e7eb;
+}
+
+/* SUCCESS */
+#toast-container > .toast-success {
+    background-color: #065f46 !important;
+}
+
+/* ERROR */
+#toast-container > .toast-error {
+    background-color: #7f1d1d !important;
+}
+
+/* INFO */
+#toast-container > .toast-info {
+    background-color: #1e3a8a !important;
+}
+
+/* WARNING */
+#toast-container > .toast-warning {
+    background-color: #78350f !important;
+}

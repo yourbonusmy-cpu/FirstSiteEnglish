@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'study/css/study_easy.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="study-wrapper">
+
+    <!-- =========================
+         ЦЕНТРАЛЬНАЯ ЧАСТЬ
+    ========================== -->
+    <div class="study-center">
+        <div class="study-card-frame">
+
+            <!-- Левая стрелка -->
+            <div class="nav-arrow nav-left" onclick="prevWord()">
+                <i class="bi bi-chevron-compact-left"></i>
+            </div>
+
+            <!-- Карточка -->
+            <div class="card-wrapper">
+                <div class="card" id="word-card" onclick="flipCard()">
+                    <div class="front" id="card-front">
+                        <div class="word-main" id="word-main">Word</div>
+                        <div class="word-transcription" id="word-transcription"></div>
+                    </div>
+                    <div class="back" id="card-back">Translation</div>
+                </div>
+
+                <div class="progress-bar" id="progress-bar">
+                    1 / 1
+                </div>
+            </div>
+
+            <!-- Варианты ответов -->
+            <div class="answer-options" id="answer-options">
+                <!-- кнопки создаются JS -->
+            </div>
+
+            <!-- Правая стрелка -->
+            <div class="nav-arrow nav-right" onclick="nextWord()">
+                <i class="bi bi-chevron-compact-right"></i>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- =========================
+         БОКОВАЯ ПАНЕЛЬ
+    ========================== -->
+    <div class="sidebar">
+        <div class="timer" id="timer">00:00</div>
+
+        <div class="score" id="score">
+            Правильных: 0 / 1
+        </div>
+
+        <button class="finish-btn" onclick="finishStudy()">
+            Завершить
+        </button>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    /* данные для теста приходят из views.py */
+    window.STUDY_WORDS = {{ words_json|safe }};
+</script>
+
+<script src="{% static 'study/js/study_easy_3.js' %}"></script>
+{% endblock %}
+
+study_easy_3.js

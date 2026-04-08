@@ -1,0 +1,48 @@
+.color-swatch {
+    -webkit-appearance: none; /* убираем стандартный вид */
+    border: 2px solid #ccc;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s, background 0.3s;
+
+    /* начальный градиент */
+    background: linear-gradient(
+        45deg,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+    );
+}
+
+.color-swatch:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(0,0,0,0.25);
+}
+
+.color-swatch.active {
+    border-color: #111;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+
+#reset-image:hover {
+    background-color: rgba(0,0,0,0.15); /* менее прозрачный */
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* мягкая тень при hover */
+}
+
+/* Эффект при нажатии */
+#reset-image:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Плавный переход для всех эффектов */
+#reset-image.btn {
+    transition: all 0.2s ease;
+}

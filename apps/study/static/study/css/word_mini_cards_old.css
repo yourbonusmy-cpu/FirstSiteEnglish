@@ -1,0 +1,28 @@
+.mini-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 10px 12px;
+    background: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+.mini-card .word-text {
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.mini-card .circle {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #6c757d;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mini-card .circle i {
+    font-size: 14px;
+    color: #28a745;
+}

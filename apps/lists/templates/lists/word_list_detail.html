@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<h2 class="mb-3">{{ word_list.name }}</h2>
+
+<!-- ФИЛЬТРЫ -->
+<div class="mb-3 d-flex gap-3 flex-wrap align-items-center">
+
+    <input type="text"
+           id="word-search"
+           class="form-control"
+           placeholder="Поиск слова..."
+           style="max-width: 300px;">
+
+    <div class="form-check">
+        <input class="form-check-input"
+               type="checkbox"
+               id="filter-hide-known">
+        <label class="form-check-label">
+            Скрыть выученные
+        </label>
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input"
+               type="checkbox"
+               id="filter-only-known">
+        <label class="form-check-label">
+            Показать выученные
+        </label>
+    </div>
+
+    <button id="download-words"
+            class="btn btn-outline-primary ms-auto">
+        Скачать список
+    </button>
+
+</div>
+
+<table class="table table-striped align-middle">
+    <thead>
+        <tr>
+            <th>Слово</th>
+            <th>Транскрипция</th>
+            <th>Часть речи</th>
+            <th>Перевод</th>
+            <th>Показов</th>
+            <th>Оценка</th>
+        </tr>
+    </thead>
+
+    <tbody id="words-container">
+        {% include "lists/partials/word_rows.html" %}
+    </tbody>
+</table>
+
+<!-- триггер infinite scroll -->
+<div id="load-trigger" class="text-center py-4">
+    <div class="spinner-border text-primary"></div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    const LIST_ID = {{ word_list.id }};
+</script>
+<script src="{% static 'lists/js/word_list_detail.js' %}"></script>
+{% endblock %}

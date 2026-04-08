@@ -1,0 +1,41 @@
+{% for word in words %}
+<tr class="word-card"
+    data-word-id="{{ word.id }}"
+    data-word="{{ word.name|lower }}"
+    data-known="{{ word.is_known|yesno:'1,0' }}">
+
+    <td class="word-name">{{ word.name }}</td>
+    <td class="word-transcription">{{ word.transcription }}</td>
+
+    <td>
+        <select class="part-select form-select">
+            {% for part_link in word.word_parts.all %}
+                <option value="{{ part_link.id }}"
+                        data-is-main="{{ part_link.is_main|yesno:'1,0' }}"
+                        {% if part_link.is_main %}selected{% endif %}>
+                    {{ part_link.part_of_speech.name }}
+                </option>
+            {% endfor %}
+        </select>
+    </td>
+
+    <td>
+        <select class="translation-select form-select"></select>
+
+        {% for part_link in word.word_parts.all %}
+        <div class="translations-data"
+             data-part-id="{{ part_link.id }}"
+             style="display:none;">
+            {% for tr in part_link.translations.all %}
+                <span data-is-main="{{ tr.is_main|yesno:'1,0' }}">
+                    {{ tr.translation }}
+                </span>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </td>
+
+    <td>{{ word.impressions }}</td>
+    <td>{{ word.score }}</td>
+</tr>
+{% endfor %}

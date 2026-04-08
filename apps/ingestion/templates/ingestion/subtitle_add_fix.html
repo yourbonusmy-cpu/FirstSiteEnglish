@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'lists/css/lists.css' %}">
+<link rel="stylesheet" href="{% static 'ingestion/css/subtitle_add.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4 mb-4">
+    <div class="row">
+        <div class="col-lg-8">
+            <form id="subtitle-form" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-4">
+                    <label for="subtitle-name" class="form-label fw-bold">Название списка</label>
+                    <input type="text" class="form-control" maxlength="64" id="subtitle-name" name="subtitle_name" placeholder="Введите название списка" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label fw-bold">Источник субтитров</label>
+                    <div class="row g-3" id="source-row">
+                        <div class="col-md-6 col-sm-12" id="file-col">
+                            <label for="subtitle-file" class="form-label small">Файл (.srt, .vtt и др.)</label>
+                            <input type="file" class="form-control" id="subtitle-file" name="subtitle_file" accept=".srt,.vtt,.txt">
+                        </div>
+                        <div class="col-md-6 col-sm-12 mb-12" id="text-col">
+                            <label for="subtitle-text" class="form-label small">Текст или текст субтитров</label>
+                            <textarea class="form-control mb-2" id="subtitle-text" name="subtitle_text" placeholder="Вставьте текст или текст субтитров..." rows="1" style="transition: height 0.2s ease;"></textarea>
+                            <div class="d-flex justify-content-end">
+                                <button type="button" class="btn btn-outline-primary btn-sm d-none" id="process-text-btn">Обработать текст</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label fw-bold">Оформление карточки</label>
+                    <div class="row g-4 align-items-start">
+                        <div class="col-md-6">
+                            <label class="form-label small">Фоновое изображение (необязательно)</label>
+                            <div class="d-flex gap-2 align-items-center">
+                                <input type="file" class="form-control" id="background-image" name="background_image" accept="image/*">
+                                <button type="button" id="reset-image" class="btn rounded-circle shadow-sm d-none" style="width:40px;height:40px;background-color: rgba(0,0,0,0.05);border:none;">
+                                    <img src="{% static 'lists/icons/hide_image.svg' %}" alt="" style="width:20px;height:20px;">
+                                </button>
+                            </div>
+                            <div class="form-text">Если выбрано изображение — цвет фона игнорируется</div>
+                        </div>
+                        <div class="col-md-5" id="color-col">
+                            <label class="form-label small">Цвет фона</label>
+                            <div class="d-flex flex-wrap gap-2" id="color-picker">
+                                <button type="button" class="color-swatch" data-color="#ffffff" style="background:#ffffff"></button>
+                                <button type="button" class="color-swatch" data-color="#dc3545" style="background:#dc3545"></button>
+                                <button type="button" class="color-swatch" data-color="#198754" style="background:#198754"></button>
+                                <button type="button" class="color-swatch" data-color="#0d6efd" style="background:#0d6efd"></button>
+                                <button type="button" class="color-swatch" data-color="#ffc107" style="background:#ffc107"></button>
+                                <input type="color" id="direct-color-picker" class="color-swatch">
+                            </div>
+                            <input type="hidden" name="background_color" id="background-color-input" value="#ffffff">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-lg-4">
+            <h5>Предпросмотр карточки</h5>
+            <div id="card-preview-wrapper">
+                {% include "lists/_list_card.html" with preview=True %}
+            </div>
+        </div>
+    </div>
+
+    <div id="words-section" class="mt-5" style="display:none;">
+        <div class="d-flex justify-content-between mb-3">
+            <button type="button" class="btn btn-primary" id="save-btn-top">Сохранить</button>
+            <span class="badge bg-secondary" id="words-count-top">Слов: 0</span>
+        </div>
+        <div id="words-table-wrapper" style="height:400px;overflow-y:auto;">
+            <div id="words-table"></div>
+        </div>
+    </div>
+
+    <!-- Модальное окно прогресса -->
+    <div class="modal fade" id="progressModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-3">
+          <div class="modal-header border-0">
+            <h5 class="modal-title">Обработка субтитров</h5>
+          </div>
+          <div class="modal-body">
+            <div class="mb-2" id="progress-text">Запуск...</div>
+            <div class="progress" style="height:25px;">
+              <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width:0%"></div>
+            </div>
+            <div class="mt-2 text-end"><span id="progress-percent">0%</span></div>
+            <div class="text-center mt-3">
+                <button id="cancel-processing" class="btn btn-danger btn-sm">Отмена</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+window.SUBTITLE_START_URL = "{% url 'ingestion:subtitle_start' %}";
+window.SUBTITLE_PROGRESS_URL = "{% url 'ingestion:subtitle_progress' %}";
+window.SUBTITLE_PAGE_URL = "{% url 'ingestion:subtitle_page' %}";
+window.SUBTITLE_SAVE_URL = "{% url 'ingestion:subtitle_save' %}";
+window.SUBTITLE_DELETE_URL = "{% url 'ingestion:subtitle_delete_word' %}";
+</script>
+<script src="{% static 'ingestion/js/sub_fix_check.js' %}"></script>
+{% endblock %}

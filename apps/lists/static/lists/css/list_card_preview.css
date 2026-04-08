@@ -1,0 +1,18 @@
+.preview-mode a,
+.preview-mode button,
+.preview-mode .btn,
+.preview-mode .publish-switch,
+.preview-mode .like-btn {
+    pointer-events: none;
+    cursor: default;
+}
+
+/* отключаем hover-анимации */
+.preview-mode .icon-btn:hover,
+.preview-mode .list-card:hover .icon-btn {
+    background-color: inherit !important;
+}
+
+.preview-mode .list-card:hover .card-overlay {
+    --bs-bg-opacity: 0.5;
+}

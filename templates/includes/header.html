@@ -1,0 +1,112 @@
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top custom-navbar">
+
+  <div class="container">
+
+    <!-- LOGO -->
+    <a class="navbar-brand fw-bold" href="/">
+      🇬🇧 LearnEnglish
+    </a>
+
+    <!-- MOBILE -->
+    <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+
+      <!-- LEFT MENU -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'my_lists' %}active{% endif %}"
+                   href="{% url 'lists:my_lists' %}">
+                    Мои списки
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'known_words' %}active{% endif %}"
+                   href="{% url 'study:known_words' %}">
+                    Выученные слова
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'subtitle_add' %}active{% endif %}"
+                   href="{% url 'ingestion:subtitle_add' %}">
+                    Добавить список
+                </a>
+            </li>
+        {% endif %}
+
+        <!-- пункты, видимые всем -->
+        <li class="nav-item">
+            <a class="nav-link {% if request.resolver_match.url_name == 'dictionary' %}active{% endif %}"
+               href="{% url 'dictionary:dictionary' %}">
+                Словарь
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}"
+               href="{% url 'lists:about' %}">
+                О проекте
+            </a>
+        </li>
+    </ul>
+
+      <!-- RIGHT AUTH -->
+      <div class="d-flex align-items-center gap-3">
+
+        <div id="global-save-indicator"
+             class="d-none align-items-center px-2 py-1 rounded-pill bg-warning-subtle text-warning-emphasis"
+             style="font-size:13px;">
+            <div class="spinner-border spinner-border-sm me-2"></div>
+            Сохранение
+        </div>
+          <button id="themeToggleBtn" class="btn btn-outline-secondary btn-sm">
+                🌓
+            </button>
+
+        {% if user.is_authenticated %}
+
+          <!-- USER MENU -->
+          <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle"
+                    data-bs-toggle="dropdown">
+              👤 {{ user.username }}
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item" href="/accounts/profile/">
+                  Профиль
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item text-danger"
+                   href="#"
+                   id="logoutBtn">
+                  Выйти
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        {% else %}
+
+          <!-- LOGIN BUTTON -->
+          <button class="btn btn-outline-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#authModal">
+            Войти
+          </button>
+
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</nav>

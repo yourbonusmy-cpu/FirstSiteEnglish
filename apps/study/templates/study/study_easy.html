@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'study/css/study_easy.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="study-wrapper">
+    <!-- Центр -->
+    <div class="study-center">
+        <div class="study-card-frame">
+            <!-- Левая стрелка -->
+            <div class="nav-arrow nav-left" onclick="prevWord()">
+                <i class="bi bi-chevron-compact-left"></i>
+            </div>
+
+            <!-- Карточка слова -->
+            <div class="card-wrapper">
+                <div class="card" id="word-card" onclick="flipCard()">
+                    <div class="front" id="card-front">Слово</div>
+                    <div class="back" id="card-back">Перевод</div>
+                </div>
+                <div class="progress-bar" id="progress-bar">1 / 20</div>
+            </div>
+
+            <!-- Варианты ответов -->
+            <div class="answer-options" id="answer-options"></div>
+
+            <!-- Правая стрелка -->
+            <div class="nav-arrow nav-right" onclick="nextWord()">
+                <i class="bi bi-chevron-compact-right"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Боковая панель -->
+    <div class="sidebar">
+        <div class="timer" id="timer">00:00</div>
+        <div class="score" id="score">Правильных: 0</div>
+        <button onclick="finishStudy()">Завершить</button>
+    </div>
+</div>
+
+<script>
+// Слова приходят из views.py через JSON
+const words = {{ words_json|safe }};
+let currentIndex = 0;
+let correctCount = 0;
+
+const card = document.getElementById("word-card");
+const front = document.getElementById("card-front");
+const back = document.getElementById("card-back");
+const answersDiv = document.getElementById("answer-options");
+const progressBar = document.getElementById("progress-bar");
+const scoreDiv = document.getElementById("score");
+
+// Таймер
+let seconds = 0;
+setInterval(() => {
+    seconds++;
+    const m = String(Math.floor(seconds / 60)).padStart(2, '0');
+    const s = String(seconds % 60).padStart(2, '0');
+    document.getElementById('timer').innerText = `${m}:${s}`;
+}, 1000);
+
+// Показ слова и вариантов ответа
+function showWord() {
+    card.classList.remove("flipped");
+    const wordObj = words[currentIndex];
+    front.innerText = wordObj.word;
+    back.innerText = wordObj.main_translation;
+
+    let options = [];
+
+    // 1️⃣ Тест с distractors
+    if (wordObj.distractors && wordObj.distractors.length === 3) {
+        options = [...wordObj.distractors, wordObj.main_translation];
+    }
+    // 2️⃣ Тест без distractors, используем все переводы
+    else if (wordObj.all_translations && wordObj.all_translations.length > 0) {
+        options = [...wordObj.all_translations];
+        // если вариантов меньше 4, добавляем "..."
+        while (options.length < 4) options.push("...");
+        // если больше 4, оставляем 4 случайные
+        if (options.length > 4) options = shuffleArray(options).slice(0, 4);
+    }
+    // 3️⃣ Резерв
+    else {
+        options = [wordObj.main_translation];
+        while (options.length < 4) options.push("...");
+    }
+
+    // перемешиваем
+    options = shuffleArray(options);
+
+    // очищаем старые кнопки и создаем новые
+    answersDiv.innerHTML = "";
+    options.forEach(opt => {
+        const btn = document.createElement("button");
+        btn.innerText = opt;
+        btn.onclick = () => checkAnswer(btn, wordObj.main_translation);
+        answersDiv.appendChild(btn);
+    });
+
+    progressBar.innerText = `${currentIndex+1} / ${words.length}`;
+}
+
+// вспомогательная функция перемешивания массива
+function shuffleArray(array) {
+    return array.sort(() => Math.random() - 0.5);
+}
+
+
+// Переворот карточки
+function flipCard() {
+    card.classList.toggle("flipped");
+}
+
+// Проверка ответа
+function checkAnswer(btn, correct) {
+    if (btn.innerText === correct) {
+        btn.classList.add("correct");
+        correctCount++;
+    } else {
+        btn.classList.add("wrong");
+    }
+    scoreDiv.innerText = `Правильных: ${correctCount}`;
+}
+
+// Навигация
+function nextWord() {
+    if (currentIndex < words.length - 1) currentIndex++;
+    else currentIndex = 0;
+    showWord();
+}
+
+function prevWord() {
+    if (currentIndex > 0) currentIndex--;
+    else currentIndex = words.length - 1;
+    showWord();
+}
+
+// Завершение
+function finishStudy() {
+    alert(`Вы завершили изучение. Правильных: ${correctCount}/${words.length}`);
+}
+
+// Инициализация
+showWord();
+</script>
+{% endblock %}

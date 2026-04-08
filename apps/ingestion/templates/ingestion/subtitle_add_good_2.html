@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Добавление списка субтитров</h2>
+
+<form id="subtitle-form" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="subtitle-file">Файл субтитров:</label>
+        <input type="file" id="subtitle-file" name="subtitle_file" required onchange="autoPreview()">
+    </div>
+
+    <div class="form-group">
+        <label for="subtitle-name">Название списка:</label>
+        <input type="text" id="subtitle-name" name="subtitle_name" placeholder="Введите название" required>
+    </div>
+</form>
+
+<hr>
+
+<div id="words-section" style="display:none;">
+    <button type="button" id="save-btn-top" class="btn-save">Сохранить список</button>
+    <div id="words-table"></div>
+    <button type="button" id="save-btn-bottom" class="btn-save">Сохранить список</button>
+</div>
+
+<style>
+/* Современный вид таблицы */
+#words-table table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px; /* отступ между строками */
+    margin-top: 10px;
+}
+
+#words-table th, #words-table td {
+    padding: 12px 8px;
+    text-align: left;
+}
+
+#words-table th {
+    background-color: #2d3748;
+    color: white;
+}
+
+#words-table td {
+    background-color: #f1f5f9;
+    border-radius: 6px;
+}
+
+#words-table tr:hover td {
+    background-color: #e2e8f0;
+}
+
+.btn-save {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 8px 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-save:hover {
+    background-color: #357ab8;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+</style>
+
+<script>
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+async function autoPreview() {
+    const fileInput = document.getElementById("subtitle-file");
+    if (!fileInput.files[0]) return;
+
+    const formData = new FormData();
+    formData.append("subtitle_file", fileInput.files[0]);
+    const csrftoken = getCookie('csrftoken');
+
+    try {
+        const res = await fetch("{% url 'subtitle_preview' %}", {
+            method: "POST",
+            body: formData,
+            headers: {
+                'X-CSRFToken': csrftoken
+            }
+        });
+        const data = await res.json();
+
+        document.getElementById("subtitle-name").value = data.subtitle_name;
+
+        // Рендер таблицы слов
+        const tableDiv = document.getElementById("words-table");
+        tableDiv.innerHTML = "<table><tr><th>Слово</th><th>Транскрипция</th><th>Часть речи</th><th>Перевод</th><th>Частотность</th></tr>" +
+            data.words.map((w, idx) => `<tr>
+                <td>${w.name}</td>
+                <td>${w.transcription || ''}</td>
+                <td>
+                    <select class="pos-select">
+                        ${w.pos_list.map(pos => `<option value="${pos}" ${pos===w.selected_pos?'selected':''}>${pos}</option>`).join('')}
+                    </select>
+                </td>
+                <td>
+                    <select class="translation-select">
+                        ${(w.translations_for_pos[w.selected_pos] || []).map(tr => `<option value="${tr}" ${tr===w.selected_translation?'selected':''}>${tr}</option>`).join('')}
+                    </select>
+                </td>
+                <td>${w.frequency}</td>
+            </tr>`).join('') + "</table>";
+
+        document.getElementById("words-section").style.display = "block";
+
+        // Динамическое обновление переводов при смене части речи
+        document.querySelectorAll('.pos-select').forEach((select, idx) => {
+            select.addEventListener('change', function() {
+                const trSelect = document.querySelectorAll('.translation-select')[idx];
+                const translations = data.words[idx].translations_for_pos[this.value] || [];
+                trSelect.innerHTML = translations.map(t => `<option value="${t}">${t}</option>`).join('');
+            });
+        });
+
+        // Обработчик кнопок "Сохранить"
+        async function saveList() {
+            const rows = document.querySelectorAll("#words-table table tr");
+            const words = [];
+            rows.forEach((row, i) => {
+                if(i===0) return;
+                const cols = row.children;
+                words.push({
+                    name: cols[0].innerText,
+                    transcription: cols[1].innerText,
+                    selected_pos: cols[2].children[0].value,
+                    selected_translation: cols[3].children[0].value,
+                    frequency: parseInt(cols[4].innerText)
+                });
+            });
+
+            const formDataSave = new FormData();
+            formDataSave.append("subtitle_name", document.getElementById("subtitle-name").value);
+            words.forEach(w => formDataSave.append("words", JSON.stringify(w)));
+
+            const res = await fetch("{% url 'subtitle_save' %}", {
+                method: "POST",
+                body: formDataSave,
+                headers: {
+                    'X-CSRFToken': csrftoken
+                }
+            });
+            const dataSave = await res.json();
+            if(dataSave.status === "ok") {
+                alert("Список успешно сохранён!");
+            } else {
+                alert("Ошибка при сохранении списка");
+            }
+        }
+
+        document.getElementById("save-btn-top").onclick = saveList;
+        document.getElementById("save-btn-bottom").onclick = saveList;
+
+    } catch(e) {
+        console.error("Ошибка предпросмотра:", e);
+        alert("Не удалось сделать предпросмотр");
+    }
+}
+</script>
+{% endblock %}

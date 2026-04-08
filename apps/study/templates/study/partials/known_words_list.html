@@ -1,0 +1,15 @@
+{% for item in known_words %}
+<div class="col-6 col-md-4 col-lg-3">
+    <div class="card p-3 {% if item.is_learned %}border border-3 border-success{% endif %}">
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="word-name">{{ item.word.name }}</span>
+
+            <button class="btn btn-sm btn-outline-success known-toggle"
+                    data-word-id="{{ item.word.id }}"
+                    data-mode="learned">
+                <i class="bi bi-check-lg"></i>
+            </button>
+        </div>
+    </div>
+</div>
+{% endfor %}

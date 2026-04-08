@@ -1,0 +1,171 @@
+{% load static %}
+
+<div class="col">
+    <div class="card shadow-sm list-card {% if preview %}preview-mode{% endif %}"
+         style="
+            {% if list.background_image %}
+                background-image: url('{{ list.background_image.url }}');
+                background-size: cover;
+                background-position: center;
+            {% else %}
+                background-color: {{ list.background_color }};
+            {% endif %}
+         ">
+
+        <div class="card-body list-card-body">
+
+            <!-- ===== Верхний счетчик ===== -->
+            <div class="learned-counter-wrapper">
+                <span class="card-overlay small px-2 py-1
+                             bg-white bg-opacity-50 rounded-bottom learned-counter"
+                      data-list-id="{{ list.id }}">
+                    {% if list.user_quantity_learned_words != None %}
+                        <span class="learned-count">
+                            {{ list.user_quantity_learned_words }}
+                        </span> из {{ list.quantity_words }} <i class="bi bi-check-lg"></i>
+                    {% else %}
+                        <span class="learned-count">
+                            {{ list.quantity_words }} слов
+                        </span>
+                    {% endif %}
+                </span>
+            </div>
+
+            <!-- ===== Основной контент ===== -->
+            <div class="content-wrapper flex-grow-1 d-flex flex-column">
+
+                <!-- Заголовок + прогресс -->
+                <div class="title-progress-wrapper mb-2">
+                    <div class="title-wrapper">
+                        <h5 class="card-title mb-0">
+                            <span class="card-title-span card-overlay px-2 py-1 bg-white bg-opacity-50 rounded d-inline-block">
+                                {{ list.name }}
+                            </span>
+                        </h5>
+                    </div>
+
+                    <div class="progress-container">
+                        <div class="progress-ring-wrapper"
+                             data-list-id="{{ list.id }}"
+                             style="--percent: {{ list.progress_percent|default_if_none:0 }}">
+                            <div class="progress-ring {% if list.user_quantity_learned_words == None %}empty{% endif %}"></div>
+                            <div class="card-overlay bg-white bg-opacity-50 progress-ring-center"></div>
+                            <div class="progress-ring-label">
+                                {% if list.user_quantity_learned_words != None %}
+                                    {{ list.progress_percent }}%
+                                {% else %}
+                                    ?
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Кнопки просмотра / редактирования -->
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-1 mb-2">
+                    <div class="d-flex gap-1 flex-wrap">
+
+                            <a href="{% if not preview %} {% url 'lists:word_list_detail' list.id %} {% else %}#{% endif %}"
+                               class="btn btn-light btn-sm icon-btn bg-white bg-opacity-10">
+
+                            <img src="{% static 'lists/icons/list-ul.svg' %}" alt="">
+                        </a>
+
+                            <a href="{% if not preview %} {% url 'study:word_mini_cards' list.id %}{% else %}#{% endif %}"
+                               class="btn btn-light btn-sm icon-btn bg-white bg-opacity-10">
+
+                            <img src="{% static 'lists/icons/card-checklist.svg' %}" alt="">
+                        </a>
+                    </div>
+                    {% if request.user == list.owner %}
+                    <div class="d-flex gap-1 flex-wrap">
+                        <button class="btn btn-light btn-sm icon-btn delete-list bg-white bg-opacity-10"
+                                data-list-id="{{ list.id }}">
+                            <img src="{% static 'lists/icons/trash.svg' %}" alt="">
+                        </button>
+                        <button class="btn btn-light btn-sm icon-btn bg-white bg-opacity-10">
+                            <img src="{% static 'lists/icons/pencil-square.svg' %}" alt="">
+                        </button>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <!-- Тесты -->
+                <div class="tests-section d-flex flex-wrap align-items-center gap-1 mb-2">
+                    <span class="card-overlay small px-2 py-1 fw-medium small text-muted me-1 bg-white bg-opacity-50 rounded">Тесты:</span>
+
+
+                        <a href="{% if not preview %}{% url 'study:study_easy_3_cards' list.id %}{% else %}#{% endif %}"
+                           class="btn btn-light btn-sm icon-btn test-btn bg-white bg-opacity-10"
+                           data-bs-toggle="tooltip" data-bs-placement="top"
+                           title="Легкий тест">
+
+                        <img src="{% static 'lists/icons/healthicons--i-training-class.svg' %}" alt="">
+                    </a>
+
+
+                    <a href="{% if not preview %}{% url 'study:study_cards' list.id %}{% else %}#{% endif %}"
+                       class="btn btn-light btn-sm icon-btn test-btn bg-white bg-opacity-10">
+
+                        <img src="{% static 'lists/icons/book-check.svg' %}" alt="">
+                    </a>
+
+
+                    <a href="{% if not preview %}{% url 'study:study_puzzle_cards' list.id %}{% else %}#{% endif %}"
+                       class="btn btn-light btn-sm icon-btn test-btn bg-white bg-opacity-10">
+
+                        <img src="{% static 'lists/icons/puzzle.svg' %}" alt="">
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- ===== НИЖНИЙ БЛОК ===== -->
+            <div class="bottom-row">
+
+                {% if request.user.is_authenticated %}
+                <div class="like-right card-overlay px-2 py-1 bg-white bg-opacity-50 rounded-top">
+                        {% if not preview %}
+                        <button class="btn btn-link p-0 like-btn"
+                                data-url="{% url 'social:toggle_like' list.id %}">
+                        {% endif %}
+                        <i class="bi
+                            {% if list.is_liked %}
+                                bi-heart-fill text-danger
+                            {% else %}
+                                bi-heart-fill text-secondary
+                            {% endif %}
+                            fs-5"></i>
+                    </button>
+                    <span class="small text-muted likes-count">
+                        {% if not preview %}
+                            {{ list.likes.count }}
+                        {% else %}
+                            0
+                        {% endif %}
+                    </span>
+                </div>
+                {% endif %}
+
+                {% if request.user == list.owner or request.user.is_staff or preview %}
+                <div class="publish-center">
+                            <div class="card-overlay form-check form-switch m-0
+                                        d-flex align-items-center gap-1
+                                        px-2 py-1 bg-white bg-opacity-50 rounded-top ">
+                                <label class="form-check-label small text-muted">
+                                    Опубликовать
+                                </label>
+                                <input class="form-check-input publish-switch m-0"
+                                       type="checkbox"
+                                       data-list-id="{{ list.id }}"
+                                       {% if list.is_public %}checked{% endif %}>
+                            </div>
+                        </div>
+                {% endif %}
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
