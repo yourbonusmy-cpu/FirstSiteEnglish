@@ -9,6 +9,7 @@ dj-database-url==3.1.0
 psycopg2-binary==2.9.11
 redis==7.1.0
 channels_redis==4.3.0
+celery==5.6.2
 uvicorn==0.40.0
 websockets==16.0
 gunicorn==24.1.1
