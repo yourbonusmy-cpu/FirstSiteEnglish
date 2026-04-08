@@ -171,7 +171,7 @@ SPACY_MODEL = "en_core_web_sm"
 
 CELERY_BROKER_URL = os.environ.get('CELERY_BROKER_URL', 'redis://localhost:6379/0')
 # CELERY_BROKER_URL = "redis://localhost:6379/0"  # URL брокера сообщений
-CELERY_RESULT_BACKEND = "redis://localhost:6379/0"  # куда сохраняются результаты задач
+CELERY_RESULT_BACKEND = CELERY_BROKER_URL # куда сохраняются результаты задач
 CELERY_ACCEPT_CONTENT = ["json"]
 CELERY_TASK_SERIALIZER = "json"
 CELERY_RESULT_SERIALIZER = "json"
