@@ -170,12 +170,14 @@ DATA_UPLOAD_MAX_NUMBER_FIELDS = 10000
 SPACY_MODEL = "en_core_web_sm"
 
 # CELERY_BROKER_URL = "redis://localhost:6379/0"  # URL брокера сообщений
-if os.environ.get('DEBUG') == 'True' or os.environ.get('ENV') == 'local':
-    CELERY_BROKER_URL = 'redis://localhost:6379/0'
-else:
-    CELERY_BROKER_URL = os.environ.get('REDIS_URL') or os.environ.get('CELERY_BROKER_URL')
-
-CELERY_RESULT_BACKEND = REDIS_URL
+# if os.environ.get('DEBUG') == 'True' or os.environ.get('ENV') == 'local':
+#     CELERY_BROKER_URL = 'redis://localhost:6379/0'
+# else:
+#     CELERY_BROKER_URL = os.environ.get('REDIS_URL') or os.environ.get('CELERY_BROKER_URL')
+#
+# CELERY_RESULT_BACKEND = REDIS_URL
+CELERY_BROKER_URL = os.environ.get("REDIS_URL")
+CELERY_RESULT_BACKEND = os.environ.get("REDIS_URL")
 
 CELERY_ACCEPT_CONTENT = ["json"]
 CELERY_TASK_SERIALIZER = "json"
