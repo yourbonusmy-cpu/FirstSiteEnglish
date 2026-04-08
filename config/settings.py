@@ -63,7 +63,7 @@ REST_FRAMEWORK = {
 ASGI_APPLICATION = "config.asgi.application"
 
 REDIS_URL = os.getenv("REDIS_URL", "redis://127.0.0.1:6379")
-
+print(os.getenv("REDIS_URL"))
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
