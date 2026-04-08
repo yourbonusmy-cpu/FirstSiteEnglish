@@ -1,2 +1,2 @@
 web: daphne -b 0.0.0.0 -p 8000 config.asgi:application
-worker: celery -A config worker --concurrency=4
+worker: celery -A config worker --concurrency=2
