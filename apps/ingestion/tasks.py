@@ -7,7 +7,7 @@ from asgiref.sync import async_to_sync
 from celery import shared_task
 from channels.layers import get_channel_layer
 from django.contrib.auth import get_user_model
-from django.db import transaction
+from django.db import transaction, models
 
 from apps.ingestion.services.phrasal_extractor import get_phrasal_extractor
 from apps.dictionary.models import Word
@@ -141,6 +141,14 @@ def save_subtitle_list_task(self, *, user_id: int, list_id: int, task_id: str):
 
     except Exception as exc:
         r.delete(cancel_key)
-        subtitle_list.delete()
+        status = models.CharField(
+            max_length=20,
+            choices=[
+                ("processing", "processing"),
+                ("done", "done"),
+                ("error", "error"),
+            ],
+            default="processing"
+        )
         send_ws(user_id, {"type": "error", "message": str(exc)})
         raise
