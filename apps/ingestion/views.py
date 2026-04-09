@@ -1,5 +1,6 @@
 # ingestion/views.py
 import json
+import uuid
 from time import sleep
 
 from better_profanity import profanity
@@ -221,6 +222,7 @@ class SubtitleSaveView(View):
                 status=400,
             )
 
+        save_task_id = str(uuid.uuid4())
         with transaction.atomic():
             subtitle_list = SubtitleList.objects.create(
                 name=name,
@@ -233,17 +235,22 @@ class SubtitleSaveView(View):
                 quantity_learned_words_frequencies=0,
             )
 
-        # 🚀 Запускаем Celery для сохранения слов
-        celery_result = save_subtitle_list_task.delay(
-            user_id=request.user.id,
-            list_id=subtitle_list.id,
-            task_id=task_id,
-        )
+        def start_task():
+            save_subtitle_list_task.apply_async(
+                kwargs={
+                    "user_id": request.user.id,
+                    "list_id": subtitle_list.id,
+                    "task_id": task_id,
+                },
+                task_id=save_task_id,  # 👈 ВАЖНО
+            )
+
+        transaction.on_commit(start_task)
 
         return JsonResponse(
             {
                 "status": "ok",
-                "save_task_id": celery_result.id,
+                "save_task_id": save_task_id,
                 "list_id": subtitle_list.id,
             }
         )
