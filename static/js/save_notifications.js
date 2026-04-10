@@ -1,3 +1,5 @@
+// save_notifications.js
+
 // ========================================
 // GLOBAL SAVE PROGRESS MANAGER (ADVANCED)
 // ========================================
@@ -95,15 +97,14 @@ function connectSaveSocket() {
 // ================================
 // Events
 // ================================
-
 function handleSaveEvent(data) {
 
-    if (data.type === "start") {
+    if (data.type === "save_start") {
         setSavingState(data.name);
         showToast(data.name);
     }
 
-    if (data.type === "progress") {
+    if (data.type === "save_progress") {
         if (!document.getElementById("save-progress")) {
             const name = localStorage.getItem("save_list_name") || "Сохранение...";
             showToast(name);
@@ -111,17 +112,22 @@ function handleSaveEvent(data) {
         updateProgress(data.percent);
     }
 
-    if (data.type === "done") {
+    if (data.type === "save_done") {
 
         updateProgress(100);
 
         toastr.clear();
-        toastr.success("Список успешно сохранён");
+        toastr.success("Список успешно сохранён", "", {
+            timeOut: 15000,
+            extendedTimeOut: 1000,
+            closeButton: true,
+            progressBar: true
+        });
 
         clearSavingState();
     }
 
-    if (data.type === "error") {
+    if (data.type === "save_error") {
 
         toastr.clear();
         toastr.error("Ошибка сохранения: " + (data.message || ""));
@@ -182,18 +188,18 @@ window.cancelSave = function () {
 // ================================
 // Public API
 // ================================
-
 window.startSaveToast = function (name, taskId) {
+
     if (localStorage.getItem("save_in_progress")) return;
 
-    if (!taskId) {
-        console.warn("No taskId passed to startSaveToast");
-        return;
+    if (taskId) {
+        localStorage.setItem("save_task_id", taskId);
     }
 
-    localStorage.setItem("save_task_id", taskId);
     setSavingState(name);
     connectSaveSocket();
+
+    showToast(name); // 🔥 СРАЗУ показываем
 };
 
 // ================================

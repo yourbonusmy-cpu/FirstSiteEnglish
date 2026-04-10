@@ -107,9 +107,8 @@
 
 {% block extra_js %}
 <script>
+window.WS_URL = `ws://${window.location.host}/ws/ingestion/`;
 window.SUBTITLE_START_URL = "{% url 'ingestion:subtitle_start' %}";
-window.SUBTITLE_PROGRESS_URL = "{% url 'ingestion:subtitle_progress' %}";
-window.SUBTITLE_PAGE_URL = "{% url 'ingestion:subtitle_page' %}";
 window.SUBTITLE_SAVE_URL = "{% url 'ingestion:subtitle_save' %}";
 window.SUBTITLE_DELETE_URL = "{% url 'ingestion:subtitle_delete_word' %}";
 </script>

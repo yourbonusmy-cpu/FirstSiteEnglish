@@ -9,6 +9,15 @@ def subtitle_list_image_path(instance, filename):
 class SubtitleList(models.Model):
     name = models.CharField(max_length=64, blank=True, default="")
     version = models.PositiveIntegerField(default=1)
+    status = models.CharField(
+        max_length=20,
+        choices=[
+            ("processing", "Processing"),
+            ("done", "Done"),
+            ("error", "Error"),
+        ],
+        default="processing"
+    )
     is_hide = models.BooleanField(default=False)
 
     is_public = models.BooleanField(default=False)

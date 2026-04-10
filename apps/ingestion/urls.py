@@ -17,10 +17,10 @@ urlpatterns = [
     path("subtitle/start/", views.SubtitleStartView.as_view(), name="subtitle_start"),
 
     # Прогресс обработки субтитров
-    path("subtitle/progress/", views.SubtitleProgressView.as_view(), name="subtitle_progress"),
+    # path("subtitle/progress/", views.SubtitleProgressView.as_view(), name="subtitle_progress"),
 
     # Пагинация preview
-    path("subtitle/page/", views.SubtitlePageView.as_view(), name="subtitle_page"),
+    # path("subtitle/page/", views.SubtitlePageView.as_view(), name="subtitle_page"),
 
     # Удаление слова из preview
     path("subtitle/delete_word/", views.SubtitleDeleteWordView.as_view(), name="subtitle_delete_word"),

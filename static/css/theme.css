@@ -1,3 +1,4 @@
+
 body.light-theme {
     background-color: #ffffff;
     color: #212529;
@@ -32,12 +33,22 @@ body.dark-theme {
 
 /* === TOAST CONTAINER === */
 #toast-container > .toast {
-    background-color: #1f2937 !important; /* тёмно-серый */
-    color: #f9fafb !important;            /* светлый текст */
+    background-color: #1f2937 !important;
+    color: #f9fafb !important;
     border-radius: 10px;
-    padding: 14px 16px;
+
+    padding: 14px 16px 14px 50px !important; /* 🔥 фикс */
+    position: relative;
+
     box-shadow: 0 8px 25px rgba(0,0,0,0.3);
     opacity: 1 !important;
+}
+
+#toast-container > .toast:before {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Заголовок */

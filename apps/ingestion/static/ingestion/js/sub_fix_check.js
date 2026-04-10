@@ -4,14 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const MAX_TITLE = 64;
     const MAX_TEXTAREA_HEIGHT = 250;
 
+
     const state = {
         isProcessing: false,
-        controller: null,
+        socket: null,
         taskId: null,
-        page: 1,
-        hasNext: true,
-        loading: false,
-        showModalTimer: null
+        modalOpenedAt: null
     };
 
     /* ================= DOM ================= */
@@ -33,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }),
         progressBar: document.getElementById("progress-bar"),
         progressPercent: document.getElementById("progress-percent"),
-        progressText: document.getElementById("progress-text"),
+
         cancelBtn: document.getElementById("cancel-processing"),
 
         bgColor: document.getElementById('background-color-input'),
@@ -49,19 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const getCookie = (name) =>
         document.cookie.split("; ").find(r => r.startsWith(name + "="))?.split("=")[1];
 
-    const sleep = (ms) => new Promise(r => setTimeout(r, ms));
-
-    async function request(url, { method = "GET", body = null, signal } = {}) {
-        const res = await fetch(url, {
-            method,
-            body,
-            signal,
-            headers: { "X-CSRFToken": getCookie("csrftoken") }
-        });
-        if (!res.ok) throw new Error("Request failed");
-        return res.json();
-    }
-
     function lockUI() {
         el.processBtn.disabled = true;
         el.file.disabled = true;
@@ -74,64 +59,64 @@ document.addEventListener("DOMContentLoaded", () => {
         el.text.disabled = false;
     }
 
-    /* ================= PREVIEW ================= */
-    function applyPreviewBg() {
-        if (el.bgImage.files.length > 0) return;
-        el.previewCard.style.backgroundImage = "";
-        el.previewCard.style.backgroundColor = el.bgColor.value;
-    }
+    /* ================= WS ================= */
+    function connectWS() {
 
-    function updateImageState() {
-        const hasImage = el.bgImage.files.length > 0;
-        el.resetImage.classList.toggle("d-none", !hasImage);
-        el.colorCol.style.display = hasImage ? "none" : "";
-    }
+        if (state.socket && state.socket.readyState === WebSocket.OPEN) return;
 
-    function updateTextareaHeight() {
-        el.text.style.height = "auto";
-        const h = Math.min(el.text.scrollHeight, MAX_TEXTAREA_HEIGHT);
-        el.text.style.height = h + "px";
-        el.text.style.overflowY = el.text.scrollHeight > MAX_TEXTAREA_HEIGHT ? "auto" : "hidden";
-    }
+        const protocol = window.location.protocol === "https:" ? "wss" : "ws";
 
-    /* ================= INPUT ================= */
-    function handleInputChange() {
-        const hasFile = el.file.files.length > 0;
-        const hasText = el.text.value.trim().length > 0;
+        state.socket = new WebSocket(`${protocol}://${window.location.host}/ws/ingestion/`);
 
-        el.processBtn.classList.toggle('d-none', !(hasText && !hasFile));
-        updateTextareaHeight();
+        state.socket.onmessage = (e) => {
+            const data = JSON.parse(e.data);
 
-        const fileCol = document.getElementById('file-col');
-        const textCol = document.getElementById('text-col');
+            switch (data.type) {
 
-        if (hasText) {
-            fileCol.style.display = 'none';
-            textCol.classList.replace('col-md-6', 'col-12');
-        } else if (hasFile) {
-            textCol.style.display = 'none';
-            fileCol.classList.replace('col-md-6', 'col-12');
-        } else {
-            fileCol.style.display = '';
-            textCol.style.display = '';
-            fileCol.classList.replace('col-12', 'col-md-6');
-            textCol.classList.replace('col-12', 'col-md-6');
-        }
+                case "start":
+                    el.progressModal.show();
+                    state.modalOpenedAt = Date.now();
+
+                    el.progressBar.style.width = "0%";
+                    el.progressPercent.textContent = "0%";
+                    break;
+
+                case "progress":
+                    el.progressBar.style.width = data.percent + "%";
+                    el.progressPercent.textContent = data.percent + "%";
+                    break;
+
+                case "words_chunk":
+                    renderWords(data.words);
+                    break;
+
+                case "done":
+                    el.progressBar.style.width = "100%";
+                    el.progressPercent.textContent = "100%";
+
+                    const MIN_VISIBLE_TIME = 500; // ms
+
+                    const elapsed = Date.now() - (state.modalOpenedAt || 0);
+                    const delay = Math.max(0, MIN_VISIBLE_TIME - elapsed);
+
+                    setTimeout(() => {
+                        el.progressModal.hide();
+                    }, delay);
+
+                    el.wordsSection.style.display = "block";
+                    unlockUI();
+                    break;
+
+                case "error":
+                    console.error(data.message);
+                    el.progressModal.hide();
+                    unlockUI();
+                    break;
+            }
+        };
     }
 
     /* ================= WORDS ================= */
-    function updateWordsCount() {
-        const tbody = el.wordsTable.querySelector("tbody");
-        const displayed = tbody ? tbody.children.length : 0;
-        const total = window.TOTAL_WORDS || 0;
-
-        el.wordsCount.textContent = `Слов: ${displayed}/${total}`;
-
-        document.querySelectorAll(".learned-count").forEach(span => {
-            span.textContent = `${displayed}/${total}`;
-        });
-    }
-
     function ensureTable() {
         if (el.wordsTable.querySelector("table")) return;
 
@@ -146,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function renderWords(words) {
         ensureTable();
+
         const tbody = el.wordsTable.querySelector("tbody");
 
         words.forEach(w => {
@@ -162,110 +148,77 @@ document.addEventListener("DOMContentLoaded", () => {
         updateWordsCount();
     }
 
-    async function loadNextPage() {
-        if (state.loading || !state.hasNext) return;
-        state.loading = true;
+    function updateWordsCount() {
+        const tbody = el.wordsTable.querySelector("tbody");
+        const count = tbody ? tbody.children.length : 0;
+        el.wordsCount.textContent = `Слов: ${count}`;
+    }
 
-        const data = await request(`${window.SUBTITLE_PAGE_URL}?task_id=${state.taskId}&page=${state.page}`);
+    /* ================= PROCESS ================= */
+    async function startProcessing() {
 
-        if (!data.words.length) {
-            state.hasNext = false;
-            state.loading = false;
+        if (state.isProcessing) return;
+
+        state.isProcessing = true;
+
+        connectWS();
+        lockUI();
+
+        const fd = new FormData();
+
+        if (el.file.files[0]) {
+            fd.append("subtitle_file", el.file.files[0]);
+        } else if (el.text.value.trim()) {
+            fd.append("subtitle_text", el.text.value.trim());
+        } else {
+            unlockUI();
+            state.isProcessing = false;
             return;
         }
 
-        renderWords(data.words);
-        window.TOTAL_WORDS = data.total;
-
-        state.page++;
-        state.hasNext = data.has_next;
-        state.loading = false;
-    }
-
-    /* ================= PROCESSING ================= */
-    async function startProcessing() {
-        if (state.isProcessing) return;
-
-        state.controller?.abort();
-        state.controller = new AbortController();
-        state.isProcessing = true;
-
-        const fd = new FormData();
-        if (el.file.files[0]) fd.append("subtitle_file", el.file.files[0]);
-        else if (el.text.value.trim()) fd.append("subtitle_text", el.text.value.trim());
-        else return;
-
-        lockUI();
-
         try {
-            const { task_id } = await request(window.SUBTITLE_START_URL, {
+            const res = await fetch(window.SUBTITLE_START_URL, {
                 method: "POST",
                 body: fd,
-                signal: state.controller.signal
+                headers: {
+                    "X-CSRFToken": getCookie("csrftoken")
+                }
             });
 
-            state.taskId = task_id;
+            const data = await res.json();
 
-            state.showModalTimer = setTimeout(() => el.progressModal.show(), 300);
+            if (data.status === "ok") {
+                state.taskId = data.task_id;  // 🔥 КЛЮЧЕВОЕ
+            } else {
+                throw new Error("start failed");
+            }
 
-            await pollProgress();
-
-        } catch {
-            state.isProcessing = false;
+        } catch (e) {
+            console.error(e);
             unlockUI();
+            state.isProcessing = false;
         }
-    }
-
-    async function pollProgress() {
-        const { progress = 0 } = await request(`${window.SUBTITLE_PROGRESS_URL}?task_id=${state.taskId}`);
-
-        el.progressBar.style.width = progress + "%";
-        el.progressPercent.textContent = progress + "%";
-
-        if (progress < 100) {
-            await sleep(500);
-            return pollProgress();
-        }
-
-        await finalizeProcessing();
-    }
-
-    async function finalizeProcessing() {
-        el.wordsTable.innerHTML = "";
-        state.page = 1;
-        state.hasNext = true;
-
-        for (let i = 0; i < 5; i++) {
-            await loadNextPage();
-            if (el.wordsTable.querySelector("tbody")?.children.length) break;
-            await sleep(200);
-        }
-
-        if (state.showModalTimer) {
-            clearTimeout(state.showModalTimer);
-            state.showModalTimer = null;
-        }
-
-        setTimeout(() => el.progressModal.hide(), 300);
-
-        el.wordsSection.style.display = "block";
-        state.isProcessing = false;
-        unlockUI();
-
-        updateWordsCount();
     }
 
     /* ================= SAVE ================= */
     async function saveList() {
-        if (!state.taskId) return alert("Ошибка: task_id отсутствует");
-
-        // ✅ Получаем все слова из Redis по правильной логике
-        const data = await request(`${window.SUBTITLE_PAGE_URL}?task_id=${state.taskId}&page=1`);
-        const totalWords = data.total;
-        if (!totalWords) return alert("Нет слов для сохранения");
-
+        console.log("CLICK SAVE");
         const name = el.title.value.trim();
-        if (!name) return alert("Введите название");
+        if (!name) {
+            alert("Введите название");
+            return;
+        }
+
+        if (!state.taskId) {
+            alert("Ошибка: нет task_id (обработка не завершена)");
+            return;
+        }
+
+        // 🔥 1. СРАЗУ поднимаем UI + состояние
+        window.startSaveToast(name, null);
+
+        // 🔥 2. Гарантируем подключение WS (если вдруг не подключён)
+        connectSaveSocket();
 
         const fd = new FormData();
         fd.append("subtitle_name", name);
@@ -276,50 +229,45 @@ document.addEventListener("DOMContentLoaded", () => {
             fd.append("background_image", el.bgImage.files[0]);
         }
 
-        const res = await request(window.SUBTITLE_SAVE_URL, {
-            method: "POST",
-            body: fd
-        });
+        try {
+            const res = await fetch(window.SUBTITLE_SAVE_URL, {
+                method: "POST",
+                body: fd,
+                headers: {
+                    "X-CSRFToken": getCookie("csrftoken")
+                }
+            });
 
-        if (res.status === "ok") {
-            window.startSaveToast(name, res.save_task_id);  // 🔥 ВАЖНО
-        } else {
-            alert("Ошибка сохранения");
+            if (!res.ok) {
+                throw new Error(`HTTP ${res.status}`);
+            }
+
+            const data = await res.json();
+
+            if (data.status !== "ok") {
+                throw new Error(data.message || "save failed");
+            }
+
+            // 🔥 3. Сохраняем реальный task_id (для восстановления)
+            if (data.save_task_id) {
+                localStorage.setItem("save_task_id", data.save_task_id);
+            }
+
+        } catch (e) {
+            console.error("SAVE ERROR:", e);
+
+            toastr.clear();
+            toastr.error("Ошибка сохранения");
+
+            clearSavingState();
         }
     }
 
     /* ================= EVENTS ================= */
-    el.text.oninput = handleInputChange;
-
-    el.file.onchange = () => {
-        const file = el.file.files[0];
-        if (!file) return;
-
-        if (!el.title.value.trim()) {
-            let name = file.name.replace(/\.[^/.]+$/, "");
-            if (name.length > MAX_TITLE) name = name.slice(0, MAX_TITLE - 3) + "...";
-            el.title.value = name;
-            el.previewTitle.textContent = name;
-        }
-
-        startProcessing();
-    };
-
     el.processBtn.onclick = startProcessing;
     el.saveBtn.onclick = saveList;
 
-    el.cancelBtn.onclick = () => {
-        state.controller?.abort();
-        state.isProcessing = false;
-        unlockUI();
-        el.progressModal.hide();
-    };
-
-    el.wordsWrapper?.addEventListener("scroll", () => {
-        if (el.wordsWrapper.scrollTop + el.wordsWrapper.clientHeight >= el.wordsWrapper.scrollHeight - 50) {
-            loadNextPage();
-        }
-    });
+    el.file.onchange = startProcessing;
 
     el.wordsTable.addEventListener("click", async (e) => {
         if (!e.target.classList.contains("delete-word-btn")) return;
@@ -327,31 +275,42 @@ document.addEventListener("DOMContentLoaded", () => {
         const tr = e.target.closest("tr");
 
         const fd = new FormData();
-        fd.append("task_id", state.taskId);
         fd.append("word_id", tr.dataset.wordId);
+        fd.append("task_id", state.taskId);
 
-        const data = await request(window.SUBTITLE_DELETE_URL, {
+        await fetch(window.SUBTITLE_DELETE_URL, {
             method: "POST",
-            body: fd
+            body: fd,
+            headers: { "X-CSRFToken": getCookie("csrftoken") }
         });
 
-        if (data.status === "ok") {
-            tr.remove();
-            updateWordsCount();
+        tr.remove();
+        updateWordsCount();
+    });
+
+    /* ================= PREVIEW ================= */
+    el.title.addEventListener("input", () => {
+        if (el.title.value.length > MAX_TITLE) {
+            el.title.value = el.title.value.slice(0, MAX_TITLE);
         }
+        el.previewTitle.textContent = el.title.value || "Название списка";
     });
-
-    /* ================= COLORS ================= */
-    el.colorPicker?.addEventListener("input", () => {
-        el.bgColor.value = el.colorPicker.value;
-        applyPreviewBg();
-    });
-
-    el.resetImage?.addEventListener("click", () => {
-        el.bgImage.value = "";
+    el.title.value = "test"
+    function applyPreviewBg() {
+        if (el.bgImage.files.length > 0) return;
         el.previewCard.style.backgroundImage = "";
-        applyPreviewBg();
-        updateImageState();
+        el.previewCard.style.backgroundColor = el.bgColor.value;
+    }
+
+    el.bgImage.addEventListener("change", function () {
+        const file = this.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            el.previewCard.style.backgroundImage = `url(${e.target.result})`;
+        };
+        reader.readAsDataURL(file);
     });
 
     document.querySelectorAll('.color-swatch').forEach(btn => {
@@ -359,51 +318,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const color = btn.dataset.color;
             if (!color) return;
             el.bgColor.value = color;
-            document.querySelectorAll('.color-swatch').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
             applyPreviewBg();
         };
     });
-
-    el.title.addEventListener("input", () => {
-        if (el.title.value.length > MAX_TITLE) {
-            el.title.value = el.title.value.slice(0, MAX_TITLE);
-        }
-        el.previewTitle.textContent = el.title.value.trim() || "Название списка";
-    });
-
-    el.bgImage?.addEventListener("change", function () {
-        const file = this.files[0];
-        if (!file) {
-            applyPreviewBg();
-            updateImageState();
-            return;
-        }
-        const reader = new FileReader();
-        reader.onload = (e) => {
-            el.previewCard.style.backgroundImage = `url(${e.target.result})`;
-            el.previewCard.style.backgroundSize = "cover";
-            el.previewCard.style.backgroundPosition = "center";
-        };
-        reader.readAsDataURL(file);
-        updateImageState();
-    });
-
-    /* ================= INIT ================= */
-    handleInputChange();
-    updateImageState();
-
-    function initDefaultColor() {
-        const color = "#ffffff";
-        el.bgColor.value = color;
-        el.colorPicker.value = color;
-        applyPreviewBg();
-
-        const btn = document.querySelector(`.color-swatch[data-color="${color}"]`);
-        if (btn) btn.classList.add("active");
-    }
-
-    initDefaultColor();
-    el.previewTitle.textContent = "Название списка";
 
 });

@@ -1,7 +1,5 @@
 # ingestion/views.py
 import json
-import uuid
-from time import sleep
 
 from better_profanity import profanity
 from celery.result import AsyncResult
@@ -29,9 +27,6 @@ PREVIEW_TTL = 3600
 extractor = get_phrasal_extractor()
 
 
-# -----------------------------
-# Сохраняем отмену
-# -----------------------------
 def save_cancel(request):
     task_id = request.POST.get("task_id")
     if task_id:
@@ -39,16 +34,10 @@ def save_cancel(request):
     return JsonResponse({"status": "cancelled"})
 
 
-# ===========================
-# Страница добавления субтитров
-# ===========================
 class SubtitleAddView(TemplateView):
     template_name = "ingestion/subtitle_add_fix.html"
 
 
-# ===========================
-# Загрузка текста / файла → запуск Celery
-# ===========================
 @method_decorator(csrf_exempt, name="dispatch")
 class SubtitleStartView(View):
     def post(self, request):
@@ -60,100 +49,14 @@ class SubtitleStartView(View):
         else:
             text = raw_text
 
-        # Запуск Celery задачи
-        task = process_subtitle_task.apply_async(args=[text])
-        task_id = task.id
-
-        # Инициализируем пустой Redis preview
-        r.set(f"subtitle_preview:{task_id}", json.dumps([]), ex=PREVIEW_TTL)
-
-        return JsonResponse({"status": "ok", "task_id": task_id})
-
-
-# ===========================
-# Проверка прогресса Celery
-# ===========================
-class SubtitleProgressView(View):
-    def get(self, request):
-        task_id = request.GET.get("task_id")
-        if not task_id:
-            return JsonResponse({"progress": -1})
-
-        async_result = AsyncResult(task_id)
-        state = async_result.state
-
-        if state == "PROGRESS":
-            percent = async_result.info.get("percent", 0)
-        elif state == "SUCCESS":
-            percent = 100
-
-            words = async_result.result or []
-
-            # Сохраняем preview в Redis
-            words_key = f"subtitle:{task_id}:words"
-            order_key = f"subtitle:{task_id}:order"
-            total_key = f"subtitle:{task_id}:total"
-
-            pipe = r.pipeline()
-            pipe.delete(words_key, order_key, total_key)
-
-            for w in words:
-                wid = str(w["id"])
-                pipe.hset(words_key, wid, json.dumps(w))
-                pipe.rpush(order_key, wid)
-
-            pipe.set(total_key, len(words))
-            pipe.expire(words_key, PREVIEW_TTL)
-            pipe.expire(order_key, PREVIEW_TTL)
-            pipe.expire(total_key, PREVIEW_TTL)
-            pipe.execute()
-        elif state == "FAILURE":
-            percent = -1
-        else:
-            percent = 0
-
-        return JsonResponse({"progress": percent})
-
-
-# ===========================
-# Пагинация preview из Redis
-# ===========================
-class SubtitlePageView(View):
-    PAGE_SIZE = 50
-
-    def get(self, request):
-        task_id = request.GET.get("task_id")
-        if not task_id:
-            return JsonResponse({"words": [], "has_next": False, "total": 0})
-
-        page = int(request.GET.get("page", 1))
-
-        order_key = f"subtitle:{task_id}:order"
-        words_key = f"subtitle:{task_id}:words"
-        total_key = f"subtitle:{task_id}:total"
-
-        start = (page - 1) * self.PAGE_SIZE
-        end = start + self.PAGE_SIZE - 1
-
-        ids = r.lrange(order_key, start, end)
-        words = []
-        if ids:
-            # HMGET принимает ключи как список аргументов
-            words_raw = r.hmget(words_key, *ids)
-            words = [json.loads(w) for w in words_raw if w]
-
-        total = int(r.get(total_key) or 0)
+        task = process_subtitle_task.delay(text, request.user.id)
 
         return JsonResponse({
-            "words": words,
-            "has_next": end + 1 < total,
-            "total": total
+            "status": "ok",
+            "task_id": task.id
         })
 
 
-# ===========================
-# Удаление слова из preview в Redis
-# ===========================
 @method_decorator(csrf_exempt, name="dispatch")
 class SubtitleDeleteWordView(View):
     def post(self, request):
@@ -163,25 +66,24 @@ class SubtitleDeleteWordView(View):
         if not task_id or not word_id:
             return JsonResponse({"status": "error"}, status=400)
 
-        words_key = f"subtitle:{task_id}:words"
-        total_key = f"subtitle:{task_id}:total"
+        key = f"subtitle_preview:{task_id}"
+        raw = r.get(key)
 
-        pipe = r.pipeline()
-        pipe.hdel(words_key, word_id)
-        pipe.decr(total_key)
-        pipe.execute()
+        if not raw:
+            return JsonResponse({"status": "error"}, status=404)
 
-        total = int(r.get(total_key) or 0)
+        words = json.loads(raw)
+
+        words = [w for w in words if str(w["id"]) != str(word_id)]
+
+        r.setex(key, PREVIEW_TTL, json.dumps(words))
 
         return JsonResponse({
             "status": "ok",
-            "total": total
+            "total": len(words)
         })
 
 
-# ===========================
-# Сохранение списка
-# ===========================
 @method_decorator(csrf_exempt, name="dispatch")
 class SubtitleSaveView(View):
     MAX_IMAGE_SIZE = 2 * 1024 * 1024
@@ -222,7 +124,6 @@ class SubtitleSaveView(View):
                 status=400,
             )
 
-        save_task_id = str(uuid.uuid4())
         with transaction.atomic():
             subtitle_list = SubtitleList.objects.create(
                 name=name,
@@ -235,30 +136,22 @@ class SubtitleSaveView(View):
                 quantity_learned_words_frequencies=0,
             )
 
-        def start_task():
-            save_subtitle_list_task.apply_async(
-                kwargs={
-                    "user_id": request.user.id,
-                    "list_id": subtitle_list.id,
-                    "task_id": task_id,
-                },
-                task_id=save_task_id,  # 👈 ВАЖНО
-            )
-
-        transaction.on_commit(start_task)
+        # 🚀 Запускаем Celery для сохранения слов
+        celery_result = save_subtitle_list_task.delay(
+            user_id=request.user.id,
+            list_id=subtitle_list.id,
+            task_id=task_id,
+        )
 
         return JsonResponse(
             {
                 "status": "ok",
-                "save_task_id": save_task_id,
+                "save_task_id": celery_result.id,
                 "list_id": subtitle_list.id,
             }
         )
 
 
-# ===========================
-# Проверка прогресса сохранения
-# ===========================
 class SubtitleSaveProgressView(View):
     def get(self, request):
         task_id = request.GET.get("task_id")
@@ -268,7 +161,9 @@ class SubtitleSaveProgressView(View):
         res = AsyncResult(task_id)
 
         if res.state == "PROGRESS":
-            return JsonResponse(res.info)
+            return JsonResponse({
+                "percent": res.info.get("percent", 0)
+            })
         elif res.state == "SUCCESS":
             return JsonResponse({"percent": 100})
         elif res.state in {"FAILURE", "REVOKED"}:
@@ -277,9 +172,6 @@ class SubtitleSaveProgressView(View):
         return JsonResponse({"percent": 0})
 
 
-# ===========================
-# Отмена сохранения
-# ===========================
 @method_decorator(csrf_exempt, name="dispatch")
 class SubtitleSaveCancelView(View):
     def post(self, request):
