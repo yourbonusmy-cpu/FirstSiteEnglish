@@ -162,9 +162,12 @@ def my_lists(request):
                 user_list_qs.values("quantity_learned_words")[:1],
                 output_field=IntegerField(),
             ),
-            progress_percent=ExpressionWrapper(
-                100 * F("user_quantity_learned_words") / F("quantity_words"),
-                output_field=IntegerField(),
+            progress_percent=Case(
+                When(quantity_words=0, then=Value(0)),
+                default=ExpressionWrapper(
+                    100 * F("user_quantity_learned_words") / F("quantity_words"),
+                    output_field=IntegerField(),
+                ),
             ),
         )
 

@@ -52,7 +52,7 @@
                             <div class="card-overlay bg-white bg-opacity-50 progress-ring-center"></div>
                             <div class="progress-ring-label">
                                 {% if list.user_quantity_learned_words != None %}
-                                    {{ list.progress_percent }}%
+                                    {{ list.progress_percent|default_if_none:0 }}%
                                 {% else %}
                                     ?
                                 {% endif %}
