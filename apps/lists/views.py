@@ -235,7 +235,7 @@ def word_lists(request):
 
     return render(request, "lists/word_lists.html", {"word_lists": lists})
 
-
+@login_required
 def word_list_detail(request, list_id):
     word_list = get_object_or_404(SubtitleList, id=list_id)
 

@@ -45,7 +45,7 @@ class WordPartOfSpeech(models.Model):
 
 
 class Translation(models.Model):
-    translation = models.CharField(max_length=128, blank=True, default="")
+    translation = models.CharField(max_length=256, blank=True, default="")
     is_main = models.BooleanField(default=False)
 
     word_part_of_speech = models.ForeignKey(
