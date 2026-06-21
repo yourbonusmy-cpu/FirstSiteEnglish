@@ -18,7 +18,7 @@ from django.db import models
 from django.db.models.functions import Coalesce
 from django.db.models.signals import pre_save, post_delete
 from django.dispatch import receiver
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.template.loader import render_to_string
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
@@ -27,7 +27,6 @@ from django.http import HttpResponseForbidden
 
 from apps.lists.models import SubtitleList, UserSubtitleList
 
-from django.http import JsonResponse
 
 from ..dictionary.models import Word, WordPartOfSpeech, Translation
 from ..social.models import SubtitleListLike
